@@ -1,0 +1,82 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site title
+title: "BlogInn"
+
+# Tagline next to the site title
+tagline: "Thoughts, stories and ideas."
+
+# A description of your site for social meta tag, search engines, and feed.xml
+description: "BlogInn is a bold theme for the Jekyll blogging platform. Available for purchase at ThemeForest.net."
+
+# The subpath of your site, e.g. /blog, for generating urls
+baseurl:
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# The base hostname & protocol of your site for where absolute urls are needed
+url: "https://bloginn.netlify.app"
+
+# Site navigation - each item must have a title and a url.
+navigation:
+- text: Home
+  url: /
+- text: About
+  url: /about/
+- text: Style Guide
+  url: /style-guide/
+- text: Archives
+  url: /tags/
+
+# The shortname for your Disqus site to enable comments.
+disqus: "justgoodthemes"
+
+# Google Analytics id, e.g. "UA-NNNNNNNN-N"
+google_analytics: ""
+
+# Author information - author info at the bottom of the post
+author_name: "John Doe"
+author_bio: "John is a designer, photographer, speaker, author of a couple of books about typography and the founder of photo magazine Curious."
+author_url:  "http://justgoodthemes.com"
+author_location: "Vilnius, Lithuania"
+author_image: /images/authorimage.png
+
+# Sidebar Add banner
+banner_url: "https://justgoodthemes.com"
+banner_image: images/banner.jpg
+banner_image_alt: "Alt text"
+
+# Sidebar newsletter widget - add your form action url for MailChimp signup form here
+mailchimp_url: "//justgoodthemes.us3.list-manage.com/subscribe/post?u=78f1bab16028354caeb23aecd&amp;id=4a7330d117"
+
+# Social links in the site footer
+twitter_url: "https://twitter.com/"
+facebook_url: "https://www.facebook.com/"
+github_url: "https://github.com/"
+codepen_url: "https://codepen.io/"
+dribbble_url: "https://dribbble.com/"
+medium_url: "https://medium.com/"
+instagram_url: "https://www.instagram.com/"
+pinterest_url: "https://www.pinterest.com/"
+linkedin_url: "https://www.linkedin.com/"
+weibo_url: "https://www.weibo.com/"
+
+# http://jekyllrb.com/docs/pagination/
+paginate: 4
+paginate_path: '/blog/page:num/'
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+permalink: pretty
+markdown: kramdown
+kramdown:
+    auto_ids: false
