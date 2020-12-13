@@ -3,7 +3,7 @@ layout: post
 title:  ".NET - Portrait Image read as landscape image"
 date:   2020-10-06 00:00:00
 image: /images/posts/photographer.jpg
-tags: [.net core, image, ]
+tags: [.net core, image ]
 ---
 
 Portrait photos taken by an SLR camera do not have the length and width dimensions that reflect the portrait photo.
