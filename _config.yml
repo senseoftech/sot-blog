@@ -54,8 +54,6 @@ banner_url: "https://www.senseof.tech"
 banner_image: images/banner.jpg
 banner_image_alt: "Sense of Tech"
 
-# Sidebar newsletter widget - add your form action url for MailChimp signup form here
-mailchimp_url: ""
 
 # Social links in the site footer
 twitter_url: "https://twitter.com/senseof_tech"
