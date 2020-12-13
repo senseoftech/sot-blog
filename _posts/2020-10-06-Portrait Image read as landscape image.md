@@ -8,13 +8,11 @@ tags: [.net core, image ]
 
 Portrait photos taken by an SLR camera do not have the length and width dimensions that reflect the portrait photo.
 
-
 In one of the projects I'm developing, the aim is to display an online shop of professional photography for events.
-
 
 Once the photographer injects the photos into the backoffice platform, the platform is lightened and a watermark is added. 
 
-<!-- more -->
+<!--more-->
 
 So far nothing very difficult using the 
 [SkiaSharp library](https://docs.microsoft.com/en-us/dotnet/api/skiasharp?view=skiasharp-1.68.2&WT.mc_id=WD-MVP-5001937)
