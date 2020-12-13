@@ -9,7 +9,7 @@
 title: "Sense of [Blog]"
 
 # Tagline next to the site title
-tagline: "Sense of Tech blog writted by Adrien Clerbois."
+tagline: "Sense of Tech's blog writted by Adrien Clerbois."
 
 # A description of your site for social meta tag, search engines, and feed.xml
 description: "This is the blog of Sense of Tech"
@@ -44,7 +44,7 @@ google_analytics: ""
 
 # Author information - author info at the bottom of the post
 author_name: "Adrien Clerbois"
-author_bio: "Adrien Clerbois is a Microsoft MVP in Developer Technologies"
+author_bio: "Adrien Clerbois is a Microsoft MVP in Developer Technologies. Adrien founded the company Sense of Tech"
 author_url:  "http://www.aclerbois.be"
 author_location: "Anderlues, Belgium"
 author_image: /images/authorimage.png
