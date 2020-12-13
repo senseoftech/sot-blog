@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Add alias drive in powershell"
-date:   2020-12-13 00:00:00
+date:   2020-12-12 00:00:00
 image: /images/posts/powershell.jpg
 tags: [powershell, cli, tips]
 ---
