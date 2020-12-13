@@ -1,32 +1,135 @@
 ---
 layout: post
-title:  "Graphic Designer On The Road"
-date:   2020-01-20
-image: /images/posts/road.jpg
-tags: [web design, blogging]
+title:  ".NET - Portrait Image read as landscape image"
+date:   2020-10-06 00:00:00
+image: /images/posts/photographer.jpg
+tags: [.net core, image, ]
 ---
 
-A graphic designer is a professional within the graphic design and graphic arts industry who assembles together images, typography, or motion graphics to create a piece of design. A graphic designer creates the graphics primarily for published, printed or electronic media, such as brochures (sometimes) and advertising. They are also sometimes responsible for typesetting, illustration, user interfaces, web design, or take a teaching position. A core responsibility of the designer's job is to present information in a way that is both accessible and memorable.
+Portrait photos taken by an SLR camera do not have the length and width dimensions that reflect the portrait photo.
 
-<!--more-->
 
-A degree or certificate from an accredited trade school is usually considered essential for a graphic design position. After a career history has been established, though, the graphic designer's experience and number of years in the business are considered the primary qualifications. A portfolio, which is the primary method for demonstrating these qualifications, is usually required to be shown at job interviews, and is constantly developed throughout a designer's career. [[Source](https://en.wikipedia.org/wiki/Graphic_designer)]
+In one of the projects I'm developing, the aim is to display an online shop of professional photography for events.
 
-Ice molecules can exhibit up to sixteen different phases *(packing geometries)* that depend on temperature and pressure. When water is cooled rapidly (quenching), up to three different types of amorphous ice can form depending on the history of its pressure and temperature. When cooled slowly correlated proton tunneling occurs below 20 K giving rise to macroscopic quantum phenomena. Virtually all the ice on Earth's surface and in its atmosphere is of a hexagonal crystalline structure denoted as ice Ih (spoken as "ice one h") with minute traces of cubic ice denoted as ice Ic. The most common phase transition to ice Ih occurs when liquid water is cooled below 0°C (273.15K, 32°F) at standard atmospheric pressure. It may also be deposited directly by water vapor, as happens in the formation of frost. The transition from ice to water is melting and from ice directly to water vapor is sublimation.
 
-## Characteristics
+Once the photographer injects the photos into the backoffice platform, the platform is lightened and a watermark is added. 
 
-As a naturally-occurring crystalline inorganic solid with an ordered structure, ice is considered a mineral.[citation needed] It possesses a regular crystalline structure based on the molecule of water, which consists of a single oxygen atom covalently bonded to two hydrogen atoms, or H-O-H. However, many of the physical properties of water and ice are controlled by the formation of hydrogen bonds between adjacent oxygen and hydrogen atoms; while it is a weak bond, it is nonetheless critical in controlling the structure of both water and ice.
+<!-- more -->
 
-> “ice contains no future , just the past, sealed away. As if they're alive, everything in the world is sealed up inside, clear and distinct. Ice can preserve all kinds of things that way- cleanly, clearly. That's the essence of ice, the role it plays.” 
-> <cite>― Haruki Murakami</cite>
+So far nothing very difficult using the 
+[SkiaSharp library](https://docs.microsoft.com/en-us/dotnet/api/skiasharp?view=skiasharp-1.68.2&WT.mc_id=WD-MVP-5001937)
 
-An unusual property of ice frozen at atmospheric pressure is that the solid is approximately 8.3% less dense than liquid water. The density of ice is 0.9167 g/cm3 at 0 °C,[4] whereas water has a density of 0.9998 g/cm³ at the same temperature. Liquid water is densest, essentially 1.00 g/cm³, at 4 °C and becomes less dense as the water molecules begin to form the hexagonal crystals[5] of ice as the freezing point is reached. This is due to hydrogen bonding dominating the intermolecular forces, which results in a packing of molecules less compact in the solid. Density of ice increases slightly with decreasing temperature and has a value of 0.9340 g/cm³ at −180 °C (93 K).[6]
+But a few days ago the photographer discovered portrait photography and the client opened a ticket to inform me that the photos are not displayed in the right direction and that it would be important to keep the rotation.
 
-When water freezes, it increases in volume (about 9% for freshwater).[7] The effect of expansion during freezing can be dramatic, and ice expansion is a basic cause of freeze-thaw weathering of rock in nature and damage to building foundations and roadways from frost heaving. It is also a common cause of the flooding of houses when water pipes burst due to the pressure of expanding water when it freezes.
+I started off naively with a : 
 
-The result of this process is that ice *(in its most common form)* floats on liquid water, which is an important feature in Earth's biosphere. It has been argued that without this property, natural bodies of water would freeze, in some cases permanently, from the bottom up,[8] resulting in a loss of bottom-dependent animal and plant life in fresh and sea water. Sufficiently thin ice sheets allow light to pass through while protecting the underside from short-term weather extremes such as wind chill. This creates a sheltered environment for bacterial and algal colonies. When sea water freezes, the ice is riddled with brine-filled channels which sustain sympagic organisms such as bacteria, algae, copepods and annelids, which in turn provide food for animals such as krill and specialised fish like the bald notothen, fed upon in turn by larger animals such as emperor penguins and minke whales.
+```csharp
+// Object from library : [Image.FromFile method](https://docs.microsoft.com/en-us/dotnet/api/system.drawing.image.fromfile?view=dotnet-plat-ext-3.1&WT.mc_id=WD-MVP-5001937)
+var image = Image.FromFile("best-picture-ever.jpg");
+```
 
-When ice melts, it absorbs as much energy as it would take to heat an equivalent mass of water by 80 °C. During the melting process, the temperature remains constant at 0 °C. While melting, any energy added breaks the hydrogen bonds between ice (water) molecules. Energy becomes available to increase the thermal energy (temperature) only after enough hydrogen bonds are broken that the ice can be considered liquid water. The amount of energy consumed in breaking hydrogen bonds in the transition from ice to water is known as the heat of fusion.
+And make an extrapolation to determine if the picture is portrait or not by : 
 
-As with water, ice absorbs light at the red end of the spectrum preferentially as the result of an overtone of an oxygen-hydrogen (O-H) bond stretch. Compared with water, this absorption is shifted toward slightly lower energies. Thus, ice appears blue, with a slightly greener tint than for liquid water. Since absorption is cumulative, the color effect intensifies with increasing thickness or if internal reflections cause the light to take a longer path through the ice.
+
+```csharp
+public bool IsPortrait(Image image){
+    return image.Height > image.Width;
+}
+```
+
+Happy with my long seconds of programming, I decided to test. I know how to test it is doubtful.
+
+And I did the right thing! After you start the machine nothing happens as it should. I get the height size which corresponds to the width size and vice versa.
+
+Dubitative, I will see the properties of the image in the photo but I can see that the height is larger than the length. I attach a breakpoint in Visual Studio and there it is the opposite. 
+
+My brain went boom :D
+
+Looking for a little bit, I thought, how can I get the size that is in the metas information of the file? Why, I don't have the same information as in the file?
+
+By scraping a little in the image properties 
+
+```csharp
+var image = Image.FromFile("photo.jpg");
+foreach (var propertyItem in image.PropertyItems)
+{
+    // read properties
+}
+```
+
+I discover the existence of the EXIF (thank you Communities): 
+
+> Exchangeable image file format (officially Exif, according to JEIDA/JEITA/CIPA specifications) is a standard that specifies the formats for images, sound, and ancillary tags used by digital cameras (including smartphones), scanners and other systems handling image and sound files recorded by digital cameras.
+Source : [Wikipedia](https://en.wikipedia.org/wiki/Exif)
+
+---
+
+The site [exiftoolg.org](https://exiftool.org/TagNames/EXIF.html) lists the standards and more specifically the content I am interested in, namely guidance (274).
+
+| Tag ID | Tag Name | Writable | Group | Values / Notes |
+|-------|-----------|----------|--------|----------------|
+| ... | |  |  |  |
+| 0x0112 | Orientation | int16u | IFD0  | 1 = Horizontal (normal) <br>2 = Mirror horizontal <br>3 = Rotate 180<br>4 = Mirror vertical<br>5 = Mirror horizontal and rotate 270 CW<br>6 = Rotate 90 CW<br>7 = Mirror horizontal and rotate 90 CW<br>8 = Rotate 270 CW |
+| ... | |  |  |  |
+
+Finaly, I discover the library [MetadataExtractor](https://www.nuget.org/packages/MetadataExtractor/?WT.mc_id=WD-MVP-500193). This is very helpful to navigate through the properties of a file. 
+
+I developed two methods, one to determine which rotation operation I need to do on the picture and another one to make the rotation. 
+
+```csharp
+/// <summary>
+/// Retrieve the rotate flip type to apply to the modified picture
+/// </summary>
+/// <param name="path">Original picture</param>
+/// <returns>Nullabe RotateFlipType</returns>
+private RotateFlipType? ComputeRotateFlipType(string path)
+{
+    IEnumerable<MetadataExtractor.Directory> directories = ImageMetadataReader.ReadMetadata(path);
+    var orientation = directories
+        .OfType<ExifIfd0Directory>()
+        .FirstOrDefault()
+        ?.GetObject(ExifDirectoryBase.TagOrientation) as ushort?;
+
+    if (orientation != null)
+    {
+        // Values provided by Standard EXIF : https://exiftool.org/TagNames/EXIF.html
+        switch (orientation)
+        {
+            // 1 = Horizontal(normal)
+            case 1: return RotateFlipType.RotateNoneFlipNone;
+            // 2 = Mirror horizontal
+            case 2: return RotateFlipType.RotateNoneFlipX;
+            // 3 = Rotate 180
+            case 3: return RotateFlipType.Rotate180FlipNone;
+            // 4 = Mirror vertical
+            case 4: return RotateFlipType.RotateNoneFlipY;
+            // 5 = Mirror horizontal and rotate 270 CW
+            case 5: return RotateFlipType.Rotate270FlipX;
+            // 6 = Rotate 90 CW
+            case 6: return RotateFlipType.Rotate90FlipNone;
+            // 7 = Mirror horizontal and rotate 90 CW
+            case 7: return RotateFlipType.Rotate90FlipX;
+            // 8 = Rotate 270 CW
+            case 8: return RotateFlipType.Rotate270FlipNone;
+        }
+    }
+    return null;
+}
+
+/// <summary>
+/// Rotate the modified picture based on the orientation property of the original picture
+/// </summary>
+/// <param name="inputPath">Original picture path</param>
+/// <param name="outputPath">Modified picture path</param>
+private void RotationWhenTransformationIsRequired(string inputPath, string outputPath)
+{
+    var rotationDegree = ComputeRotateFlipType(inputPath);
+    if (rotationDegree.HasValue && rotationDegree.Value != RotateFlipType.RotateNoneFlipNone)
+    {
+        var bitmap = (Bitmap)Bitmap.FromFile(outputPath);
+        bitmap.RotateFlip(rotationDegree.Value);
+        using var stream = new FileStream(outputPath, FileMode.Create, FileAccess.Write);
+        bitmap.Save(stream, ImageFormat.Jpeg);
+    }
+}
+```
