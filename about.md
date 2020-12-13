@@ -5,12 +5,18 @@ description: An optional about page for BlogInn Jekyll theme
 image: aboutPage.jpg
 ---
 
-**John Doe** is a Senior Art Director from [Vilnius](https://en.wikipedia.org/wiki/Vilnius), Lithuania. After graduating from The College of Visual Arts with a degree in Communication Design, he worked for three small graphic design shops where he honed his design style and sensibility.
+**Adrien Clerbois** is a Software Craftsman from [Anderlues](https://en.wikipedia.org/wiki/Anderlues), Belgium. 
 
-His work has been recognized by Communication Arts, Print, How, ID, IdN, AIGA, Effie, Archive, Graphis, AdFed and Rockport. Graphic Design USA named him a person to watch in 2015.
+He has been passionate about computers since he was 12 years old, He wrote his first website with a lot of nested tables at 13 years old and that's when he discovered that computers are within everyone's reach. Since then he has evolved well and he is now Microsoft MVP.
 
->The world always seems brighter when you’ve just made something that wasn’t there before. <cite>Neil Gaiman</cite>
+He was interested in what is really interesting: "Programming"!
 
-As a hobby, John Doe authors the most influential design blog in Lithuania with over 100,000 page views a month. He lives in Vilnius with his beautiful wife, two boys and one girl.
+He was a consultant at Trasys (now called NRB) where he had fun in the industrial field with renowned companies such as Audi, myShopi, etc...
 
-*Thank You for reading!*
+He was an Enterprise Lead Designer at Ingenico and he customize the ePayment platform for international customers requirements such as Carrefour.
+
+He's now at my own and built up my company named Sense of Tech.
+
+He love to share, so if you see him, don't hesitate to discuss, as they say: 
+
+>"We learn something new every day".
