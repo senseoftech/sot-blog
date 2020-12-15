@@ -20,6 +20,15 @@ The powershell commandlet is ```New-PSDrive``` with the syntax :
 New-PSDrive [DRIVE_NAME] filesystem [PATH_TO_FOLDER]
 ```
 
+From now, you can call the alias with the following commandlet : 
+
+```bash
+cd [DRIVE_NAME]:
+
+# i.e : 
+cd MyDrive:
+```
+
 You can include this in your Powershell profile to have it each time you launch a new Powershell Console instance. To edit your profile, run this command in powershell : 
 
 ```bash
