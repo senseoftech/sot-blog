@@ -1,4 +1,3 @@
-
 ---layout: post
 title:  "How to delete a project wiki"
 date:   2021-01-02 00:00:00
@@ -11,7 +10,7 @@ tags: [azure devops, tips]
 > In order to run this blogpost you should have Azure CLI and the Azure DevOps extension installed on your Powershell.
 
 In order to be able to delete a wiki project, you have to delete its (hidden) repo Git.
-
+<!--more-->
 First step: identify the repository behind the Project Wiki:
 
 ```ps
