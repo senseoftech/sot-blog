@@ -14,7 +14,7 @@ In order to be able to delete a wiki project, you have to delete its (hidden) re
 <!--more-->
 First step: identify the repository behind the Project Wiki:
 
-```ps
+```bash
 az devops wiki list --project <MyProject>
 ```
 
@@ -22,7 +22,7 @@ In this example, you will see a lot of data, you save the repository Guid for th
 
 Second step : Delete repo
 
-```ps
+```bash
 az repos delete --id 2c9047e3-ecb9-4913-b51e-893bc5a3e6gg 
 --project <MyProject>
 ```
