@@ -1,11 +1,11 @@
 ---layout: post
-title:  "How to delete a project wiki"
+title:  "How to delete a project Wiki in Azure DevOps?"
 date:   2021-01-02 00:00:00
 image: /images/posts/azuredevops.jpg
 tags: [azure devops, tips]
 ---
 
-# How to delete a project Wiki
+# How to delete a project Wiki in Azure DevOps?
 
 > In order to run this blogpost you should have Azure CLI and the Azure DevOps extension installed on your Powershell.
 
