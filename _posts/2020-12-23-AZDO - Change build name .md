@@ -2,9 +2,11 @@
 layout: post
 title:  "Change pipeline name"
 date:   2020-12-12 00:00:00
-image: /images/posts/azuredevops.jpg
+image: /images/posts/azuredevops.png
 tags: [azure devops, tips]
 ---
+
+# Change pipeline name
 
 When you start to work on your own pipeline with yaml or using the GUI, you may interested to change the build name. 
 

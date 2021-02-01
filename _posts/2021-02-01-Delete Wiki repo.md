@@ -2,7 +2,7 @@
 layout: post
 title:  "How to delete a project Wiki in Azure DevOps?"
 date:   2021-01-02 00:00:00
-image: /images/posts/azuredevops.jpg
+image: /images/posts/azuredevops.png
 tags: [azure devops, tips]
 ---
 
