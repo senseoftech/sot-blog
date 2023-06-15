@@ -6,7 +6,7 @@ author: AClerbois
 github_repo_username: aclerbois
 github_repo : aclerbois
 comments: true
-image: [/images/posts/ngrok.png](https://miro.medium.com/v2/resize:fit:1200/1*v-usjN8zMK1JLJKV9Dzwuw.png)
+image: https://miro.medium.com/v2/resize:fit:1200/1*v-usjN8zMK1JLJKV9Dzwuw.png
 tags: [testing]
 ---
 
