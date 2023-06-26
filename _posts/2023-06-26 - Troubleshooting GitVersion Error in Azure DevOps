@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "Troubleshooting GitVersion Error in Azure DevOps"
+date:   2023-06-26 08:37:00
+author: AClerbois
+github_repo_username: aclerbois
+github_repo : aclerbois
+#image: /images/posts/ngrok.png
+tags: [azuredevops, gitversion]
+---
+
+# Introduction:
+Azure DevOps is a powerful platform that enables seamless collaboration and continuous integration/continuous deployment (CI/CD) workflows for software development teams. When using GitVersion, an open-source tool for versioning Git repositories, you may encounter errors that hinder its functionality. One such error is the message "Cannot find commit [commit hash]. Please ensure that the repository is an unshallow clone with `git fetch --unshallow`." In this blog post, we will explore how to address this issue by adding a configuration variable, Agent.Source.Git.ShallowFetchDepth, with the value 0.
+<!--more-->
+# Understanding the Error:
+The error message suggests that GitVersion is unable to locate a specific commit, indicated by the commit hash (e.g., "eeee52 Update ci.yml for Azure Pipelines"). This error commonly occurs when the repository is not properly cloned with the full commit history, leading to a shallow clone. A shallow clone only fetches a limited depth of commit history, potentially excluding the required commit for GitVersion's functionality.
+
+# Resolving the Error:
+To resolve this issue, we need to modify the configuration of the build agent in Azure DevOps and ensure that the repository is cloned as an unshallow clone. Follow the steps below to add the necessary configuration variable:
+
+Step 1: Access your Azure DevOps project and navigate to the pipeline where GitVersion is being used.
+
+Step 2: Locate the build agent that executes the pipeline. This can be an Azure-hosted agent or a self-hosted agent, depending on your setup.
+
+Step 3: In the pipeline configuration, find the section where you define variables for the agent.
+
+Step 4: Add a new variable named "Agent.Source.Git.ShallowFetchDepth" and set its value to 0.
+
+Step 5: Save the pipeline configuration to apply the changes.
+
+By adding the "Agent.Source.Git.ShallowFetchDepth" variable with a value of 0, we instruct the build agent to perform an unshallow clone, fetching the complete commit history required by GitVersion.
+
+# Validation and Execution:
+After making the necessary changes, trigger a new build pipeline run to validate the fix. GitVersion should now be able to locate the previously missing commit, and the error message should no longer appear. If other errors or warnings are encountered, refer to the GitVersion documentation or seek assistance from the community.
+
+# Conclusion:
+Azure DevOps, coupled with GitVersion, provides a powerful environment for managing versioning in Git repositories. However, occasional errors can arise, such as the inability to find specific commits during the versioning process. By adding the "Agent.Source.Git.ShallowFetchDepth" variable with a value of 0, you can ensure an unshallow clone, thereby resolving the issue. Remember to validate the fix by triggering a new pipeline run and confirming the absence of the error. With these troubleshooting steps, you can maximize the capabilities of Azure DevOps and GitVersion for seamless CI/CD workflows in your software development projects.
