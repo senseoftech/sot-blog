@@ -5,7 +5,7 @@ description: An optional about page for BlogInn Jekyll theme
 image: aboutPage.jpg
 ---
 
-**Adrien Clerbois** is a Software Craftsman from [Anderlues](https://en.wikipedia.org/wiki/Anderlues), Belgium. 
+**Adrien Clerbois** is a Software Craftsman from [Buvrinnes](https://fr.wikipedia.org/wiki/Buvrinnes), Belgium. 
 
 He has been passionate about computers since he was 12 years old, He wrote his first website with a lot of nested tables at 13 years old and that's when he discovered that computers are within everyone's reach. Since then he has evolved well and he is now Microsoft MVP.
 
