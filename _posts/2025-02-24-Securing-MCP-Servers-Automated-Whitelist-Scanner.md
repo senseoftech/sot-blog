@@ -1,86 +1,86 @@
 ---
 layout: post
-title:  "Sécuriser vos serveurs MCP : un scanner automatisé pour GitHub Actions"
+title:  "Securing Your MCP Servers: An Automated Scanner for GitHub Actions"
 date:   2025-02-24 10:00:00
 author: AClerbois
 tags: [MCP, security, AI, GitHub Actions, DevSecOps]
 ---
 
-## Le Model Context Protocol : une révolution... et une surface d'attaque
+## The Model Context Protocol: A Revolution... and an Attack Surface
 
-Le [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) s'impose rapidement comme le standard ouvert permettant aux agents IA — GitHub Copilot, Claude, Cursor et bien d'autres — d'accéder à des outils, des bases de données et des API externes. Concrètement, un fichier `mcp.json` déclaré dans votre projet permet à votre IDE d'interagir avec des serveurs distants ou locaux qui exposent des capacités supplémentaires à l'IA.
+The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is rapidly establishing itself as the open standard enabling AI agents — GitHub Copilot, Claude, Cursor, and many others — to access external tools, databases, and APIs. In practice, an `mcp.json` file declared in your project allows your IDE to interact with remote or local servers that expose additional capabilities to the AI.
 
 <!-- more -->
 
-C'est puissant. C'est aussi **dangereux** si ces serveurs ne sont pas audités.
+It's powerful. It's also **dangerous** if these servers aren't audited.
 
-## Les risques de sécurité liés aux serveurs MCP
+## Security Risks Associated with MCP Servers
 
-La communauté sécurité a déjà identifié plusieurs vecteurs d'attaque spécifiques aux serveurs MCP :
+The security community has already identified several attack vectors specific to MCP servers:
 
 ### Prompt Injection
 
-Un serveur MCP malveillant peut injecter du contenu dans les descriptions de ses outils afin de manipuler le comportement de l'agent IA. L'agent exécute alors des actions non souhaitées par l'utilisateur, en toute transparence.
+A malicious MCP server can inject content into its tool descriptions to manipulate AI agent behavior. The agent then performs actions not intended by the user, in complete transparency.
 
 - [Invariant Labs — MCP Security Notification: Tool Poisoning Attacks](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks)
 - [OWASP — Prompt Injection](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 
 ### Tool Poisoning
 
-Un outil exposé par un serveur MCP peut être compromis : au lieu d'exécuter l'action attendue, il exécute du code malveillant — lecture de fichiers sensibles, exécution de commandes système, exfiltration de tokens.
+A tool exposed by an MCP server can be compromised: instead of executing the expected action, it runs malicious code — reading sensitive files, executing system commands, exfiltrating tokens.
 
 - [Snyk — Securing AI Agents: Understanding MCP Tool Poisoning](https://snyk.io/blog/securing-ai-agents-understanding-mcp-tool-poisoning/)
 
-### Toxic Flows (WhatsApp-style data exfiltration)
+### Toxic Flows (WhatsApp-style Data Exfiltration)
 
-Lorsqu'un agent IA utilise plusieurs outils MCP en chaîne, un outil compromis peut transmettre les données collectées par un outil légitime vers un serveur malveillant. C'est le principe des *toxic tool-call flows*.
+When an AI agent uses multiple MCP tools in a chain, a compromised tool can transmit data collected by a legitimate tool to a malicious server. This is the principle behind *toxic tool-call flows*.
 
 - [Trail of Bits — MCP Security Review](https://blog.trailofbits.com/2025/01/09/the-model-context-protocol-and-its-security-implications/)
 
 ### Rug Pull Attacks
 
-Un serveur MCP peut modifier silencieusement le comportement de ses outils **après** que l'utilisateur les a approuvés. La description visible reste inchangée, mais le code exécuté est différent — un scénario particulièrement sournois.
+An MCP server can silently modify the behavior of its tools **after** the user has approved them. The visible description remains unchanged, but the executed code is different — a particularly insidious scenario.
 
 - [Pillar Security — The Security Risks of Model Context Protocol](https://www.pillar.security/blog/the-security-risks-of-model-context-protocol-mcp)
 
-## Le constat : personne n'audite les serveurs MCP
+## The Reality: Nobody Is Auditing MCP Servers
 
-Lors d'une mission chez un client, nous avons constaté que les équipes de développement ajoutaient des serveurs MCP dans leurs configurations VS Code sans aucun processus de validation. Chaque développeur pouvait déclarer ses propres serveurs, sans visibilité pour l'équipe sécurité.
+During an engagement with a client, we noticed that development teams were adding MCP servers to their VS Code configurations without any validation process. Each developer could declare their own servers, with zero visibility for the security team.
 
-Les questions qui se sont posées :
+The questions that arose:
 
-- **Quels serveurs MCP sont utilisés** dans l'organisation ?
-- **Sont-ils fiables ?** Un serveur HTTP tiers pourrait-il être compromis entre deux déploiements ?
-- **Comment détecter un changement silencieux** dans les outils exposés par un serveur ?
+- **Which MCP servers are being used** across the organization?
+- **Are they trustworthy?** Could a third-party HTTP server be compromised between deployments?
+- **How can we detect silent changes** in the tools exposed by a server?
 
-## La solution : un scanner MCP automatisé dans GitHub Actions
+## The Solution: An Automated MCP Scanner in GitHub Actions
 
-Nous avons développé un workflow GitHub Actions qui :
+We developed a GitHub Actions workflow that:
 
-1. **Détecte automatiquement** tous les fichiers `mcp.json` dans le repository
-2. **Exécute [mcp-scan](https://github.com/snyk/agent-scan)** (outil open-source de Snyk) sur chaque configuration
-3. **Analyse chaque outil, prompt et ressource** exposé par les serveurs MCP déclarés
-4. **Génère un rapport de tests JUnit XML** affiché directement dans l'onglet *Checks* des Pull Requests
-5. **Publie un résumé Markdown** dans le *Job Summary* de chaque exécution
+1. **Automatically discovers** all `mcp.json` files in the repository
+2. **Runs [mcp-scan](https://github.com/snyk/agent-scan)** (Snyk's open-source tool) on each configuration
+3. **Analyzes every tool, prompt, and resource** exposed by the declared MCP servers
+4. **Generates a JUnit XML test report** displayed directly in the Pull Request *Checks* tab
+5. **Publishes a Markdown summary** in the *Job Summary* of each run
 
-### Architecture du pipeline
+### Pipeline Architecture
 
 ```
-mcp.json → mcp-scan (analyse) → JSON → JUnit XML + Markdown → GitHub Actions (Test Report + Summary)
+mcp.json → mcp-scan (analysis) → JSON → JUnit XML + Markdown → GitHub Actions (Test Report + Summary)
 ```
 
-### Déclenchement automatique
+### Automatic Triggers
 
-| Événement | Condition |
+| Event | Condition |
 |---|---|
-| **Push** sur `main` | Modification d'un fichier `mcp.json` |
-| **Pull Request** vers `main` | Idem |
-| **Schedule hebdomadaire** | Chaque lundi à 08:00 UTC |
-| **Manuel** | Via l'onglet Actions |
+| **Push** to `main` | Modification of an `mcp.json` file |
+| **Pull Request** to `main` | Same |
+| **Weekly schedule** | Every Monday at 08:00 UTC |
+| **Manual** | Via the Actions tab |
 
-Le scan **hebdomadaire** est essentiel : il permet de détecter les *rug pull attacks*, c'est-à-dire les modifications silencieuses côté serveur qui surviennent entre deux commits.
+The **weekly scan** is essential: it detects *rug pull attacks*, i.e., silent server-side modifications that occur between commits.
 
-### Exemple de workflow GitHub Actions
+### GitHub Actions Workflow Example
 
 ```yaml
 name: MCP Security Scan
@@ -138,41 +138,41 @@ jobs:
           fail-on-error: false
 ```
 
-### Lecture des résultats
+### Reading the Results
 
-Les résultats apparaissent directement dans l'interface GitHub :
+Results appear directly in the GitHub interface:
 
-- **Onglet Checks** de la PR : chaque serveur MCP est une *test suite*, chaque outil est un *test case*
-  - ✅ **Passed** — aucun problème détecté
-  - ❌ **Failed** — vulnérabilité détectée (prompt injection, tool poisoning, etc.)
-  - ⚠️ **Error** — serveur injoignable ou timeout
-- **Job Summary** : tableau récapitulatif par serveur avec le nombre d'outils analysés et les alertes
+- **Checks tab** on the PR: each MCP server is a *test suite*, each tool is a *test case*
+  - ✅ **Passed** — no issues detected
+  - ❌ **Failed** — vulnerability detected (prompt injection, tool poisoning, etc.)
+  - ⚠️ **Error** — server unreachable or timeout
+- **Job Summary**: summary table per server with the number of tools analyzed and alerts
 
-## Conversion des résultats : le script Python
+## Result Conversion: The Python Script
 
-Le coeur du système repose sur un script Python qui convertit la sortie JSON de `mcp-scan` en rapport JUnit XML exploitable par [dorny/test-reporter](https://github.com/dorny/test-reporter). Chaque outil exposé par un serveur MCP est évalué selon un **score de risque** :
+The core of the system relies on a Python script that converts the JSON output from `mcp-scan` into a JUnit XML report consumable by [dorny/test-reporter](https://github.com/dorny/test-reporter). Each tool exposed by an MCP server is evaluated against a **risk score**:
 
-- Les outils avec un score supérieur au seuil (0.5) sont marqués en **failed**
-- Les serveurs injoignables sont marqués en **error**
-- Les outils sains sont marqués en **passed**
+- Tools with a score above the threshold (0.5) are marked as **failed**
+- Unreachable servers are marked as **error**
+- Healthy tools are marked as **passed**
 
-Ce format JUnit permet d'exploiter l'écosystème existant : intégration native avec GitHub, Azure DevOps, Jenkins, etc.
+This JUnit format leverages the existing ecosystem: native integration with GitHub, Azure DevOps, Jenkins, etc.
 
-## Proposition de valeur
+## Value Proposition
 
-| Bénéfice | Détail |
+| Benefit | Detail |
 |---|---|
-| **Visibilité** | Inventaire centralisé et versionné de tous les serveurs MCP autorisés |
-| **Détection proactive** | Identification des vulnérabilités avant qu'elles n'impactent les développeurs |
-| **Surveillance continue** | Détection des changements silencieux côté serveur (rug pull) |
-| **Coût zéro** | mcp-scan est open-source, aucune licence requise |
-| **Audit & compliance** | Rapports archivés (JUnit XML, JSON, Markdown) pour chaque run |
+| **Visibility** | Centralized, versioned inventory of all authorized MCP servers |
+| **Proactive detection** | Identify vulnerabilities before they impact developers |
+| **Continuous monitoring** | Detect silent server-side changes (rug pulls) |
+| **Zero cost** | mcp-scan is open-source, no license required |
+| **Audit & compliance** | Archived reports (JUnit XML, JSON, Markdown) for every run |
 
-## Pour aller plus loin
+## Going Further
 
-### Ressources sur la sécurité MCP
+### MCP Security Resources
 
-- [Model Context Protocol — Specification officielle](https://modelcontextprotocol.io/)
+- [Model Context Protocol — Official Specification](https://modelcontextprotocol.io/)
 - [Snyk agent-scan (mcp-scan) — GitHub](https://github.com/snyk/agent-scan)
 - [Invariant Labs — MCP Security Notifications](https://invariantlabs.ai/blog/mcp-security-notification-tool-poisoning-attacks)
 - [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
@@ -180,16 +180,16 @@ Ce format JUnit permet d'exploiter l'écosystème existant : intégration native
 - [Pillar Security — The Security Risks of MCP](https://www.pillar.security/blog/the-security-risks-of-model-context-protocol-mcp)
 - [Snyk — Securing AI Agents: Understanding MCP Tool Poisoning](https://snyk.io/blog/securing-ai-agents-understanding-mcp-tool-poisoning/)
 
-### Actions GitHub utilisées
+### GitHub Actions Used
 
-- [dorny/test-reporter](https://github.com/dorny/test-reporter) — Affichage de rapports de tests dans GitHub
-- [astral-sh/setup-uv](https://github.com/astral-sh/setup-uv) — Installation de `uv` pour exécuter `mcp-scan`
-- [actions/upload-artifact](https://github.com/actions/upload-artifact) — Archivage des résultats
+- [dorny/test-reporter](https://github.com/dorny/test-reporter) — Display test reports in GitHub
+- [astral-sh/setup-uv](https://github.com/astral-sh/setup-uv) — Install `uv` to run `mcp-scan`
+- [actions/upload-artifact](https://github.com/actions/upload-artifact) — Archive results
 
 ## Conclusion
 
-L'adoption massive du MCP dans les outils de développement assistés par IA crée une **nouvelle surface d'attaque** que la plupart des organisations n'ont pas encore adressée. Un serveur MCP compromis peut exfiltrer du code source, des secrets ou manipuler silencieusement le comportement d'un agent IA.
+The massive adoption of MCP in AI-assisted development tools creates a **new attack surface** that most organizations have not yet addressed. A compromised MCP server can exfiltrate source code, secrets, or silently manipulate an AI agent's behavior.
 
-La mise en place d'un scanner automatisé, intégré dans la CI/CD, est une première étape essentielle pour **reprendre le contrôle** sur cette supply chain émergente. Le tout sans licence, sans infrastructure supplémentaire, et avec une intégration native dans GitHub Actions.
+Setting up an automated scanner, integrated into your CI/CD pipeline, is an essential first step to **regain control** over this emerging supply chain. All at zero cost, with no additional infrastructure, and native GitHub Actions integration.
 
-**N'attendez pas qu'un incident survienne pour auditer vos serveurs MCP.**
+**Don't wait for an incident to audit your MCP servers.**

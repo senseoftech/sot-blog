@@ -1,70 +1,70 @@
 ---
 layout: post
-title:  "Fluent UI Blazor MCP Server : un assistant IA pour accompagner votre migration vers la V5"
+title:  "Fluent UI Blazor MCP Server: An AI Assistant to Support Your V5 Migration"
 date:   2026-02-23 10:00:00
 author: AClerbois
 tags: [Blazor, Fluent UI, MCP, AI, .NET, Copilot]
 ---
 
-## Le défi de la migration vers Fluent UI Blazor V5
+## The Challenge of Migrating to Fluent UI Blazor V5
 
-La [version 5 de Microsoft Fluent UI Blazor](https://www.fluentui-blazor.net/) apporte son lot de nouveautés, de breaking changes et de refactoring. Avec plus de **142 composants** disponibles, parcourir la documentation pour trouver le bon paramètre, comprendre un enum ou adapter son code existant peut vite devenir chronophage.
+[Microsoft Fluent UI Blazor version 5](https://www.fluentui-blazor.net/) brings a wealth of new features, breaking changes, and refactoring. With over **142 components** available, browsing the documentation to find the right parameter, understand an enum, or adapt your existing code can quickly become time-consuming.
 
 <!-- more -->
 
-Et si votre assistant IA — GitHub Copilot, Claude, Cursor — pouvait accéder **directement** à la documentation complète de chaque composant, y compris les guides de migration ?
+What if your AI assistant — GitHub Copilot, Claude, Cursor — could **directly** access the complete documentation for every component, including migration guides?
 
-C'est exactement ce que propose le **Fluent UI Blazor MCP Server**.
+That's exactly what the **Fluent UI Blazor MCP Server** offers.
 
-## Qu'est-ce qu'un serveur MCP ?
+## What Is an MCP Server?
 
-Le [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) est un standard ouvert qui permet aux agents IA d'accéder à des sources de données externes — outils, API, documentation — via un protocole unifié. Concrètement, un serveur MCP expose des **tools** (invoqués automatiquement par l'IA) et des **resources** (attachées manuellement à une conversation) que votre IDE peut exploiter.
+The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is an open standard that enables AI agents to access external data sources — tools, APIs, documentation — through a unified protocol. In practice, an MCP server exposes **tools** (automatically invoked by the AI) and **resources** (manually attached to a conversation) that your IDE can leverage.
 
-Au lieu de copier-coller de la documentation dans votre prompt, le serveur MCP la rend **nativement accessible** à l'IA.
+Instead of copy-pasting documentation into your prompt, the MCP server makes it **natively accessible** to the AI.
 
-## Le Fluent UI Blazor MCP Server
+## The Fluent UI Blazor MCP Server
 
-J'ai contribué à la création de ce serveur MCP, désormais disponible en tant que [package NuGet officiel](https://www.nuget.org/packages/Microsoft.FluentUI.AspNetCore.McpServer). Il fournit à votre assistant IA un accès complet à la documentation Fluent UI Blazor V5 :
+I contributed to the creation of this MCP server, now available as an [official NuGet package](https://www.nuget.org/packages/Microsoft.FluentUI.AspNetCore.McpServer). It provides your AI assistant with full access to the Fluent UI Blazor V5 documentation:
 
-### Tools disponibles (invoqués automatiquement par l'IA)
+### Available Tools (automatically invoked by the AI)
 
 | Tool | Description |
 |---|---|
-| `ListComponents` | Liste tous les composants disponibles, avec filtrage par catégorie |
-| `GetComponentDetails` | Documentation complète d'un composant (paramètres, événements, méthodes) |
-| `SearchComponents` | Recherche de composants par nom ou description |
-| `GetEnumValues` | Exploration des types enum et de leurs valeurs |
-| `GetComponentEnums` | Liste des enums utilisés par un composant donné |
-| `ListDocumentationTopics` | Liste de tous les sujets de documentation |
-| `GetDocumentationTopic` | Documentation détaillée sur un sujet (installation, localisation, styles…) |
-| `SearchDocumentation` | Recherche dans la documentation par mot-clé |
-| `GetMigrationGuide` | **Guide de migration complet vers la V5** |
+| `ListComponents` | Lists all available components, with optional category filtering |
+| `GetComponentDetails` | Complete documentation for a component (parameters, events, methods) |
+| `SearchComponents` | Search components by name or description |
+| `GetEnumValues` | Explore enum types and their values |
+| `GetComponentEnums` | Lists enums used by a given component |
+| `ListDocumentationTopics` | Lists all documentation topics |
+| `GetDocumentationTopic` | Detailed documentation on a topic (installation, localization, styles...) |
+| `SearchDocumentation` | Search documentation by keyword |
+| `GetMigrationGuide` | **Complete migration guide to V5** |
 
-### Resources disponibles (attachées par l'utilisateur)
+### Available Resources (attached by the user)
 
 | URI | Description |
 |---|---|
-| `fluentui://components` | Liste complète de tous les composants par catégorie |
-| `fluentui://categories` | Liste des catégories avec le nombre de composants |
-| `fluentui://enums` | Liste complète des types enum avec leurs valeurs |
-| `fluentui://component/{name}` | Documentation détaillée d'un composant spécifique |
-| `fluentui://category/{name}` | Composants d'une catégorie donnée |
-| `fluentui://enum/{name}` | Détails d'un type enum |
-| `fluentui://documentation` | Liste de tous les sujets de documentation |
-| `fluentui://documentation/{topic}` | Documentation d'un sujet spécifique |
-| `fluentui://documentation/migration` | Guide de migration vers la V5 |
+| `fluentui://components` | Complete list of all components by category |
+| `fluentui://categories` | List of categories with component counts |
+| `fluentui://enums` | Complete list of all enum types with their values |
+| `fluentui://component/{name}` | Detailed documentation for a specific component |
+| `fluentui://category/{name}` | Components in a given category |
+| `fluentui://enum/{name}` | Details of an enum type |
+| `fluentui://documentation` | List of all documentation topics |
+| `fluentui://documentation/{topic}` | Documentation for a specific topic |
+| `fluentui://documentation/migration` | Migration guide to V5 |
 
 ## Installation
 
-### Option 1 : Outil .NET global (recommandé)
+### Option 1: .NET Global Tool (recommended)
 
-Installez le serveur MCP en tant qu'outil global :
+Install the MCP server as a global tool:
 
 ```bash
 dotnet tool install -g Microsoft.FluentUI.AspNetCore.McpServer
 ```
 
-Puis configurez votre fichier `.vscode/mcp.json` :
+Then configure your `.vscode/mcp.json` file:
 
 ```json
 {
@@ -76,9 +76,9 @@ Puis configurez votre fichier `.vscode/mcp.json` :
 }
 ```
 
-### Option 2 : Utiliser `dnx` (sans installation)
+### Option 2: Using `dnx` (no installation required)
 
-Si vous utilisez .NET 10+, vous pouvez utiliser le script [`dnx`](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-10/sdk#the-new-dnx-tool-execution-script) pour exécuter le serveur à la volée :
+If you're using .NET 10+, you can use the [`dnx`](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-10/sdk#the-new-dnx-tool-execution-script) script to run the server on the fly:
 
 ```json
 {
@@ -95,15 +95,15 @@ Si vous utilisez .NET 10+, vous pouvez utiliser le script [`dnx`](https://learn.
 }
 ```
 
-Cette méthode télécharge automatiquement la dernière version depuis NuGet.org. Vous pouvez aussi épingler une version :
+This method automatically downloads the latest version from NuGet.org. You can also pin a specific version:
 
 ```bash
 dnx Microsoft.FluentUI.AspNetCore.McpServer@5.0.1
 ```
 
-### Option 3 : Build from source
+### Option 3: Build from Source
 
-Pour contribuer ou personnaliser le serveur :
+To contribute or customize the server:
 
 ```bash
 cd src/Tools/McpServer
@@ -129,82 +129,82 @@ dotnet build
 }
 ```
 
-## Exemples d'utilisation concrets
+## Real-World Usage Examples
 
-Une fois le serveur MCP configuré, votre assistant IA peut répondre à des questions comme :
+Once the MCP server is configured, your AI assistant can answer questions like:
 
-**"Quels sont les composants de type Button disponibles ?"**
-→ L'IA invoque automatiquement `ListComponents(category: "Button")` et vous retourne la liste complète.
+**"What Button-type components are available?"**
+→ The AI automatically invokes `ListComponents(category: "Button")` and returns the complete list.
 
-**"Comment utiliser FluentDataGrid avec du tri et de la pagination ?"**
-→ L'IA appelle `GetComponentDetails(componentName: "FluentDataGrid")` et obtient tous les paramètres, événements et méthodes documentés.
+**"How do I use FluentDataGrid with sorting and pagination?"**
+→ The AI calls `GetComponentDetails(componentName: "FluentDataGrid")` and retrieves all documented parameters, events, and methods.
 
-**"Quel enum dois-je utiliser pour l'apparence d'un bouton ?"**
-→ `GetEnumValues(enumName: "Appearance")` retourne toutes les valeurs possibles.
+**"Which enum should I use for button appearance?"**
+→ `GetEnumValues(enumName: "Appearance")` returns all possible values.
 
-**"Comment migrer mon code de la V4 vers la V5 ?"**
-→ `GetMigrationGuide()` fournit le guide de migration complet directement dans le contexte de l'IA.
+**"How do I migrate my code from V4 to V5?"**
+→ `GetMigrationGuide()` provides the complete migration guide directly in the AI's context.
 
-## Architecture : sécurité et performance
+## Architecture: Security and Performance
 
-Le serveur MCP a été conçu avec des principes de sécurité stricts :
+The MCP server was designed with strict security principles:
 
-| Caractéristique | Détail |
+| Feature | Detail |
 |---|---|
-| **Lecture seule** | Aucune modification du système de fichiers |
-| **Aucun accès réseau** | Fonctionne entièrement hors-ligne |
-| **Documentation pré-générée** | Pas d'exécution de code au runtime |
-| **Exécution sandboxée** | Tourne en processus fils de votre IDE |
-| **Aucune donnée sensible** | Sert uniquement de la documentation publique |
-| **Open source** | Code entièrement auditable sur [GitHub](https://github.com/microsoft/fluentui-blazor) |
+| **Read-only** | No file system modifications |
+| **No network access** | Runs entirely offline |
+| **Pre-generated documentation** | No code execution at runtime |
+| **Sandboxed execution** | Runs as a child process of your IDE |
+| **No sensitive data** | Serves only public API documentation |
+| **Open source** | Fully auditable code on [GitHub](https://github.com/microsoft/fluentui-blazor) |
 
-L'architecture repose sur un JSON de documentation **pré-généré au build** à partir des XML docs du projet, puis embarqué comme ressource dans le package. Cela garantit un démarrage rapide et une documentation toujours cohérente avec la version du package.
+The architecture relies on a documentation JSON **pre-generated at build time** from the project's XML docs, then embedded as a resource in the package. This ensures fast startup and documentation that is always consistent with the package version.
 
 ```
 ┌─────────────────────────────────────────────────┐
 │ FluentUI.Demo.DocApiGen (Build Time)            │
-│ ├── Utilise LoxSmoke.DocXml                     │
-│ └── Génère FluentUIComponentsDocumentation.json │
+│ ├── Uses LoxSmoke.DocXml                        │
+│ └── Generates FluentUIComponentsDocumentation.json
 └─────────────────────────────────────────────────┘
                     │
                     ▼ (PreBuild / EmbeddedResource)
 ┌─────────────────────────────────────────────────┐
 │ McpServer (Runtime)                             │
-│ └── Lit le JSON depuis la ressource embarquée   │
+│ └── Reads JSON from embedded resource           │
 └─────────────────────────────────────────────────┘
 ```
 
-## Compatible Visual Studio Code ET Visual Studio 2026
+## Compatible with Visual Studio Code AND Visual Studio 2026
 
-Le serveur MCP fonctionne avec :
+The MCP server works with:
 
 - **Visual Studio Code** via `.vscode/mcp.json`
-- **Visual Studio 2026** via `.mcp.json` à la racine de la solution
-- **Tout client MCP compatible** (MCP Inspector, Claude Desktop, etc.)
+- **Visual Studio 2026** via `.mcp.json` at the solution root
+- **Any compatible MCP client** (MCP Inspector, Claude Desktop, etc.)
 
-## Pourquoi c'est un game-changer pour la V5
+## Why This Is a Game-Changer for V5
 
-La migration vers une nouvelle version majeure d'une bibliothèque de composants est toujours un moment délicat. Avec le serveur MCP Fluent UI Blazor :
+Migrating to a new major version of a component library is always a delicate moment. With the Fluent UI Blazor MCP Server:
 
-1. **Plus besoin de chercher dans la doc** — L'IA a accès à toute la documentation nativement
-2. **Guide de migration intégré** — `GetMigrationGuide()` donne les breaking changes et les étapes de migration
-3. **Découverte de composants** — Vous ne connaissez pas encore tous les 142+ composants ? L'IA peut vous les présenter par catégorie
-4. **Prototypage accéléré** — Demandez à l'IA de générer un `FluentDataGrid` avec pagination, elle connaît tous les paramètres
+1. **No more searching through docs** — The AI has native access to all documentation
+2. **Built-in migration guide** — `GetMigrationGuide()` provides breaking changes and migration steps
+3. **Component discovery** — Don't know all 142+ components yet? The AI can present them by category
+4. **Accelerated prototyping** — Ask the AI to generate a `FluentDataGrid` with pagination — it knows all the parameters
 
-## Liens utiles
+## Useful Links
 
-- [Package NuGet — Microsoft.FluentUI.AspNetCore.McpServer](https://www.nuget.org/packages/Microsoft.FluentUI.AspNetCore.McpServer)
-- [Repository GitHub — microsoft/fluentui-blazor](https://github.com/microsoft/fluentui-blazor)
-- [Site de démonstration Fluent UI Blazor](https://www.fluentui-blazor.net/)
+- [NuGet Package — Microsoft.FluentUI.AspNetCore.McpServer](https://www.nuget.org/packages/Microsoft.FluentUI.AspNetCore.McpServer)
+- [GitHub Repository — microsoft/fluentui-blazor](https://github.com/microsoft/fluentui-blazor)
+- [Fluent UI Blazor Demo Site](https://www.fluentui-blazor.net/)
 - [What's New — Fluent UI Blazor](https://www.fluentui-blazor.net/whatsnew)
-- [Model Context Protocol — Spécification](https://modelcontextprotocol.io/)
-- [Documentation dnx (.NET 10)](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-10/sdk#the-new-dnx-tool-execution-script)
+- [Model Context Protocol — Specification](https://modelcontextprotocol.io/)
+- [dnx Documentation (.NET 10)](https://learn.microsoft.com/en-us/dotnet/core/whats-new/dotnet-10/sdk#the-new-dnx-tool-execution-script)
 
 ## Conclusion
 
-Le Fluent UI Blazor MCP Server transforme votre assistant IA en **expert Fluent UI Blazor**. Plus besoin de jongler entre votre IDE et la documentation : tout est accessible directement dans votre conversation avec l'IA.
+The Fluent UI Blazor MCP Server turns your AI assistant into a **Fluent UI Blazor expert**. No more juggling between your IDE and the documentation — everything is directly accessible within your AI conversation.
 
-Si vous commencez votre migration vers la V5 ou si vous démarrez un nouveau projet Blazor avec Fluent UI, installez le serveur MCP — votre productivité vous remerciera.
+If you're starting your migration to V5 or kicking off a new Blazor project with Fluent UI, install the MCP server — your productivity will thank you.
 
 ```bash
 dotnet tool install -g Microsoft.FluentUI.AspNetCore.McpServer
