@@ -9,7 +9,7 @@ tags: [DevBox, Microsoft Azure, cloud, development]
 ## Introduction to DevBox and its Benefits
 
 DevBox is a powerful development environment that allows developers to create, test, and deploy applications in a cloud-based environment. By using DevBox with Microsoft Azure, developers can take advantage of Azure's robust infrastructure, scalability, and security features. This combination provides a seamless and efficient development experience, enabling developers to focus on writing code and delivering high-quality applications.
-
+<!--more-->
 ## Step-by-Step Instructions on How to Use DevBox with Microsoft Azure
 
 ### Step 1: Set Up Your Azure Account
