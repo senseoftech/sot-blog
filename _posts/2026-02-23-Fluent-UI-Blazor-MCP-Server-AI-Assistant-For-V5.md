@@ -16,6 +16,8 @@ What if your AI assistant — GitHub Copilot, Claude, Cursor — could **directl
 
 That's exactly what the **Fluent UI Blazor MCP Server** offers.
 
+<!--more--> 
+
 ## What Is an MCP Server?
 
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is an open standard that enables AI agents to access external data sources — tools, APIs, documentation — through a unified protocol. In practice, an MCP server exposes **tools** (automatically invoked by the AI) and **resources** (manually attached to a conversation) that your IDE can leverage.
