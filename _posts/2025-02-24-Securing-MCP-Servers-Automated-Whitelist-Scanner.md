@@ -10,7 +10,7 @@ tags: [MCP, security, AI, GitHub Actions, DevSecOps]
 
 The [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) is rapidly establishing itself as the open standard enabling AI agents — GitHub Copilot, Claude, Cursor, and many others — to access external tools, databases, and APIs. In practice, an `mcp.json` file declared in your project allows your IDE to interact with remote or local servers that expose additional capabilities to the AI.
 
-<!-- more -->
+<!--more-->
 
 It's powerful. It's also **dangerous** if these servers aren't audited.
 
