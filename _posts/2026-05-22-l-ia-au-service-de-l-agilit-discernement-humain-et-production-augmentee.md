@@ -6,11 +6,12 @@ author: AClerbois
 tags: [Agile,IA]
 ---
 
-À l’heure où l’intelligence artificielle accélère massivement la production, une question s’impose : comment rester pertinent et irremplaçable ? Lors de l’événement I Love Agility à Namur, François Francart et Adrien Clerbois ont partagé un retour d’expérience concret sur l’intégration de l’IA dans les pratiques agiles en grande entreprise.
+À l’heure où l’intelligence artificielle accélère massivement la production, une question s’impose : comment rester pertinent et irremplaçable ? Lors de l’événement La journée Agile à Namur, François Francart et Adrien Clerbois ont partagé un retour d’expérience concret sur l’intégration de l’IA dans les pratiques agiles en grande entreprise.
 
+<!--more-->
 # L’IA au service de l’agilité – discernement humain et production augmentée
 
-À l’heure où l’intelligence artificielle accélère massivement la production, une question s’impose : comment rester pertinent et irremplaçable ? Lors de l’événement **I Love Agility**, organisé le 22 mai 2026 à Namur sur le site Ecolys, **François Francart** (coach agile, coach de leaders, instructeur mindfulness) et **Adrien Clerbois** (Senior Technical Architect .NET/Cloud/IA, Microsoft MVP) ont partagé un retour d’expérience concret sur l’intégration de l’IA dans les pratiques agiles en grande entreprise.
+À l’heure où l’intelligence artificielle accélère massivement la production, une question s’impose : comment rester pertinent et irremplaçable ? Lors de l’événement **La journée Agile**, organisé le 22 mai 2026 à Namur sur le site Ecolys, **François Francart** (coach agile, coach de leaders, instructeur mindfulness) et **Adrien Clerbois** (Senior Technical Architect .NET/Cloud/IA, Microsoft MVP) ont partagé un retour d’expérience concret sur l’intégration de l’IA dans les pratiques agiles en grande entreprise.
 
 Leur message est clair : l’IA transforme la manière dont nous produisons. Mais elle redéfinit surtout là où se situe la valeur humaine.
 
