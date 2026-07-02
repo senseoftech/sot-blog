@@ -30,6 +30,44 @@ Each customization feature answers a moment in that onboarding:
 
 And for each one, we'll add a little ⚙️ box that says **when it's loaded** and **what the model actually sees**. Let's take them in order.
 
+## Before we take it apart: frontmatter, the label on the sheet
+
+One last tool before we open the hood, because it shows up in almost every example that follows: **frontmatter**.
+
+**The analogy:** it's the **label stuck on the sheet**. It's not part of the procedure itself — it says *who* the sheet is for, *when* to pull it out and *how* to file it. You can sort the whole binder just by reading the labels, without ever opening the sheets.
+
+**Concretely:** it's a small **YAML** block at the very top of a Markdown file, delimited by two `---` lines:
+
+```markdown
+---
+name: azure-deploy
+description: Deploy the app to Azure App Service.
+---
+
+The normal Markdown content starts here…
+```
+
+Everything between the two `---` lines is **metadata**, as key-value pairs. Everything after is the actual content.
+
+And that distinction is not cosmetic — it maps exactly onto our favorite question of "who sees what":
+
+- the **frontmatter** is read by the **harness** (VS Code, Copilot CLI…) *before* any call to the model: it's what decides whether the file applies, when to load it and with which settings;
+- the **body** is the text meant for the **model**, loaded at the moment the mechanism dictates.
+
+Each mechanism uses its own keys, and you'll recognize them throughout the article:
+
+| Key | Seen in… | It's used to… |
+| --- | --- | --- |
+| `applyTo` | `*.instructions.md` | Restrict the rules to files matching the glob pattern |
+| `mode` | `*.prompt.md` | Pick the prompt's execution mode (e.g. `agent`) |
+| `name` / `description` | `SKILL.md`, `*.agent.md` | Identify the sheet — the **always-visible** part of a skill |
+| `tools` | `*.agent.md` | Restrict the tools exposed to the agent |
+| `model` | `*.agent.md` | Force which model to use |
+
+Two special cases worth noting: `AGENTS.md` has **no frontmatter at all** (that's precisely its promise — plain Markdown understood by every agent), and in a `SKILL.md` the frontmatter plays a starring role: `name` and `description` are **the only thing loaded permanently** — the label the model reads to decide whether to open the sheet.
+
+There's your reading key. Now, let's take it apart.
+
 ## 1. Custom Instructions — the welcome handbook
 
 **The analogy:** it's the house rules pinned to the wall. Your assistant reads them *on every task*, without being asked. "Here, we write C#, we test with xUnit, and we answer in English."
@@ -221,6 +259,20 @@ Once plugged in, Copilot can read your GitHub issues, drive a browser, query a d
 | **Skills** | A multi-step know-how (+ scripts) | `SKILL.md` folder in `.github/skills/` | **On demand** — name + description, then the rest | A reusable procedure ("how we deploy") |
 | **Agents** | A dedicated role, with its own tools and model | `*.agent.md` in `.github/agents/` | **On activation** — becomes the system prompt | A recurring profile (reviewer, architect…) |
 | **MCP** | Plugging Copilot into external tools/data | `mcp.json` (e.g. `.vscode/mcp.json`) | **Schemas** on enable, **results** on call | Need to act outside the code (DB, Jira, browser…) |
+
+## 🎁 The starter tip: have the assistant write its own welcome handbook
+
+Sold on `AGENTS.md`, but stuck on the blank page? Good news: there's a **skill whose only job is to generate your `AGENTS.md`**. Yes, you read that right — you use a know-how sheet (mechanism #3) to produce the welcome handbook (mechanism #1). It's a bit of inception, and above all it's **self-teaching**: the assistant explores your repository and writes, by itself, the document that will serve as its memory in every session.
+
+The skill is called [`create-agentsmd`](https://www.skills.sh/github/awesome-copilot/create-agentsmd) and comes from GitHub's official [awesome-copilot](https://github.com/github/awesome-copilot) repository. One command is all it takes:
+
+```bash
+npx skills add https://github.com/github/awesome-copilot --skill create-agentsmd
+```
+
+Then simply ask Copilot to "create the AGENTS.md for the project": the skill kicks in, analyzes your repository (stack, build commands, how to run the tests, conventions, structure — monorepos included) and produces an `AGENTS.md` that follows the open standard, ready to be reviewed and committed.
+
+And that's where the loop closes: on the next start, your amnesiac hire **reads the handbook it wrote itself the day before**. Review it, fix what's missing, commit it — and you've just taken the first concrete step to help your agent keep its context from one session to the next.
 
 ## The simple rule to remember
 

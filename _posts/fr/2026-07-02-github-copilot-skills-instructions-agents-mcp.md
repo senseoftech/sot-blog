@@ -31,6 +31,44 @@ Chaque fonctionnalité de personnalisation répond à un moment de cet accueil :
 
 Et pour chacune, on ajoutera un petit encadré ⚙️ qui dit **quand elle est chargée** et **ce que le modèle voit réellement**. Reprenons dans l'ordre.
 
+## Avant de démonter : le frontmatter, l'étiquette sur la fiche
+
+Un dernier outil avant d'ouvrir le capot, parce qu'il revient dans presque tous les exemples qui suivent : le **frontmatter**.
+
+**L'analogie :** c'est l'**étiquette collée sur la fiche**. Elle ne fait pas partie de la procédure elle-même — elle dit *à qui* la fiche s'adresse, *quand* la sortir et *comment* la ranger. On peut trier tout le classeur rien qu'en lisant les étiquettes, sans jamais ouvrir les fiches.
+
+**Concrètement :** c'est un petit bloc **YAML** placé tout en haut d'un fichier Markdown, délimité par deux lignes `---` :
+
+```markdown
+---
+name: deploiement-azure
+description: Déploie l'app sur Azure App Service.
+---
+
+Ici commence le contenu Markdown normal…
+```
+
+Tout ce qui est entre les deux `---`, ce sont des **métadonnées** sous forme de paires clé-valeur. Tout ce qui vient après, c'est le contenu proprement dit.
+
+Et cette distinction n'est pas cosmétique — elle recoupe exactement notre question fétiche du « qui voit quoi » :
+
+- le **frontmatter** est lu par le **harness** (VS Code, Copilot CLI…) *avant* tout appel au modèle : c'est lui qui décide si le fichier s'applique, quand le charger et avec quels réglages ;
+- le **corps** est le texte destiné au **modèle**, chargé au moment prévu par le mécanisme.
+
+Chaque mécanisme utilise ses propres clés, et vous les reconnaîtrez au fil de l'article :
+
+| Clé | Vue dans… | Elle sert à… |
+| --- | --- | --- |
+| `applyTo` | `*.instructions.md` | Restreindre les règles aux fichiers qui matchent le motif glob |
+| `mode` | `*.prompt.md` | Choisir le mode d'exécution du prompt (ex. `agent`) |
+| `name` / `description` | `SKILL.md`, `*.agent.md` | Identifier la fiche — c'est la partie **toujours visible** du skill |
+| `tools` | `*.agent.md` | Restreindre les outils exposés à l'agent |
+| `model` | `*.agent.md` | Imposer le modèle à utiliser |
+
+Deux cas particuliers à noter : `AGENTS.md` n'a **pas de frontmatter du tout** (c'est justement sa promesse — du Markdown brut compris par tous les agents), et dans un `SKILL.md`, le frontmatter joue un rôle de premier plan : `name` et `description` sont **la seule chose chargée en permanence** — c'est l'étiquette que le modèle lit pour décider d'ouvrir la fiche.
+
+Voilà, vous avez la clé de lecture. Maintenant, démontons.
+
 ## 1. Custom Instructions — le livret d'accueil
 
 **L'analogie :** c'est le règlement intérieur affiché au mur. Votre assistant le lit *à chaque tâche*, sans qu'on lui demande. « Ici, on écrit en C#, on teste avec xUnit, et on répond en français. »
@@ -222,6 +260,20 @@ Une fois branché, Copilot peut lire vos issues GitHub, piloter un navigateur, i
 | **Skills** | Un savoir-faire multi-étapes (+ scripts) | Dossier `SKILL.md` dans `.github/skills/` | **À la demande** — nom + description, puis le reste | Une procédure réutilisable (« comment on déploie ») |
 | **Agents** | Un rôle dédié, avec ses outils et son modèle | `*.agent.md` dans `.github/agents/` | **À l'activation** — devient la consigne système | Un profil récurrent (relecteur, architecte…) |
 | **MCP** | Brancher Copilot sur des outils/données externes | `mcp.json` (ex. `.vscode/mcp.json`) | **Schémas** dès l'activation, **résultats** à l'appel | Besoin d'agir hors du code (BDD, Jira, navigateur…) |
+
+## 🎁 L'astuce de départ : faites écrire le livret d'accueil… par l'assistant lui-même
+
+Vous êtes convaincu par le `AGENTS.md`, mais la page blanche vous freine ? Bonne nouvelle : il existe un **skill dont le seul métier est de générer votre `AGENTS.md`**. Oui, vous avez bien lu — on utilise une fiche savoir-faire (mécanisme n° 3) pour fabriquer le livret d'accueil (mécanisme n° 1). C'est un peu de l'inception, et c'est surtout de l'**auto-apprentissage** : l'assistant explore votre dépôt et rédige lui-même le document qui lui servira de mémoire à chaque session.
+
+Le skill s'appelle [`create-agentsmd`](https://www.skills.sh/github/awesome-copilot/create-agentsmd) et vient du dépôt officiel [awesome-copilot](https://github.com/github/awesome-copilot) de GitHub. Une commande suffit :
+
+```bash
+npx skills add https://github.com/github/awesome-copilot --skill create-agentsmd
+```
+
+Ensuite, demandez simplement à Copilot de « créer le AGENTS.md du projet » : le skill se déclenche, analyse votre dépôt (stack, commandes de build, façon de lancer les tests, conventions, structure — monorepos compris) et produit un `AGENTS.md` conforme au standard ouvert, prêt à être relu et committé.
+
+Et c'est là que la boucle se referme : au prochain démarrage, votre employé amnésique **lira le livret qu'il a écrit lui-même la veille**. Relisez-le, corrigez ce qui manque, committez — et vous venez de faire le premier pas concret pour aider votre agent à garder son contexte d'une session à l'autre.
 
 ## La règle simple à retenir
 
