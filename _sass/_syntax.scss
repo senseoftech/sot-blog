@@ -1,0 +1,40 @@
+// Rouge syntax highlighting — GitHub-style palettes for both themes
+
+html[data-theme="dark"] {
+    --sx-comment: #8b949e;
+    --sx-keyword: #ff7b72;
+    --sx-string: #a5d6ff;
+    --sx-number: #79c0ff;
+    --sx-function: #d2a8ff;
+    --sx-variable: #ffa657;
+    --sx-constant: #79c0ff;
+    --sx-error: #f85149;
+}
+
+html[data-theme="light"] {
+    --sx-comment: #6e7781;
+    --sx-keyword: #cf222e;
+    --sx-string: #0a3069;
+    --sx-number: #0550ae;
+    --sx-function: #8250df;
+    --sx-variable: #953800;
+    --sx-constant: #0550ae;
+    --sx-error: #82071e;
+}
+
+.highlight {
+    .c, .c1, .cm, .cs, .cd { color: var(--sx-comment); font-style: italic; } // comments
+    .k, .kd, .kn, .kp, .kr, .kv, .ow { color: var(--sx-keyword); }           // keywords
+    .kt, .kc { color: var(--sx-constant); }                                  // types, constants
+    .s, .s1, .s2, .sb, .sc, .sd, .sh, .si, .sx, .sr, .ss { color: var(--sx-string); } // strings
+    .m, .mi, .mf, .mh, .mo, .mb, .mx, .il { color: var(--sx-number); }       // numbers
+    .nf, .fm, .nd { color: var(--sx-function); }                             // functions, decorators
+    .na, .nv, .vc, .vg, .vi, .bp { color: var(--sx-variable); }              // attributes, variables
+    .nc, .nn, .no, .ne { color: var(--sx-function); }                        // classes, namespaces
+    .nt { color: var(--sx-keyword); }                                        // HTML tags
+    .o { color: var(--text); }                                               // operators
+    .err { color: var(--sx-error); }
+    .gd { color: var(--sx-error); background: rgba(248, 81, 73, 0.12); }     // diff deleted
+    .gi { color: var(--green); background: rgba(63, 185, 80, 0.12); }        // diff inserted
+    .gh, .gu { color: var(--sx-number); font-weight: 600; }                  // diff headers
+}

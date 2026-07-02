@@ -1,18 +1,11 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
 # Site title
 title: "Sense of [Blog]"
 
 # Tagline next to the site title
-tagline: "Sense of Tech's blog writted by Adrien Clerbois."
+tagline: "Tech notes on .NET, Azure, DevOps & AI — by Adrien Clerbois, Microsoft MVP."
 
 # A description of your site for social meta tag, search engines, and feed.xml
-description: "This is the blog of Sense of Tech"
+description: "The Sense of Tech blog — .NET, Azure, DevOps and AI articles by Adrien Clerbois, Microsoft MVP in Developer Technologies."
 
 # The subpath of your site, e.g. /blog, for generating urls
 baseurl:
@@ -26,15 +19,33 @@ sass:
 url: "https://blog.senseof.tech"
 
 # Site navigation - each item must have a title and a url.
+# i18n keys map to the dictionary in js/scripts.js
 navigation:
 - text: Home
+  i18n: nav_home
   url: /
-- text: About
-  url: /about/
-# - text: Style Guide
-#   url: /style-guide/
 - text: Archives
+  i18n: nav_archives
   url: /tags/
+- text: About
+  i18n: nav_about
+  url: /about/
+
+# Important links shown in the footer and on the home page
+important_links:
+- text: "Sense of Tech"
+  url: "https://www.senseof.tech"
+  description: "Company website"
+# TODO: replace with your real MVP profile URL
+- text: "Microsoft MVP Profile"
+  url: "https://mvp.microsoft.com/"
+  description: "Developer Technologies"
+- text: "GitHub"
+  url: "https://github.com/aclerbois"
+  description: "Open source & samples"
+- text: "aclerbois.be"
+  url: "http://www.aclerbois.be"
+  description: "Personal website"
 
 # The shortname for your Disqus site to enable comments.
 disqus: ""
@@ -44,16 +55,10 @@ google_analytics: ""
 
 # Author information - author info at the bottom of the post
 author_name: "Adrien Clerbois"
-author_bio: "Adrien Clerbois is a Microsoft MVP in Developer Technologies. Adrien founded the company Sense of Tech"
+author_bio: "Adrien Clerbois is a Microsoft MVP in Developer Technologies. Adrien founded the company Sense of Tech."
 author_url:  "http://www.aclerbois.be"
 author_location: "Buvrinnes, Belgium"
 author_image: /images/authorimage.png
-
-# Sidebar Add banner
-banner_url: "https://www.senseof.tech"
-banner_image: images/banner.jpg
-banner_image_alt: "Sense of Tech"
-
 
 # Social links in the site footer
 twitter_url: "https://twitter.com/senseof_tech"
@@ -61,14 +66,29 @@ facebook_url: "https://www.facebook.com/senseoftech"
 github_url: "https://github.com/senseoftech"
 linkedin_url: "https://www.linkedin.com/senseoftech"
 
-# http://jekyllrb.com/docs/pagination/
-paginate: 4
-paginate_path: '/blog/page:num/'
 plugins:
-  - jekyll-paginate
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 permalink: pretty
 markdown: kramdown
 kramdown:
-    auto_ids: false
+    auto_ids: true
+
+excerpt_separator: "<!--more-->"
+
+# Bilingual posts: every article exists in _posts/en and _posts/fr,
+# paired by a shared `ref` front matter key. English keeps the historic
+# URLs; French lives under /fr/.
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      lang: "en"
+      layout: "post"
+  - scope:
+      path: "_posts/fr"
+    values:
+      lang: "fr"
+      permalink: "/fr/:categories/:year/:month/:day/:title/"

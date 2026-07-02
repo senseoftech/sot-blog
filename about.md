@@ -1,8 +1,8 @@
 ---
 layout: page
 title: About this blog
-description: An optional about page for BlogInn Jekyll theme
-image: aboutPage.jpg
+description: About Adrien Clerbois and the Sense of Tech blog
+image: /images/aboutPage.jpg
 ---
 
 **Adrien Clerbois** is a Software Craftsman from [Buvrinnes](https://fr.wikipedia.org/wiki/Buvrinnes), Belgium. 

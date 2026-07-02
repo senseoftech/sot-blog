@@ -1,36 +1,43 @@
 ---
 layout: default
-title: Post Archives
+title: Archives
 ---
-<div class="primary">
-    <article class="post">
-        <header class="post-header">
-            <div class="post-header-wrap">
-                <h1 class="post-title outer">{{page.title}}</h1>
-            </div>
-        </header><!-- .post-header -->
-        <div class="post-content inner-small outer">
-            <div class="archive-tag-list">
-                {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-                {% assign sortedTags = site_tags | split:',' | sort %}
-                {% for tag in sortedTags %}
-                <a href="#{{ tag | cgi_escape }}">{{ tag }} </a>
-                {% endfor %}
-            </div>
-            {% for tag in sortedTags %}
-            <h2 id="{{ tag | cgi_escape }}">{{ tag }}</h2>
-            <ul class="archive-post-list">
-                {% for post in site.tags[tag] %}
-                <li>
-                    <h3 class="archive-post-title"><a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{ post.title }}</a></h3>
-                    <span class="archive-post-meta"> — <time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%B %-d, %Y" }}</time></span>
-                </li>
-                {% endfor %}
-            </ul>
-            <p><a href="#top" class="archive-top-link" title="Back to Top">Return to top</a></p>
-            {% endfor %}
-        </div><!-- .post-content -->
-    </article><!-- .post -->
-</div><!-- .primary -->
+<section class="wrap archives">
+    <header class="post-full-header">
+        <h1 class="post-full-title" data-i18n="archives_title">Archives</h1>
+        <p class="hero-tagline" data-i18n="archives_subtitle">Every post, grouped by tag.</p>
+    </header>
 
-{% include sidebar.html %}
+    <div class="posts-toolbar">
+        <span></span>
+        <div class="lang-filter" role="group" aria-label="Filter posts by language">
+            <button class="filter-button is-active" data-filter="all" data-i18n="filter_all">All</button>
+            <button class="filter-button" data-filter="en">EN</button>
+            <button class="filter-button" data-filter="fr">FR</button>
+        </div>
+    </div>
+
+    {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+    {% assign sortedTags = site_tags | split:',' | sort_natural %}
+
+    <div class="archive-tag-cloud">
+        {% for tag in sortedTags %}
+        <a class="tag-chip" href="#{{ tag | cgi_escape }}">#{{ tag }} <span class="tag-count">{{ site.tags[tag].size }}</span></a>
+        {% endfor %}
+    </div>
+
+    {% for tag in sortedTags %}
+    <section class="archive-group" data-tag-group>
+        <h2 class="archive-tag-title" id="{{ tag | cgi_escape }}">#{{ tag }}</h2>
+        <ul class="archive-post-list">
+            {% for post in site.tags[tag] %}
+            <li class="archive-post" data-lang="{{ post.lang }}">
+                <time class="post-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+                <span class="lang-badge lang-{{ post.lang }}">{{ post.lang | upcase }}</span>
+                <a href="{{ site.baseurl }}{{ post.url }}" rel="bookmark">{{ post.title }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    {% endfor %}
+</section>

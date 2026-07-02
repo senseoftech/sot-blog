@@ -1,40 +1,293 @@
-/*
-* reframe.js - Reframe.js: responsive iframes for embedded content
-* @version v2.2.7
-* @link https://github.com/dollarshaveclub/reframe.js
-* @author Jeff Wainwright <jjwainwright2@gmail.com> (http://jeffry.in)
-* @license MIT
-*/
-!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?module.exports=t():"function"==typeof define&&define.amd?define(t):(e=e||self).reframe=t()}(this,function(){"use strict";return function(e,t){var i="string"==typeof e?document.querySelectorAll(e):e,n=t||"js-reframe";"length"in i||(i=[i]);for(var o=0;o<i.length;o+=1){var r=i[o];if(!(-1!==r.className.split(" ").indexOf(n)||-1<r.style.width.indexOf("%"))){var d=(r.getAttribute("height")||r.offsetHeight)/(r.getAttribute("width")||r.offsetWidth)*100,f=document.createElement("div");f.className=n;var s=f.style;s.position="relative",s.width="100%",s.paddingTop=d+"%";var a=r.style;a.position="absolute",a.width="100%",a.height="100%",a.left="0",a.top="0",r.parentNode.insertBefore(f,r),r.parentNode.removeChild(r),f.appendChild(r)}}}});
+(function () {
+    'use strict';
 
-/*
-* Smooth Scroll behavior polyfill
-* @version v0.4.4
-* @link https://github.com/iamdustan/smoothscroll
-* @license MIT
-*/
-"use strict";function polyfill(){var o=window,t=document;if(!("scrollBehavior"in t.documentElement.style&&!0!==o.__forceSmoothScrollPolyfill__)){var l,e=o.HTMLElement||o.Element,r=468,i={scroll:o.scroll||o.scrollTo,scrollBy:o.scrollBy,elementScroll:e.prototype.scroll||n,scrollIntoView:e.prototype.scrollIntoView},s=o.performance&&o.performance.now?o.performance.now.bind(o.performance):Date.now,c=(l=o.navigator.userAgent,new RegExp(["MSIE ","Trident/","Edge/"].join("|")).test(l)?1:0);o.scroll=o.scrollTo=function(){void 0!==arguments[0]&&(!0!==f(arguments[0])?v.call(o,t.body,void 0!==arguments[0].left?~~arguments[0].left:o.scrollX||o.pageXOffset,void 0!==arguments[0].top?~~arguments[0].top:o.scrollY||o.pageYOffset):i.scroll.call(o,void 0!==arguments[0].left?arguments[0].left:"object"!=typeof arguments[0]?arguments[0]:o.scrollX||o.pageXOffset,void 0!==arguments[0].top?arguments[0].top:void 0!==arguments[1]?arguments[1]:o.scrollY||o.pageYOffset))},o.scrollBy=function(){void 0!==arguments[0]&&(f(arguments[0])?i.scrollBy.call(o,void 0!==arguments[0].left?arguments[0].left:"object"!=typeof arguments[0]?arguments[0]:0,void 0!==arguments[0].top?arguments[0].top:void 0!==arguments[1]?arguments[1]:0):v.call(o,t.body,~~arguments[0].left+(o.scrollX||o.pageXOffset),~~arguments[0].top+(o.scrollY||o.pageYOffset)))},e.prototype.scroll=e.prototype.scrollTo=function(){if(void 0!==arguments[0])if(!0!==f(arguments[0])){var o=arguments[0].left,t=arguments[0].top;v.call(this,this,void 0===o?this.scrollLeft:~~o,void 0===t?this.scrollTop:~~t)}else{if("number"==typeof arguments[0]&&void 0===arguments[1])throw new SyntaxError("Value could not be converted");i.elementScroll.call(this,void 0!==arguments[0].left?~~arguments[0].left:"object"!=typeof arguments[0]?~~arguments[0]:this.scrollLeft,void 0!==arguments[0].top?~~arguments[0].top:void 0!==arguments[1]?~~arguments[1]:this.scrollTop)}},e.prototype.scrollBy=function(){void 0!==arguments[0]&&(!0!==f(arguments[0])?this.scroll({left:~~arguments[0].left+this.scrollLeft,top:~~arguments[0].top+this.scrollTop,behavior:arguments[0].behavior}):i.elementScroll.call(this,void 0!==arguments[0].left?~~arguments[0].left+this.scrollLeft:~~arguments[0]+this.scrollLeft,void 0!==arguments[0].top?~~arguments[0].top+this.scrollTop:~~arguments[1]+this.scrollTop))},e.prototype.scrollIntoView=function(){if(!0!==f(arguments[0])){var l=function(o){for(;o!==t.body&&!1===d(o);)o=o.parentNode||o.host;return o}(this),e=l.getBoundingClientRect(),r=this.getBoundingClientRect();l!==t.body?(v.call(this,l,l.scrollLeft+r.left-e.left,l.scrollTop+r.top-e.top),"fixed"!==o.getComputedStyle(l).position&&o.scrollBy({left:e.left,top:e.top,behavior:"smooth"})):o.scrollBy({left:r.left,top:r.top,behavior:"smooth"})}else i.scrollIntoView.call(this,void 0===arguments[0]||arguments[0])}}function n(o,t){this.scrollLeft=o,this.scrollTop=t}function f(o){if(null===o||"object"!=typeof o||void 0===o.behavior||"auto"===o.behavior||"instant"===o.behavior)return!0;if("object"==typeof o&&"smooth"===o.behavior)return!1;throw new TypeError("behavior member of ScrollOptions "+o.behavior+" is not a valid value for enumeration ScrollBehavior.")}function p(o,t){return"Y"===t?o.clientHeight+c<o.scrollHeight:"X"===t?o.clientWidth+c<o.scrollWidth:void 0}function a(t,l){var e=o.getComputedStyle(t,null)["overflow"+l];return"auto"===e||"scroll"===e}function d(o){var t=p(o,"Y")&&a(o,"Y"),l=p(o,"X")&&a(o,"X");return t||l}function h(t){var l,e,i,c,n=(s()-t.startTime)/r;c=n=n>1?1:n,l=.5*(1-Math.cos(Math.PI*c)),e=t.startX+(t.x-t.startX)*l,i=t.startY+(t.y-t.startY)*l,t.method.call(t.scrollable,e,i),e===t.x&&i===t.y||o.requestAnimationFrame(h.bind(o,t))}function v(l,e,r){var c,f,p,a,d=s();l===t.body?(c=o,f=o.scrollX||o.pageXOffset,p=o.scrollY||o.pageYOffset,a=i.scroll):(c=l,f=l.scrollLeft,p=l.scrollTop,a=n),h({scrollable:c,method:a,startTime:d,startX:f,startY:p,x:e,y:r})}}"object"==typeof exports&&"undefined"!=typeof module?module.exports={polyfill:polyfill}:polyfill();
+    /* ---------- UI translations (EN / FR) ---------- */
 
-/* Menu on small screens */
-let menuToggle = document.querySelectorAll('.js-menu-toggle');
-if (menuToggle) {
-    for (let i = 0; i < menuToggle.length; i++) {
-        menuToggle[i].addEventListener('click', function (e) {
-            document.body.classList.toggle('js-menu-active');
-            e.preventDefault();
+    var I18N = {
+        en: {
+            nav_home: 'Home',
+            nav_archives: 'Archives',
+            nav_about: 'About',
+            hero_tagline: 'Tech notes on .NET, Azure, DevOps & AI — by Adrien Clerbois, Microsoft MVP in Developer Technologies.',
+            latest_posts: 'Latest posts',
+            filter_all: 'All',
+            min_read: 'min read',
+            newer_posts: '← Newer',
+            older_posts: 'Older →',
+            toc_title: 'On this page',
+            share_label: 'Share:',
+            related_title: 'Related posts',
+            nav_previous: '← Previous',
+            nav_next: 'Next →',
+            archives_title: 'Archives',
+            archives_subtitle: 'Every post, grouped by tag.',
+            footer_links: 'Important links',
+            footer_navigate: 'Navigate',
+            footer_built: 'Built with Jekyll, hosted on GitHub Pages.',
+            search_placeholder: 'Search articles…',
+            search_hint: 'Type to search across all articles.',
+            search_empty: 'No results for',
+            copy: 'copy',
+            copied: 'copied!'
+        },
+        fr: {
+            nav_home: 'Accueil',
+            nav_archives: 'Archives',
+            nav_about: 'À propos',
+            hero_tagline: 'Notes techniques sur .NET, Azure, DevOps & IA — par Adrien Clerbois, Microsoft MVP en Developer Technologies.',
+            latest_posts: 'Derniers articles',
+            filter_all: 'Tous',
+            min_read: 'min de lecture',
+            newer_posts: '← Récents',
+            older_posts: 'Anciens →',
+            toc_title: 'Sur cette page',
+            share_label: 'Partager :',
+            related_title: 'Articles liés',
+            nav_previous: '← Précédent',
+            nav_next: 'Suivant →',
+            archives_title: 'Archives',
+            archives_subtitle: 'Tous les articles, groupés par tag.',
+            footer_links: 'Liens importants',
+            footer_navigate: 'Navigation',
+            footer_built: 'Propulsé par Jekyll, hébergé sur GitHub Pages.',
+            search_placeholder: 'Rechercher un article…',
+            search_hint: 'Tapez pour chercher dans tous les articles.',
+            search_empty: 'Aucun résultat pour',
+            copy: 'copier',
+            copied: 'copié !'
+        }
+    };
+
+    function currentLang() {
+        return document.documentElement.getAttribute('data-ui-lang') || 'en';
+    }
+
+    function applyTranslations() {
+        var dict = I18N[currentLang()];
+        document.querySelectorAll('[data-i18n]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n');
+            if (dict[key]) el.textContent = dict[key];
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
+            var key = el.getAttribute('data-i18n-placeholder');
+            if (dict[key]) el.setAttribute('placeholder', dict[key]);
+        });
+        var label = document.querySelector('[data-lang-label]');
+        if (label) label.textContent = currentLang().toUpperCase();
+    }
+
+    var langToggle = document.getElementById('lang-toggle');
+    if (langToggle) {
+        langToggle.addEventListener('click', function () {
+            var next = currentLang() === 'en' ? 'fr' : 'en';
+            document.documentElement.setAttribute('data-ui-lang', next);
+            localStorage.setItem('ui-lang', next);
+            applyTranslations();
+            if (hasFilterableList) {
+                applyLangFilter(next);
+            }
         });
     }
-}
+    applyTranslations();
 
-/* Responsive video embeds */
-var videoEmbeds = [
-    'iframe[src*="youtube.com"]',
-    'iframe[src*="vimeo.com"]'
-];
-reframe(videoEmbeds.join(','));
+    /* ---------- Theme toggle ---------- */
 
-/* Smooth scroll to the top of the page */
-document.getElementById('js-top-link').addEventListener('click', function (e) {
-    document.querySelector('.site-nav').scrollIntoView({ behavior: 'smooth' });
-    e.preventDefault();
-});
+    var themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function () {
+            var next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+        });
+    }
+
+    /* ---------- Mobile nav ---------- */
+
+    var navToggle = document.getElementById('nav-toggle');
+    var mobileNav = document.getElementById('mobile-nav');
+    if (navToggle && mobileNav) {
+        navToggle.addEventListener('click', function () {
+            var open = mobileNav.classList.toggle('is-open');
+            navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        });
+    }
+
+    /* ---------- Language filter on post lists ---------- */
+
+    function applyLangFilter(filter) {
+        document.querySelectorAll('.filter-button').forEach(function (b) {
+            b.classList.toggle('is-active', b.getAttribute('data-filter') === filter);
+        });
+        document.querySelectorAll('.post-card, .archive-post').forEach(function (item) {
+            item.classList.toggle('is-hidden', filter !== 'all' && item.getAttribute('data-lang') !== filter);
+        });
+        // Hide tag groups whose posts are all filtered out
+        document.querySelectorAll('[data-tag-group]').forEach(function (group) {
+            var anyVisible = group.querySelector('.archive-post:not(.is-hidden)');
+            group.classList.toggle('is-hidden', !anyVisible);
+        });
+    }
+
+    var hasFilterableList = document.querySelector('.post-card, .archive-post');
+
+    document.querySelectorAll('.filter-button').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            applyLangFilter(btn.getAttribute('data-filter'));
+        });
+    });
+
+    // Every article exists in both languages: default the list to the UI language
+    if (hasFilterableList) {
+        applyLangFilter(currentLang());
+    }
+
+    /* ---------- Table of contents ---------- */
+
+    var tocContainer = document.getElementById('post-toc');
+    var tocNav = document.getElementById('toc-nav');
+    var postContent = document.getElementById('post-content');
+    if (tocContainer && tocNav && postContent) {
+        var headings = postContent.querySelectorAll('h2, h3');
+        if (headings.length >= 2) {
+            tocContainer.hidden = false;
+            headings.forEach(function (h, i) {
+                if (!h.id) h.id = 'section-' + i;
+                var link = document.createElement('a');
+                link.href = '#' + h.id;
+                link.textContent = h.textContent;
+                link.className = h.tagName === 'H3' ? 'toc-h3' : 'toc-h2';
+                tocNav.appendChild(link);
+            });
+
+            // Scroll spy
+            var tocLinks = tocNav.querySelectorAll('a');
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        tocLinks.forEach(function (l) {
+                            l.classList.toggle('is-active', l.hash === '#' + entry.target.id);
+                        });
+                    }
+                });
+            }, { rootMargin: '-80px 0px -70% 0px' });
+            headings.forEach(function (h) { observer.observe(h); });
+        }
+    }
+
+    /* ---------- Copy button on code blocks ---------- */
+
+    document.querySelectorAll('.post-content pre').forEach(function (pre) {
+        var button = document.createElement('button');
+        button.className = 'copy-code-button';
+        button.type = 'button';
+        button.textContent = I18N[currentLang()].copy;
+        button.addEventListener('click', function () {
+            var code = pre.querySelector('code');
+            navigator.clipboard.writeText(code ? code.innerText : pre.innerText).then(function () {
+                button.textContent = I18N[currentLang()].copied;
+                button.classList.add('is-copied');
+                setTimeout(function () {
+                    button.textContent = I18N[currentLang()].copy;
+                    button.classList.remove('is-copied');
+                }, 2000);
+            });
+        });
+        pre.appendChild(button);
+    });
+
+    /* ---------- Search ---------- */
+
+    var overlay = document.getElementById('search-overlay');
+    var searchInput = document.getElementById('search-input');
+    var searchResults = document.getElementById('search-results');
+    var searchIndex = null;
+
+    function openSearch() {
+        if (!overlay) return;
+        overlay.hidden = false;
+        searchInput.focus();
+        if (!searchIndex) {
+            fetch('/search.json')
+                .then(function (r) { return r.json(); })
+                .then(function (data) { searchIndex = data; });
+        }
+    }
+
+    function closeSearch() {
+        if (!overlay) return;
+        overlay.hidden = true;
+        searchInput.value = '';
+        renderHint();
+    }
+
+    function renderHint() {
+        searchResults.innerHTML = '<p class="search-hint">' + I18N[currentLang()].search_hint + '</p>';
+    }
+
+    function escapeHtml(s) {
+        return s.replace(/[&<>"]/g, function (c) {
+            return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+        });
+    }
+
+    function runSearch(query) {
+        if (!searchIndex || query.length < 2) {
+            renderHint();
+            return;
+        }
+        var terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+        var lang = currentLang();
+        var scored = [];
+        searchIndex.forEach(function (post) {
+            if (post.lang !== lang) return;
+            var title = post.title.toLowerCase();
+            var body = post.content.toLowerCase();
+            var tags = (post.tags || []).join(' ').toLowerCase();
+            var score = 0;
+            var matchesAll = terms.every(function (t) {
+                var inTitle = title.indexOf(t) !== -1;
+                var inTags = tags.indexOf(t) !== -1;
+                var inBody = body.indexOf(t) !== -1;
+                if (inTitle) score += 10;
+                if (inTags) score += 5;
+                if (inBody) score += 1;
+                return inTitle || inTags || inBody;
+            });
+            if (matchesAll) scored.push({ post: post, score: score });
+        });
+        scored.sort(function (a, b) { return b.score - a.score; });
+
+        if (!scored.length) {
+            searchResults.innerHTML = '<p class="search-empty">' + I18N[currentLang()].search_empty + ' “' + escapeHtml(query) + '”</p>';
+            return;
+        }
+        searchResults.innerHTML = scored.slice(0, 10).map(function (item) {
+            var p = item.post;
+            var title = escapeHtml(p.title);
+            terms.forEach(function (t) {
+                title = title.replace(new RegExp('(' + t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'ig'), '<mark>$1</mark>');
+            });
+            return '<a class="search-result" href="' + p.url + '">' +
+                '<span class="result-title">' + title + '</span>' +
+                '<span class="result-meta">' + p.date + ' · ' + (p.lang || 'en').toUpperCase() +
+                (p.tags && p.tags.length ? ' · #' + p.tags.slice(0, 3).join(' #') : '') + '</span>' +
+                '</a>';
+        }).join('');
+    }
+
+    if (overlay) {
+        document.getElementById('search-open').addEventListener('click', openSearch);
+        document.getElementById('search-close').addEventListener('click', closeSearch);
+        overlay.addEventListener('click', function (e) {
+            if (e.target === overlay) closeSearch();
+        });
+        searchInput.addEventListener('input', function () { runSearch(searchInput.value.trim()); });
+        document.addEventListener('keydown', function (e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                overlay.hidden ? openSearch() : closeSearch();
+            }
+            if (e.key === 'Escape' && !overlay.hidden) closeSearch();
+        });
+    }
+})();

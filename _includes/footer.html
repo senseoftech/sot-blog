@@ -1,54 +1,46 @@
-<footer class="site-footer outer">
-    <div class="inner">
-        <div class="social-links">
-            {% if site.twitter_url %}
-            <a href="{{ site.twitter_url }}" class="button button-icon button-fill-horz" target="_blank"
-                rel="noopener"><span class="screen-reader-text">Twitter</span>{% include icons/twitter.html %}</a>
-            {% endif %}
-            {% if site.facebook_url %}
-            <a href="{{ site.facebook_url }}" class="button button-icon button-fill-horz" target="_blank"
-                rel="noopener"><span class="screen-reader-text">Facebook</span>{% include icons/facebook.html %}</a>
-            {% endif %}
-            {% if site.github_url %}
-            <a href="{{ site.github_url }}" class="button button-icon button-fill-horz" target="_blank"
-                rel="noopener"><span class="screen-reader-text">GitHub</span>{% include icons/github.html %}</a>
-            {% endif %}
-            {% if site.codepen_url %}
-            <a href="{{ site.codepen_url }}" class="button button-icon button-fill-horz" target="_blank"
-                rel="noopener"><span class="screen-reader-text">CodePen</span>{% include icons/codepen.html %}</a>
-            {% endif %}
-            {% if site.dribbble_url %}
-            <a href="{{ site.dribbble_url }}" class="button button-icon button-fill-horz" target="_blank"
-                rel="noopener"><span class="screen-reader-text">Dribbble</span>{% include icons/dribbble.html %}</a>
-            {% endif %}
-            {% if site.medium_url %}
-            <a href="{{ site.medium_url }}" class="button button-icon button-fill-horz" target="_blank"
-                rel="noopener"><span class="screen-reader-text">Medium</span>{% include icons/medium.html %}</a>
-            {% endif %}
-            {% if site.instagram_url %}
-            <a href="{{ site.instagram_url }}" class="button button-icon button-fill-horz" target="_blank"
-                rel="noopener"><span class="screen-reader-text">Instagram</span>{% include icons/instagram.html %}</a>
-            {% endif %}
-            {% if site.pinterest_url %}
-            <a href="{{ site.pinterest_url }}" class="button button-icon button-fill-horz" target="_blank"
-                rel="noopener"><span class="screen-reader-text">Pinterest</span>{% include icons/pinterest.html %}</a>
-            {% endif %}
-            {% if site.linkedin_url %}
-            <a href="{{ site.linkedin_url }}" class="button button-icon button-fill-horz" target="_blank"
-                rel="noopener"><span class="screen-reader-text">LinkedIn</span>{% include icons/linkedin.html %}</a>
-            {% endif %}
-            {% if site.weibo_url %}
-            <a href="{{ site.weibo_url }}" class="button button-icon button-fill-horz" target="_blank"
-                rel="noopener"><span class="screen-reader-text">Weibo</span>{% include icons/weibo.html %}</a>
-            {% endif %}
-            <a href="{{ site.baseurl }}/feed.xml" class="button button-icon button-fill-horz"><span
-                    class="screen-reader-text">RSS</span>{% include icons/rss.html %}</a>
-        </div><!-- .social-links -->
-        <div class="site-info">
-            <div class="copyright">
-                &copy; <a href="{{ site.baseurl }}/">{{site.title}}</a> all rights reserved. <br />
+<footer class="site-footer">
+    <div class="wrap footer-grid">
+        <div class="footer-col footer-brand">
+            <a class="site-brand" href="{{ site.baseurl }}/"><span class="brand-prompt">~/</span>senseof.tech</a>
+            <p class="footer-tagline">{{ site.tagline }}</p>
+            <div class="social-links">
+                {% if site.github_url %}
+                <a href="{{ site.github_url }}" target="_blank" rel="noopener" aria-label="GitHub">{% include icons/github.html %}</a>
+                {% endif %}
+                {% if site.linkedin_url %}
+                <a href="{{ site.linkedin_url }}" target="_blank" rel="noopener" aria-label="LinkedIn">{% include icons/linkedin.html %}</a>
+                {% endif %}
+                {% if site.twitter_url %}
+                <a href="{{ site.twitter_url }}" target="_blank" rel="noopener" aria-label="Twitter / X">{% include icons/twitter.html %}</a>
+                {% endif %}
+                {% if site.facebook_url %}
+                <a href="{{ site.facebook_url }}" target="_blank" rel="noopener" aria-label="Facebook">{% include icons/facebook.html %}</a>
+                {% endif %}
+                <a href="{{ "/feed.xml" | prepend: site.baseurl }}" aria-label="RSS feed">{% include icons/rss.html %}</a>
             </div>
-            <a href="#top" id="js-top-link" class="top-link button button-icon button-fill-horz"><span class="screen-reader-text">Back to the top</span>{% include icons/chevron-up.html %}</a>
-        </div><!-- .site-info -->
-    </div><!-- .inner -->
-</footer><!-- .site-footer -->
+        </div>
+        <div class="footer-col">
+            <h2 class="footer-title" data-i18n="footer_links">Important links</h2>
+            <ul class="footer-links">
+                {% for link in site.important_links %}
+                <li>
+                    <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.text }}</a>
+                    {% if link.description %}<span class="footer-link-desc">{{ link.description }}</span>{% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h2 class="footer-title" data-i18n="footer_navigate">Navigate</h2>
+            <ul class="footer-links">
+                {% for item in site.navigation %}
+                <li><a href="{{ item.url | prepend: site.baseurl }}" {% if item.i18n %}data-i18n="{{ item.i18n }}"{% endif %}>{{ item.text }}</a></li>
+                {% endfor %}
+                <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap footer-bottom">
+        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author_name }} — <span data-i18n="footer_built">Built with Jekyll, hosted on GitHub Pages.</span></p>
+    </div>
+</footer>

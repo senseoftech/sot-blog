@@ -1,0 +1,252 @@
+// Header, footer, page chrome
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    height: 64px;
+}
+
+.site-brand {
+    font-family: $font-mono;
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--text);
+    white-space: nowrap;
+
+    .brand-prompt {
+        color: var(--accent);
+    }
+
+    &:hover {
+        color: var(--text);
+    }
+}
+
+.brand-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.05em;
+    margin-left: 3px;
+    background: var(--accent);
+    vertical-align: text-bottom;
+    animation: blink 1.2s steps(2) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.site-nav {
+    display: flex;
+    gap: 4px;
+    margin-right: auto;
+
+    a {
+        color: var(--text-muted);
+        font-size: 0.92rem;
+        font-weight: 500;
+        padding: 6px 12px;
+        border-radius: 8px;
+
+        &:hover {
+            color: var(--text);
+            background: var(--bg-subtle);
+        }
+
+        &.is-active {
+            color: var(--accent);
+        }
+    }
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+}
+
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.15s ease;
+
+    &:hover {
+        color: var(--text);
+        background: var(--bg-subtle);
+        border-color: var(--border);
+    }
+}
+
+.lang-label {
+    font-family: $font-mono;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+// Theme toggle shows the icon of the theme you'd switch to
+html[data-theme="dark"] .icon-moon,
+html[data-theme="light"] .icon-sun {
+    display: none;
+}
+
+.nav-burger {
+    display: none;
+}
+
+.mobile-nav {
+    display: none;
+    flex-direction: column;
+    padding: 8px 24px 16px;
+    border-top: 1px solid var(--border-subtle);
+
+    a {
+        color: var(--text-muted);
+        font-weight: 500;
+        padding: 10px 4px;
+
+        &:hover {
+            color: var(--text);
+        }
+    }
+
+    &.is-open {
+        display: flex;
+    }
+}
+
+@media (max-width: 720px) {
+    .site-nav {
+        display: none;
+    }
+
+    .nav-burger {
+        display: inline-flex;
+    }
+}
+
+.site-main {
+    min-height: 60vh;
+    padding: 48px 0 80px;
+}
+
+// Footer
+
+.site-footer {
+    border-top: 1px solid var(--border-subtle);
+    background: var(--bg-subtle);
+    padding: 48px 0 0;
+    font-size: 0.92rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+
+    @media (max-width: 720px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer-tagline {
+    color: var(--text-muted);
+    max-width: 340px;
+    margin: 12px 0 16px;
+}
+
+.footer-title {
+    font-family: $font-mono;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-faint);
+    margin: 0 0 14px;
+}
+
+.footer-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        margin-bottom: 10px;
+    }
+
+    a {
+        color: var(--text-muted);
+        font-weight: 500;
+
+        &:hover {
+            color: var(--accent);
+        }
+    }
+}
+
+.footer-link-desc {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-faint);
+}
+
+.social-links {
+    display: flex;
+    gap: 8px;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        color: var(--text-muted);
+
+        svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        &:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+        }
+    }
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--text-faint);
+    font-size: 0.82rem;
+
+    p {
+        margin: 0;
+    }
+}
