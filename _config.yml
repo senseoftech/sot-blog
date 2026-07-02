@@ -36,10 +36,9 @@ important_links:
 - text: "Sense of Tech"
   url: "https://www.senseof.tech"
   description: "Company website"
-# TODO: replace with your real MVP profile URL
 - text: "Microsoft MVP Profile"
-  url: "https://mvp.microsoft.com/"
-  description: "Developer Technologies"
+  url: "https://mvp.microsoft.com/en-US/MVP/profile/2b728ade-7733-e611-8129-c4346bac7bfc"
+  description: "Developer Technologies, Microsoft Foundry"
 - text: "GitHub"
   url: "https://github.com/aclerbois"
   description: "Open source & samples"
@@ -55,7 +54,7 @@ google_analytics: ""
 
 # Author information - author info at the bottom of the post
 author_name: "Adrien Clerbois"
-author_bio: "Adrien Clerbois is a Microsoft MVP in Developer Technologies. Adrien founded the company Sense of Tech."
+author_bio: "Adrien Clerbois is a Microsoft MVP in Developer Technologies and Microsoft Foundry (Technology Areas: DevOps, Microsoft Foundry). Adrien founded the company Sense of Tech."
 author_url:  "http://www.aclerbois.be"
 author_location: "Buvrinnes, Belgium"
 author_image: /images/authorimage.png
