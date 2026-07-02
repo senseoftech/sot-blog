@@ -103,7 +103,7 @@ Assez de théorie. Ouvrons un vrai harnais et regardons ses rouages. GitHub Copi
 
 ### Le cerveau interchangeable : le sélecteur de modèle
 
-Copilot n'est pas marié à un seul modèle. Un **sélecteur** vous laisse choisir la monture : les modèles d'OpenAI (famille GPT et modèles de raisonnement), d'Anthropic (Claude Sonnet, Claude Opus), de Google (Gemini)… Le harnais, lui, ne change pas : c'est toujours la même boucle, les mêmes outils. Vous changez seulement le cheval sous le harnais — un modèle rapide pour les petites tâches, un modèle de raisonnement pour les gros morceaux.
+Copilot n'est pas marié à un seul modèle. Un **sélecteur** vous laisse choisir la monture : les modèles d'OpenAI (famille GPT et modèles de raisonnement), d'Anthropic (Claude Sonnet, Claude Opus), de Google (Gemini)… Le harnais, lui, ne change pas : c'est toujours la même boucle, les mêmes outils. Vous changez seulement le cheval sous le harnais — un modèle rapide pour les petites tâches, un modèle de raisonnement pour les gros morceaux. Quant à savoir *quel* cheval atteler, c'est justement le sujet de [mon article sur le choix du modèle]({{ site.baseurl }}/fr/2026/06/25/quel-modele-choisir-github-copilot/).
 
 ### Le mode agent : la boucle en action
 

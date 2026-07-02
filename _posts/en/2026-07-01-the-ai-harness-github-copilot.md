@@ -102,7 +102,7 @@ Enough theory. Let's open a real harness and look at its gears. GitHub Copilot i
 
 ### The swappable brain: the model picker
 
-Copilot isn't married to a single model. A **picker** lets you choose your mount: OpenAI's models (the GPT family and reasoning models), Anthropic's (Claude Sonnet, Claude Opus), Google's (Gemini)… The harness itself doesn't change: it's always the same loop, the same tools. You're only swapping the horse under the harness — a fast model for small chores, a reasoning model for the heavy lifting.
+Copilot isn't married to a single model. A **picker** lets you choose your mount: OpenAI's models (the GPT family and reasoning models), Anthropic's (Claude Sonnet, Claude Opus), Google's (Gemini)… The harness itself doesn't change: it's always the same loop, the same tools. You're only swapping the horse under the harness — a fast model for small chores, a reasoning model for the heavy lifting. As for *which* horse to hitch, that's exactly the topic of [my article on choosing the model]({{ site.baseurl }}/2026/06/25/which-model-to-choose-github-copilot/).
 
 ### Agent mode: the loop in action
 
