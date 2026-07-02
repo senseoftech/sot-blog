@@ -1,0 +1,67 @@
+name: Build & deploy to Pages
+
+# Builds the Jekyll site and deploys it to GitHub Pages.
+#
+# Triggers:
+#   - push to main        → publish as soon as you push
+#   - schedule (every 6h) → re-build so that future-dated posts go live
+#                           on their own date without any manual action
+#   - workflow_dispatch   → "Run workflow" button for an on-demand rebuild
+#
+# Scheduled publishing relies on `future: false` in _config.yml: a post
+# dated in the future is excluded from every build until a build runs on
+# or after its date — which the cron below guarantees.
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+# Least-privilege permissions required to deploy to Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one concurrent deployment; don't cancel an in-progress one.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

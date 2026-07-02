@@ -73,6 +73,15 @@ kramdown:
 
 excerpt_separator: "<!--more-->"
 
+# Interpret post dates in local time (not the UTC CI runner), so scheduled
+# publishing flips at the intended local hour.
+timezone: "Europe/Brussels"
+
+# Keep future-dated posts hidden until their date is reached. Combined with
+# the scheduled build in .github/workflows/pages.yml (cron every 6h), a post
+# dated in the future goes live automatically on its date — no manual push.
+future: false
+
 # Bilingual posts: every article exists in _posts/en and _posts/fr,
 # paired by a shared `ref` front matter key. English keeps the historic
 # URLs; French lives under /fr/.
