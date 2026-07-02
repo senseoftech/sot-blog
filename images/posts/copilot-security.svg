@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#3fb950" stop-opacity="0.14"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <!-- faint grid -->
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <!-- header -->
+  <text x="600" y="66" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">GITHUB COPILOT · SECURITY</text>
+
+  <!-- threat chips connected to the shield -->
+  <g stroke="#30363d" stroke-width="1.6" stroke-dasharray="6 6">
+    <path d="M330 190 L462 250" fill="none"/>
+    <path d="M870 190 L738 250" fill="none"/>
+    <path d="M330 430 L470 390" fill="none"/>
+    <path d="M870 430 L730 390" fill="none"/>
+  </g>
+
+  <g>
+    <rect x="90" y="160" width="240" height="56" rx="12" fill="#161b22" stroke="#ffa657" stroke-width="1.6"/>
+    <circle cx="120" cy="188" r="7" fill="#ffa657"/>
+    <text x="142" y="194" fill="#e6edf3" font-size="18" font-weight="600">Prompt injection</text>
+  </g>
+  <g>
+    <rect x="870" y="160" width="240" height="56" rx="12" fill="#161b22" stroke="#f85149" stroke-width="1.6"/>
+    <circle cx="900" cy="188" r="7" fill="#f85149"/>
+    <text x="922" y="194" fill="#e6edf3" font-size="18" font-weight="600">Secrets</text>
+  </g>
+  <g>
+    <rect x="90" y="400" width="240" height="56" rx="12" fill="#161b22" stroke="#bc8cff" stroke-width="1.6"/>
+    <circle cx="120" cy="428" r="7" fill="#bc8cff"/>
+    <text x="142" y="434" fill="#e6edf3" font-size="18" font-weight="600">Supply chain</text>
+  </g>
+  <g>
+    <rect x="870" y="400" width="240" height="56" rx="12" fill="#161b22" stroke="#38bdf8" stroke-width="1.6"/>
+    <circle cx="900" cy="428" r="7" fill="#38bdf8"/>
+    <text x="922" y="434" fill="#e6edf3" font-size="18" font-weight="600">Human review</text>
+  </g>
+
+  <!-- central shield -->
+  <path d="M600 140 L755 195 V345 Q755 455 600 525 Q445 455 445 345 V195 Z"
+        fill="url(#shield)" stroke="#3fb950" stroke-width="2.5"/>
+  <!-- checkmark -->
+  <path d="M535 330 L590 385 L675 275" fill="none" stroke="#3fb950" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="600" y="470" text-anchor="middle" fill="#9198a1" font-size="16" letter-spacing="1">guardrails on · garde-fous actifs</text>
+
+  <!-- footer strip -->
+  <text x="600" y="566" text-anchor="middle" fill="#6e7681" font-size="18" letter-spacing="2">
+    A  BADGE,  NOT  THE  MASTER  KEY  ·  UN  BADGE,  PAS  LE  PASSE-PARTOUT
+  </text>
+</svg>
