@@ -7,7 +7,6 @@ author: AClerbois
 ref: apple-pay-pfx
 github_repo_username: aclerbois
 github_repo : aclerbois
-comments: true
 image: /images/posts/iPhone-In-Hand.jpg
 tags: [apple, certificate, dns]
 ---

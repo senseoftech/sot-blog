@@ -7,7 +7,6 @@ author: AClerbois
 ref: netcore-global-tool
 github_repo_username: aclerbois
 github_repo : aclerbois
-comments: true
 image: /images/posts/conquer-1.png
 tags: [.net core, global tool, cli]
 ---

@@ -10,7 +10,6 @@ ref: ghco-tokens
 permalink: /certificate/2026/06/05/ghco-affranchir-les-tokens/
 github_repo_username: aclerbois
 github_repo : aclerbois
-comments: true
 image: /images/posts/road.jpg
 tags: [github, copilot, tokens, cli]
 ---

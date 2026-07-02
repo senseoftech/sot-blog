@@ -7,7 +7,6 @@ lang: fr
 ref: netcore-global-tool
 image: /images/posts/conquer-1.png
 tags: [.net core, global tool, cli]
-comments: true
 ---
 # Maîtriser les global tools dans .NET Core
 

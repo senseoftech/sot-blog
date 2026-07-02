@@ -7,7 +7,6 @@ lang: fr
 ref: vscode-git-editor
 image: /images/posts/ms_loves_git.png
 tags: [VS Code,git]
-comments: true
 ---
 Par défaut, git est configuré pour utiliser VIM comme éditeur, mais vous pouvez configurer votre environnement git pour utiliser Visual Studio Code.
 <!--more-->

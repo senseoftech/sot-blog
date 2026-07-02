@@ -46,9 +46,6 @@ important_links:
   url: "http://www.aclerbois.be"
   description: "Personal website"
 
-# The shortname for your Disqus site to enable comments.
-disqus: ""
-
 # Google Analytics id, e.g. "UA-NNNNNNNN-N"
 google_analytics: ""
 

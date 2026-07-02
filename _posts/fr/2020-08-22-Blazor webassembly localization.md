@@ -6,7 +6,6 @@ author: AClerbois
 lang: fr
 ref: blazor-localization
 image: /images/posts/flags.jpg
-comments: true
 tags: [.net core, blazor, webassembly, multilingual ]
 ---
 

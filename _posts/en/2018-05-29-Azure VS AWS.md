@@ -7,7 +7,6 @@ author: AClerbois
 ref: azure-vs-aws
 github_repo_username: aclerbois
 github_repo : aclerbois
-comments: true
 image: /images/posts/azure_vs_aws.jpg
 tags: [Cloud, hosting, dns]
 ---

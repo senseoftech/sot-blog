@@ -7,7 +7,6 @@ author: AClerbois
 ref: vscode-git-editor
 github_repo_username: aclerbois
 github_repo : aclerbois
-comments: true
 image: /images/posts/ms_loves_git.png
 tags: [VS Code,git]
 ---

@@ -7,7 +7,6 @@ author: AClerbois
 ref: ghco-tokens
 github_repo_username: aclerbois
 github_repo : aclerbois
-comments: true
 image: /images/posts/road.jpg
 tags: [github, copilot, tokens, cli]
 ---

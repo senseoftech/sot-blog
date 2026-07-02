@@ -7,7 +7,6 @@ author: AClerbois
 ref: tfs-git-certificate
 github_repo_username: aclerbois
 github_repo : aclerbois
-comments: true
 image: /images/posts/trust.jpg
 tags: [azure devops, hgit]
 ---

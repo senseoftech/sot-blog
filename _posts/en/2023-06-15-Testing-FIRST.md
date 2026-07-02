@@ -6,7 +6,6 @@ author: AClerbois
 ref: testing-first
 github_repo_username: aclerbois
 github_repo : aclerbois
-comments: true
 image: /images/posts/design.jpg
 tags: [testing]
 ---

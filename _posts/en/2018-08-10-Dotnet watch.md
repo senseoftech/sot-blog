@@ -7,7 +7,6 @@ author: AClerbois
 ref: dotnet-watch
 github_repo_username: aclerbois
 github_repo : aclerbois
-comments: true
 image: /images/posts/powershell.jpg
 tags: [.net core, cli]
 ---

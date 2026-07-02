@@ -7,7 +7,6 @@ lang: fr
 ref: azure-container-registry
 image: /images/posts/azure-loves-docker.png
 tags: [Azure,ACR]
-comments: true
 ---
 
 ## Comment créer un nouvel Azure Container Registry et y pousser des images.

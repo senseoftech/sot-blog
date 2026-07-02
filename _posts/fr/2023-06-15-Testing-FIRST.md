@@ -7,7 +7,6 @@ lang: fr
 ref: testing-first
 image: /images/posts/design.jpg
 tags: [testing]
-comments: true
 ---
 
 ## Le Principe FIRST dans le Test

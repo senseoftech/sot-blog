@@ -7,7 +7,6 @@ author: AClerbois
 ref: azure-container-registry
 github_repo_username: aclerbois
 github_repo: aclerbois
-comments: true
 image: /images/posts/azure-loves-docker.png
 tags: [Azure,ACR]
 ---

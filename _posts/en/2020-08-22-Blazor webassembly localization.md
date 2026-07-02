@@ -8,7 +8,6 @@ ref: blazor-localization
 github_repo_username: aclerbois
 github_repo : aclerbois
 image: /images/posts/flags.jpg
-comments: true
 tags: [.net core, blazor, webassembly, multilingual ]
 ---
 
