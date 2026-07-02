@@ -86,8 +86,26 @@
             if (hasFilterableList) {
                 applyLangFilter(next);
             }
+            // On an article page, follow the toggle to the translated version
+            var translated = document.body.getAttribute('data-url-' + next);
+            if (translated && translated !== location.pathname) {
+                window.location.href = translated;
+            }
         });
     }
+
+    // On an article page, sync the UI language to the language of the article
+    // being read, so the toggle label and chrome match the content.
+    (function syncLangToArticle() {
+        var enUrl = document.body.getAttribute('data-url-en');
+        var frUrl = document.body.getAttribute('data-url-fr');
+        var pageLang = location.pathname === frUrl ? 'fr' : (location.pathname === enUrl ? 'en' : null);
+        if (pageLang && currentLang() !== pageLang) {
+            document.documentElement.setAttribute('data-ui-lang', pageLang);
+            localStorage.setItem('ui-lang', pageLang);
+        }
+    })();
+
     applyTranslations();
 
     /* ---------- Theme toggle ---------- */

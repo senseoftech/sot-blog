@@ -39,7 +39,7 @@
         })(window, document, "clarity", "script", "4j9akdgl1a");
     </script>
 </head>
-<body>
+<body{% if page.ref %} data-post-ref="{{ page.ref }}"{% assign translations = site.posts | where: "ref", page.ref %}{% for t in translations %} data-url-{{ t.lang }}="{{ t.url | prepend: site.baseurl }}"{% endfor %}{% endif %}>
     {% include header.html %}
     <main class="site-main">
         {{ content }}
