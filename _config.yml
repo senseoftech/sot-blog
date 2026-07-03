@@ -46,8 +46,13 @@ important_links:
   url: "http://www.aclerbois.be"
   description: "Personal website"
 
-# Google Analytics id, e.g. "UA-NNNNNNNN-N"
-google_analytics: ""
+# Umami analytics (cookieless — no consent banner needed).
+# Leave website_id empty to disable. `domains` restricts tracking to the
+# production hostname so local and preview builds don't pollute the stats.
+umami:
+  script_url: "https://cloud.umami.is/script.js"
+  website_id: "151301c5-80f6-43b0-8123-0545271072da"
+  domains: "blog.senseof.tech"
 
 # Author information - author info at the bottom of the post
 author_name: "Adrien Clerbois"

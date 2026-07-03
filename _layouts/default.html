@@ -50,8 +50,8 @@
     </main>
     {% include footer.html %}
     {% include search.html %}
-    {% if site.google_analytics %}
-    {% include google_analytics.html %}
+    {% if site.umami.website_id %}
+    {% include umami.html %}
     {% endif %}
     <script src="{{ site.baseurl }}/js/scripts.js"></script>
 </body>
