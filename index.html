@@ -15,11 +15,6 @@ layout: default
 <section class="wrap">
     <div class="posts-toolbar">
         <h2 class="section-title" data-i18n="latest_posts">Latest posts</h2>
-        <div class="lang-filter" role="group" aria-label="Filter posts by language">
-            <button class="filter-button is-active" data-filter="all" data-i18n="filter_all">All</button>
-            <button class="filter-button" data-filter="en">EN</button>
-            <button class="filter-button" data-filter="fr">FR</button>
-        </div>
     </div>
 
     <div class="post-grid">
@@ -31,7 +26,6 @@ layout: default
                 <time class="post-date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%Y-%m-%d" }}</time>
                 <span class="meta-sep">·</span>
                 <span class="reading-time">{{ reading_time }} <span data-i18n="min_read">min read</span></span>
-                <span class="lang-badge lang-{{ post.lang }}">{{ post.lang | upcase }}</span>
             </div>
             <h3 class="post-card-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
             <p class="post-card-excerpt">{{ post.excerpt | strip_html | normalize_whitespace | truncate: 150 }}</p>

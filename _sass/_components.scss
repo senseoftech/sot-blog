@@ -59,7 +59,7 @@
     }
 }
 
-// Posts toolbar (title + language filter)
+// Posts toolbar (section title)
 
 .posts-toolbar {
     display: flex;
@@ -68,36 +68,6 @@
     gap: 16px;
     flex-wrap: wrap;
     margin-bottom: 24px;
-}
-
-.lang-filter {
-    display: inline-flex;
-    padding: 3px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    background: var(--bg-subtle);
-}
-
-.filter-button {
-    font-family: $font-mono;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--text-muted);
-    background: none;
-    border: 0;
-    border-radius: 7px;
-    padding: 5px 14px;
-    cursor: pointer;
-
-    &:hover {
-        color: var(--text);
-    }
-
-    &.is-active {
-        color: var(--accent);
-        background: var(--bg);
-        box-shadow: 0 0 0 1px var(--border);
-    }
 }
 
 // Post cards
@@ -117,6 +87,7 @@
 }
 
 .post-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -182,6 +153,16 @@
     a {
         color: var(--text);
 
+        // Stretched link: extends the title link over the whole card so the
+        // entire "case" is clickable, not just the title text. Elements that
+        // must stay independently clickable (e.g. tag chips) sit above it via
+        // z-index — see .post-card-footer.
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+        }
+
         &:hover {
             color: var(--accent);
         }
@@ -196,6 +177,8 @@
 }
 
 .post-card-footer {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
@@ -209,6 +192,7 @@
     background: var(--accent-bg);
     padding: 2px 9px;
     border-radius: 999px;
+    position: relative;
 
     &:hover {
         color: var(--accent-strong);
@@ -293,11 +277,6 @@
         .post-date {
             font-family: $font-mono;
             font-size: 0.78rem;
-            flex-shrink: 0;
-        }
-
-        .lang-badge {
-            margin-left: 0;
             flex-shrink: 0;
         }
 

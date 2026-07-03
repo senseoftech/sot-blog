@@ -10,7 +10,6 @@
             nav_about: 'About',
             hero_tagline: 'Tech notes on .NET, Azure, DevOps & AI — by Adrien Clerbois, Microsoft MVP in Developer Technologies.',
             latest_posts: 'Latest posts',
-            filter_all: 'All',
             min_read: 'min read',
             newer_posts: '← Newer',
             older_posts: 'Older →',
@@ -36,7 +35,6 @@
             nav_about: 'À propos',
             hero_tagline: 'Notes techniques sur .NET, Azure, DevOps & IA — par Adrien Clerbois, Microsoft MVP en Developer Technologies.',
             latest_posts: 'Derniers articles',
-            filter_all: 'Tous',
             min_read: 'min de lecture',
             newer_posts: '← Récents',
             older_posts: 'Anciens →',
@@ -131,13 +129,13 @@
     }
 
     /* ---------- Language filter on post lists ---------- */
+    /* Every article exists in both languages; lists show only the posts
+       matching the UI language (set via the lang-toggle button), so there's
+       no separate language picker or per-post badge to display. */
 
     function applyLangFilter(filter) {
-        document.querySelectorAll('.filter-button').forEach(function (b) {
-            b.classList.toggle('is-active', b.getAttribute('data-filter') === filter);
-        });
         document.querySelectorAll('.post-card, .archive-post').forEach(function (item) {
-            item.classList.toggle('is-hidden', filter !== 'all' && item.getAttribute('data-lang') !== filter);
+            item.classList.toggle('is-hidden', item.getAttribute('data-lang') !== filter);
         });
         // Hide tag groups whose posts are all filtered out
         document.querySelectorAll('[data-tag-group]').forEach(function (group) {
@@ -148,13 +146,6 @@
 
     var hasFilterableList = document.querySelector('.post-card, .archive-post');
 
-    document.querySelectorAll('.filter-button').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            applyLangFilter(btn.getAttribute('data-filter'));
-        });
-    });
-
-    // Every article exists in both languages: default the list to the UI language
     if (hasFilterableList) {
         applyLangFilter(currentLang());
     }
