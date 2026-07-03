@@ -51,7 +51,7 @@ Mais attention au réflexe « plus grand = mieux » : un grand coffre ne sert qu
 
 Depuis le **1ᵉʳ juin 2026**, Copilot est passé à la facturation à l'usage : chaque échange consomme des **AI Credits** (1 crédit = 0,01 $) selon les tokens envoyés au modèle, générés par lui, et mis en cache. Trois choses à savoir, ordres de grandeur au moment où j'écris ([tarifs officiels](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing)) :
 
-- **L'écart entre gammes est énorme** : ~0,20 à 0,50 $ le million de tokens d'entrée pour les légers, ~2 à 2,50 $ pour les polyvalents, **4 à 10 $ pour les puissants**. Du simple au vingtuple.
+- **L'écart entre gammes est énorme** : ~0,20 à 0,50 $ le million de tokens d'entrée pour les légers, ~2 à 2,50 $ pour les polyvalents, **4 à 10 $ pour les puissants** — et le sommet de la gamme, Claude Fable 5, affiche 10 $ l'entrée et 50 $ la sortie, soit **le double d'Opus 4.8**. Du simple au cinquantuple.
 - **La sortie coûte 4 à 10× plus cher que l'entrée** : un modèle bavard se paie.
 - **Le cache réduit l'entrée d'environ 90 %** : rester dans la même conversation bien contextée coûte moins cher que tout renvoyer à chaque fois.
 
@@ -59,16 +59,29 @@ Un exemple pour fixer les idées : un aller-retour qui envoie ~50 000 tokens de 
 
 ## Le parking Copilot en juin 2026
 
-Voici la gamme actuelle, rangée par vocation. La liste bouge tous les mois (des nouveaux comme Claude Fable 5 arrivent, d'autres partent à la retraite) : la référence reste [la liste officielle](https://docs.github.com/en/copilot/reference/ai-models/supported-models) et [le comparatif officiel](https://docs.github.com/en/copilot/reference/ai-models/model-comparison).
+Voici la gamme actuelle, rangée par vocation. La liste bouge tous les mois (des modèles arrivent, d'autres partent à la retraite) : la référence reste [la liste officielle](https://docs.github.com/en/copilot/reference/ai-models/supported-models) et [le comparatif officiel](https://docs.github.com/en/copilot/reference/ai-models/model-comparison).
 
 | La gamme | Les modèles (extraits) | Taillés pour |
 | --- | --- | --- |
 | **Les citadines** — légers, vifs, sobres | Claude Haiku 4.5, Gemini 3.5 Flash, GPT-5 mini / 5.4 nano | Questions rapides, petites retouches, prototypage léger |
 | **Les berlines** — les polyvalents du quotidien | Claude Sonnet 5 (et 4.6), GPT-5.4, MAI-Code-1-Flash | Le gros du travail : coder, expliquer, tester |
 | **Les semi-remorques** — raisonnement profond | Claude Opus 4.8, GPT-5.5, Gemini 3.1 Pro | Refactorings multi-fichiers, debug retors, décisions d'architecture |
+| **Le convoi exceptionnel** — la classe frontier | Claude Fable 5 | Missions longues en autonomie : migrations, chantiers d'agent complets |
 | **Les utilitaires spécialisés** — fine-tunés code | GPT-5.3-Codex, Raptor mini, Kimi-K2.7-Code | Tâches d'ingénierie pures, complétion affûtée |
 
 Bonus : certains modèles acceptent aussi les **images** (GPT-5 mini, Claude Sonnet 4.6, Gemini 3.1 Pro) — pratique pour partir d'une capture d'écran ou d'une maquette.
+
+### Zoom sur le convoi exceptionnel : Claude Fable 5
+
+Arrivé au catalogue Copilot le 9 juin, [Claude Fable 5](https://github.blog/changelog/2026-06-09-claude-fable-5-is-generally-available-for-github-copilot/) inaugure une catégorie au-dessus des semi-remorques : la **classe Mythos** d'Anthropic, premier représentant de la famille Claude 5. Sa vocation n'est pas de répondre plus vite à une question, mais de **tenir une mission longue en autonomie** — moins un assistant de chat qu'un collègue senior à qui l'on confie un chantier entier.
+
+Trois choses à savoir avant de l'atteler :
+
+- **Disponibilité** : plans Pro+, Business et Enterprise — et côté organisation, la **politique est désactivée par défaut** ; un admin doit l'activer dans les réglages Copilot.
+- **Prix** : facturé au tarif catalogue du fournisseur, 10 $ le million de tokens d'entrée et 50 $ en sortie — le double de Claude Opus 4.8. Le convoi exceptionnel se paie.
+- **Particularité** : au titre de ses garde-fous renforcés, Anthropic conserve prompts et sorties jusqu'à 30 jours pour ses classificateurs de sécurité.
+
+Le conseil reste le même que pour tout le reste du parking : **mesurez-le dans votre grille**. Sur une tâche berline, Fable 5 est juste plus lent et beaucoup plus cher ; sur une vraie mission au long cours, c'est là qu'il justifie son gabarit.
 
 ## Le banc d'essai maison : trouvez VOTRE modèle en une heure
 
@@ -130,6 +143,7 @@ Refaites l'exercice tous les deux ou trois mois : les modèles changent vite, vo
 - **Par défaut : la berline.** Un polyvalent couvre 80 % de vos journées.
 - **Pour les courses : la citadine.** Question rapide, petite retouche → modèle léger, réponse immédiate, coût dérisoire.
 - **Quand ça coince : le semi-remorque.** Deux allers-retours sans progrès sur un problème complexe ? Montez en gamme, posez le problème une bonne fois. Puis **redescendez**.
+- **Pour la mission longue en autonomie : le convoi exceptionnel.** La classe frontier (Fable 5) prend des chantiers entiers — gardez le compteur de crédits sous les yeux.
 - **Si votre quotidien est du code pur : essayez un utilitaire spécialisé.**
 
 Et surtout : ne croyez ni les benchmarks, ni les influenceurs, ni moi. **Croyez votre grille.** Trois tâches, trois modèles, une heure d'essai routier — c'est tout ce qu'il faut pour savoir ce qui roule le mieux chez vous.

@@ -69,7 +69,7 @@
   <g>
     <rect x="820" y="110" width="320" height="380" rx="16" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
     <text x="980" y="165" text-anchor="middle" fill="#e6edf3" font-size="25" font-weight="700">POWERFUL · PUISSANT</text>
-    <text x="980" y="196" text-anchor="middle" fill="#9198a1" font-size="15">Opus · GPT-5.5 · Pro</text>
+    <text x="980" y="196" text-anchor="middle" fill="#9198a1" font-size="15">Fable 5 · Opus · GPT-5.5</text>
 
     <text x="860" y="252" fill="#9198a1" font-size="14" letter-spacing="1">SPEED · VITESSE</text>
     <rect x="860" y="264" width="240" height="14" rx="7" fill="#21262d"/>
