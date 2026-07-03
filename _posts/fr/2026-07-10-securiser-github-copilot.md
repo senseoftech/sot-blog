@@ -5,7 +5,7 @@ date: 2026-07-10 10:00:00
 author: AClerbois
 lang: fr
 ref: copilot-security
-image: /images/posts/copilot-security.svg
+image: /images/posts/copilot-security.png
 tags: [github, copilot, AI, security, agents]
 ---
 

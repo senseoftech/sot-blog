@@ -5,7 +5,7 @@ date: 2026-06-25 10:00:00
 author: AClerbois
 lang: fr
 ref: copilot-model-choice
-image: /images/posts/copilot-model-garage.svg
+image: /images/posts/copilot-model-garage.png
 tags: [github, copilot, AI, LLM, models]
 ---
 

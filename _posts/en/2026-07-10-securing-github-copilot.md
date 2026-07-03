@@ -4,7 +4,7 @@ title: "Securing GitHub Copilot: a badge, not the master key — it's not rocket
 date: 2026-07-10 10:00:00
 author: AClerbois
 ref: copilot-security
-image: /images/posts/copilot-security.svg
+image: /images/posts/copilot-security.png
 tags: [github, copilot, AI, security, agents]
 ---
 

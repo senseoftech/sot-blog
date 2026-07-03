@@ -4,7 +4,7 @@ title: "The AI \"harness\": how a model becomes an agent — it's not rocket sci
 date: 2026-07-01 10:00:00
 author: AClerbois
 ref: ai-harness
-image: /images/posts/ai-harness.svg
+image: /images/posts/ai-harness.png
 tags: [AI, agents, github, copilot, LLM]
 ---
 
