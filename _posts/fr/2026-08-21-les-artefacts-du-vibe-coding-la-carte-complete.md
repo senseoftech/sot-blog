@@ -39,6 +39,7 @@ Le fil rouge de cette famille : la barrière de Chesterton. Un agent qui ignore 
 | Artefact | Ce qu'il capture | L'article |
 | --- | --- | --- |
 | **Spec** | le comportement attendu, source de vérité | [23 août]({{ site.baseurl }}/fr/2026/08/23/spec-driven-development-la-spec-source-de-verite/) |
+| **Template d'issue** | le brief d'une tâche, prêt pour un agent | [déjà publié]({{ site.baseurl }}/fr/2026/08/07/templates-d-issues-le-brief-de-votre-agent/) |
 | **Plan d'implémentation** | le *comment*, validé avant le code | [25 août]({{ site.baseurl }}/fr/2026/08/25/le-plan-d-implementation-le-point-de-controle-humain/) |
 | **Tests** | la spec exécutable — celle qui ne peut pas mentir | [26 août]({{ site.baseurl }}/fr/2026/08/26/les-tests-la-spec-executable/) |
 
@@ -50,6 +51,7 @@ C'est la famille du contrôle : en vibe coding, on ne relit pas 2 000 lignes de 
 | --- | --- | --- |
 | **Schémas et contrats** (OpenAPI, JSON Schema, types) | les frontières machine-vérifiables | [27 août]({{ site.baseurl }}/fr/2026/08/27/schemas-et-contrats-le-contexte-machine-verifiable/) |
 | **Linters et analyzers** | les conventions auto-appliquées | [28 août]({{ site.baseurl }}/fr/2026/08/28/linters-analyzers-les-conventions-qui-s-appliquent-toutes-seules/) |
+| **Une branche par agent** | l'isolation qui rend les erreurs réversibles | [déjà publié]({{ site.baseurl }}/fr/2026/08/09/une-branche-par-agent-git-a-l-ere-des-agents/) |
 
 La famille préférée des agents : ils ne lisent même pas ces artefacts, ils **se cognent dedans** — et se corrigent tout seuls. Chaque règle automatisée est une instruction de moins à écrire et une remarque de moins en review.
 
@@ -60,7 +62,8 @@ La famille préférée des agents : ils ne lisent même pas ces artefacts, ils *
 | **AGENTS.md / instructions** | le guide d'onboarding de l'IA, relu à chaque session | [22 août]({{ site.baseurl }}/fr/2026/08/22/agents-md-le-guide-d-onboarding-de-votre-ia/) |
 | **Glossaire du domaine** | le vocabulaire unique, métier ↔ code | [déjà publié]({{ site.baseurl }}/fr/2026/07/16/le-glossaire-du-domaine/) |
 | **Diagrammes as code** | la carte du système, éditable par l'agent | [déjà publié]({{ site.baseurl }}/fr/2026/07/17/diagrammes-as-code-la-carte-que-l-ia-sait-lire/) |
-| **Runbooks et postmortems** | le savoir opérationnel des nuits blanches | [29 août]({{ site.baseurl }}/fr/2026/08/29/runbooks-et-postmortems-le-savoir-operationnel/) |
+| **Runbook** | le mode d'emploi des pannes connues | [déjà publié]({{ site.baseurl }}/fr/2026/08/05/le-runbook-le-mode-d-emploi-que-votre-agent-attend/) |
+| **Postmortem** | la mémoire des incidents | [29 août]({{ site.baseurl }}/fr/2026/08/29/le-postmortem-la-memoire-des-incidents/) |
 | **llms.txt** | votre doc publiée, pensée pour les agents des autres | [30 août]({{ site.baseurl }}/fr/2026/08/30/llms-txt-la-doc-pensee-pour-les-ia/) |
 
 ## Le motif qui revient partout
@@ -73,13 +76,13 @@ Relisez n'importe quel épisode déjà publié, vous retrouverez les trois même
 
 ## Le mot d'honnêteté
 
-- **N'installez pas les treize d'un coup.** Un dépôt qui passe de zéro artefact à tout l'attirail en une semaine produit surtout de la doc morte. Commencez par ce qui saigne : l'agent nomme mal ? Glossaire. Il défait vos choix ? ADR. Il ignore vos conventions ? AGENTS.md et linters.
+- **N'installez pas les seize d'un coup.** Un dépôt qui passe de zéro artefact à tout l'attirail en une semaine produit surtout de la doc morte. Commencez par ce qui saigne : l'agent nomme mal ? Glossaire. Il défait vos choix ? ADR. Il ignore vos conventions ? AGENTS.md et linters.
 - **L'artefact ne remplace pas la conversation.** Une équipe qui ne se parle plus parce que « tout est dans les docs » a un problème que le Markdown ne réglera pas.
 
 ## En résumé
 
 - En vibe coding, **le code devient regénérable** ; le capital, ce sont les artefacts qui le contraignent et l'expliquent — tous **dans le dépôt**, versionnés, relus en PR.
-- Quatre familles : la **mémoire des décisions** (ADR, RFC, Git), l'**intention** (specs, plans, tests), les **garde-fous** (schémas, linters), le **contexte partagé** (AGENTS.md, glossaire, diagrammes, runbooks, llms.txt).
+- Quatre familles : la **mémoire des décisions** (ADR, RFC, Git), l'**intention** (specs, plans, tests), les **garde-fous** (schémas, linters), le **contexte partagé** (AGENTS.md, glossaire, diagrammes, runbooks, postmortems, llms.txt).
 - Partout le même motif : **l'IA propose, l'humain tranche, le dépôt mémorise** — et la sélectivité fait la valeur.
 - La suite : **un artefact par jour jusqu'au 30 août**. La carte est dessinée ; en route.
 

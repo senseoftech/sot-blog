@@ -11,7 +11,7 @@ level: 100
 
 You publish a .NET library. Somewhere, a developer you'll never meet types: "add Contoso.Payments and make a first payment". Their AI agent visits your documentation site and finds… a mega-menu, a cookie banner, a carousel, three tracking scripts — and the content, drowned at the bottom. So it does what LLMs do when starved for context: it improvises. It invents `client.Charge()`, a method that never existed. The next morning, the issue lands in your tracker: "your library doesn't work".
 
-Yesterday, [runbooks and postmortems]({{ site.baseurl }}/2026/08/29/runbooks-and-postmortems-operational-knowledge/) closed the chapter on operational knowledge. Today, last stop on [the map]({{ site.baseurl }}/2026/08/21/the-artifacts-of-vibe-coding-the-complete-map/) — and we switch sides. Every artifact in this series lived *inside* your repository, for *your* agents. This one lives on your website, for **other people's** agents: your users who code with an AI. It's called `llms.txt`. You'll see: it's not rocket science.
+Yesterday, [the postmortem]({{ site.baseurl }}/2026/08/29/the-postmortem-the-memory-of-incidents/) closed the chapter on operational knowledge. Today, last stop on [the map]({{ site.baseurl }}/2026/08/21/the-artifacts-of-vibe-coding-the-complete-map/) — and we switch sides. Every artifact in this series lived *inside* your repository, for *your* agents. This one lives on your website, for **other people's** agents: your users who code with an AI. It's called `llms.txt`. You'll see: it's not rocket science.
 
 <!--more-->
 

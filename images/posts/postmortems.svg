@@ -1,0 +1,83 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">POSTMORTEM&#160;&#160;·&#160;&#160;LA&#160;&#160;M&#201;MOIRE&#160;&#160;DES&#160;&#160;INCIDENTS</text>
+
+  <!-- The postmortem document -->
+  <g>
+    <rect x="80" y="110" width="440" height="380" rx="16" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="110" y="152" fill="#e6edf3" font-size="19" font-weight="700">POSTMORTEM</text>
+    <rect x="330" y="132" width="160" height="26" rx="13" fill="#12161d" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="410" y="150" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600">blameless</text>
+    <text x="110" y="176" fill="#6e7681" font-size="12">docs/postmortems/2026-03-14-pool-sql.md</text>
+
+    <text x="110" y="212" fill="#38bdf8" font-size="13" font-weight="600" letter-spacing="1">CHRONOLOGIE</text>
+    <text x="110" y="234" fill="#9198a1" font-size="13">03:07 alerte · 03:12 diagnostic · 05:04 rétabli</text>
+
+    <text x="110" y="270" fill="#ffa657" font-size="13" font-weight="600" letter-spacing="1">CAUSE RACINE — 5 POURQUOI</text>
+    <text x="110" y="292" fill="#9198a1" font-size="13">503 → pool épuisé → connexion non libérée</text>
+    <text x="110" y="312" fill="#9198a1" font-size="13">→ using oublié → <tspan fill="#ffa657" font-weight="600">aucun analyzer ne le vérifie</tspan></text>
+
+    <text x="110" y="348" fill="#38bdf8" font-size="13" font-weight="600" letter-spacing="1">ACTIONS</text>
+    <text x="110" y="370" fill="#3fb950" font-size="13">+ analyzer CA2000 en erreur — Sarah, 28/03</text>
+    <text x="110" y="390" fill="#3fb950" font-size="13">+ test de régression sur le pool — Marc, 21/03</text>
+    <text x="110" y="410" fill="#3fb950" font-size="13">+ runbook « API 503 » mis à jour — Ana, 18/03</text>
+
+    <text x="110" y="452" fill="#e6edf3" font-size="14" font-weight="600">le système est coupable, jamais Kevin</text>
+    <text x="110" y="472" fill="#6e7681" font-size="12">porté + daté, sinon c'est du théâtre</text>
+  </g>
+
+  <!-- The loop: incident -> postmortem -> artifacts -->
+  <g>
+    <text x="850" y="150" text-anchor="middle" fill="#e6edf3" font-size="18" font-weight="600">l'incident est éphémère,</text>
+    <text x="850" y="174" text-anchor="middle" fill="#e6edf3" font-size="18" font-weight="600">l'artefact reste</text>
+
+    <rect x="620" y="240" width="180" height="56" rx="14" fill="#12161d" stroke="#f85149" stroke-width="2"/>
+    <text x="710" y="262" text-anchor="middle" fill="#f85149" font-size="14" font-weight="700">INCIDENT</text>
+    <text x="710" y="282" text-anchor="middle" fill="#9198a1" font-size="12">03:07 — SEV 2</text>
+
+    <path d="M800 268 H880" stroke="#9198a1" stroke-width="2" fill="none"/>
+    <path d="M880 268 l-8 -5 v10 z" fill="#9198a1"/>
+
+    <rect x="890" y="240" width="200" height="56" rx="14" fill="#12161d" stroke="#38bdf8" stroke-width="2"/>
+    <text x="990" y="274" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="700">POSTMORTEM</text>
+
+    <path d="M990 296 V340" stroke="#3fb950" stroke-width="2" fill="none"/>
+    <path d="M990 340 l-5 -8 h10 z" fill="#3fb950"/>
+
+    <g>
+      <rect x="640" y="350" width="140" height="44" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="710" y="377" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="600">runbook ++</text>
+      <rect x="800" y="350" width="140" height="44" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="870" y="377" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="600">test de rég.</text>
+      <rect x="960" y="350" width="140" height="44" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="1.5"/>
+      <text x="1030" y="377" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="600">ADR</text>
+    </g>
+    <path d="M990 340 Q990 345 870 350 M990 340 Q900 345 720 350" stroke="#3fb950" stroke-width="1.5" fill="none" stroke-opacity="0.6"/>
+
+    <text x="870" y="432" text-anchor="middle" fill="#9198a1" font-size="13">un postmortem utile modifie le dépôt</text>
+    <text x="870" y="458" text-anchor="middle" fill="#9198a1" font-size="13">l'IA compile la chronologie · l'humain tranche la cause</text>
+  </g>
+
+  <text x="600" y="548" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    LA  PANNE  NE  CO&#219;TE  QU'UNE  FOIS  ·  AN  OUTAGE  ONLY  COSTS  ONCE
+  </text>
+</svg>

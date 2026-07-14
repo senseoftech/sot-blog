@@ -12,7 +12,7 @@ level: 100
 
 Vous publiez une bibliothèque .NET. Quelque part, un développeur que vous ne connaîtrez jamais tape : « ajoute Contoso.Payments et fais un premier paiement ». Son agent IA visite votre site de doc et trouve… un méga-menu, un bandeau cookies, un carrousel, trois scripts de tracking — et le contenu, noyé au fond. Alors il fait ce que font les LLM à court de contexte : il improvise. Il invente `client.Charge()`, méthode qui n'a jamais existé. Le lendemain, l'issue tombe chez vous : « votre lib ne marche pas ».
 
-Hier, [les runbooks et postmortems]({{ site.baseurl }}/fr/2026/08/29/runbooks-et-postmortems-le-savoir-operationnel/) fermaient le chapitre du savoir opérationnel. Aujourd'hui, dernier arrêt de [la carte]({{ site.baseurl }}/fr/2026/08/21/les-artefacts-du-vibe-coding-la-carte-complete/) — et on change de camp. Tous les artefacts de la série vivaient *dans* votre dépôt, pour *vos* agents. Celui-ci vit sur votre site, pour les agents **des autres** : vos utilisateurs qui codent avec une IA. Il s'appelle `llms.txt`. Vous allez voir : c'est pas sorcier.
+Hier, [le postmortem]({{ site.baseurl }}/fr/2026/08/29/le-postmortem-la-memoire-des-incidents/) fermait le chapitre du savoir opérationnel. Aujourd'hui, dernier arrêt de [la carte]({{ site.baseurl }}/fr/2026/08/21/les-artefacts-du-vibe-coding-la-carte-complete/) — et on change de camp. Tous les artefacts de la série vivaient *dans* votre dépôt, pour *vos* agents. Celui-ci vit sur votre site, pour les agents **des autres** : vos utilisateurs qui codent avec une IA. Il s'appelle `llms.txt`. Vous allez voir : c'est pas sorcier.
 
 <!--more-->
 

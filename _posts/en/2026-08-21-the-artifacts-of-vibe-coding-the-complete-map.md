@@ -38,6 +38,7 @@ This family's common thread: Chesterton's fence. An agent that doesn't know *why
 | Artifact | What it captures | The article |
 | --- | --- | --- |
 | **Spec** | the expected behavior, source of truth | [August 23]({{ site.baseurl }}/2026/08/23/spec-driven-development-the-spec-as-source-of-truth/) |
+| **Issue template** | a task's brief, agent-ready | [already published]({{ site.baseurl }}/2026/08/07/issue-templates-your-agents-brief/) |
 | **Implementation plan** | the *how*, approved before the code | [August 25]({{ site.baseurl }}/2026/08/25/the-implementation-plan-the-human-checkpoint/) |
 | **Tests** | the executable spec — the one that cannot lie | [August 26]({{ site.baseurl }}/2026/08/26/tests-the-executable-spec/) |
 
@@ -49,6 +50,7 @@ This is the control family: in vibe coding, you don't re-read a 2,000-line diff 
 | --- | --- | --- |
 | **Schemas and contracts** (OpenAPI, JSON Schema, types) | machine-verifiable boundaries | [August 27]({{ site.baseurl }}/2026/08/27/schemas-and-contracts-machine-verifiable-context/) |
 | **Linters and analyzers** | self-enforcing conventions | [August 28]({{ site.baseurl }}/2026/08/28/linters-and-analyzers-conventions-that-enforce-themselves/) |
+| **One branch per agent** | the isolation that makes mistakes reversible | [already published]({{ site.baseurl }}/2026/08/09/one-branch-per-agent-git-in-the-agent-era/) |
 
 The agents' favorite family: they don't even read these artifacts, they **bump into them** — and correct themselves. Every automated rule is one instruction you don't have to write and one review comment you don't have to make.
 
@@ -59,7 +61,8 @@ The agents' favorite family: they don't even read these artifacts, they **bump i
 | **AGENTS.md / instructions** | the AI's onboarding guide, re-read every session | [August 22]({{ site.baseurl }}/2026/08/22/agents-md-your-ai-onboarding-guide/) |
 | **Domain glossary** | the single vocabulary, business ↔ code | [already published]({{ site.baseurl }}/2026/07/16/the-domain-glossary/) |
 | **Diagrams as code** | the system map, editable by the agent | [already published]({{ site.baseurl }}/2026/07/17/diagrams-as-code-the-map-ai-can-read/) |
-| **Runbooks and postmortems** | the operational knowledge of sleepless nights | [August 29]({{ site.baseurl }}/2026/08/29/runbooks-and-postmortems-operational-knowledge/) |
+| **Runbook** | the manual for known outages | [already published]({{ site.baseurl }}/2026/08/05/the-runbook-the-manual-your-agent-is-waiting-for/) |
+| **Postmortem** | the memory of incidents | [August 29]({{ site.baseurl }}/2026/08/29/the-postmortem-the-memory-of-incidents/) |
 | **llms.txt** | your published docs, written for other people's agents | [August 30]({{ site.baseurl }}/2026/08/30/llms-txt-documentation-written-for-ai/) |
 
 ## The pattern that shows up everywhere
@@ -72,13 +75,13 @@ Re-read any episode already published and you'll find the same three rules — t
 
 ## The honesty moment
 
-- **Don't install all thirteen at once.** A repository that goes from zero artifacts to the full arsenal in a week mostly produces dead documentation. Start where it bleeds: the agent names things wrong? Glossary. It undoes your choices? ADRs. It ignores your conventions? AGENTS.md and linters.
+- **Don't install all sixteen at once.** A repository that goes from zero artifacts to the full arsenal in a week mostly produces dead documentation. Start where it bleeds: the agent names things wrong? Glossary. It undoes your choices? ADRs. It ignores your conventions? AGENTS.md and linters.
 - **Artifacts don't replace conversation.** A team that stopped talking because "it's all in the docs" has a problem Markdown won't fix.
 
 ## In summary
 
 - In vibe coding, **code becomes regenerable**; the capital is the artifacts that constrain and explain it — all of them **in the repository**, versioned, reviewed in PRs.
-- Four families: the **memory of decisions** (ADRs, RFCs, Git), **intent** (specs, plans, tests), the **guardrails** (schemas, linters), and **shared context** (AGENTS.md, glossary, diagrams, runbooks, llms.txt).
+- Four families: the **memory of decisions** (ADRs, RFCs, Git), **intent** (specs, plans, tests), the **guardrails** (schemas, linters), and **shared context** (AGENTS.md, glossary, diagrams, runbooks, postmortems, llms.txt).
 - Everywhere the same pattern: **the AI proposes, the human decides, the repo remembers** — and selectivity is the value.
 - What's next: **one artifact per day until August 30**. The map is drawn; let's walk it.
 
