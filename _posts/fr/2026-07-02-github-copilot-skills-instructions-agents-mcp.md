@@ -7,6 +7,7 @@ lang: fr
 ref: copilot-personnalisation
 image: /images/posts/copilot-customization.png
 tags: [github, copilot, AI, MCP, skills]
+level: 200
 ---
 
 GitHub Copilot n'est plus le petit assistant qui complétait vos lignes de code. C'est devenu un véritable agent, capable de lire votre projet, lancer des commandes, appeler des outils externes et suivre vos règles. Le problème ? On peut désormais le personnaliser de **cinq façons différentes** — Instructions, Prompts, Skills, Agents, MCP — et tout le monde s'y perd.

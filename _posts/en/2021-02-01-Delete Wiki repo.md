@@ -6,6 +6,7 @@ author: AClerbois
 ref: delete-wiki-repo
 image: /images/posts/azuredevops.png
 tags: [azure devops, tips]
+level: 100
 ---
 
 # How to delete a project Wiki in Azure DevOps?

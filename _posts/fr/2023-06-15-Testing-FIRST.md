@@ -7,6 +7,7 @@ lang: fr
 ref: testing-first
 image: /images/posts/design.jpg
 tags: [testing]
+level: 200
 ---
 
 ## Le Principe FIRST dans le Test

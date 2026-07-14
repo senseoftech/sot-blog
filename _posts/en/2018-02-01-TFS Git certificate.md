@@ -9,6 +9,7 @@ github_repo_username: aclerbois
 github_repo : aclerbois
 image: /images/posts/trust.jpg
 tags: [azure devops, hgit]
+level: 200
 ---
 
 When you try to clone a repository, you may get an error like "ssl certificate problem: unable to get local issuer certificate"

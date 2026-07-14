@@ -7,6 +7,7 @@ lang: fr
 ref: blazor-localization
 image: /images/posts/flags.jpg
 tags: [.net core, blazor, webassembly, multilingual ]
+level: 200
 ---
 
 Dans cet article, nous allons aborder la possibilité d'ajouter des capacités multilingues à votre application Blazor WebAssembly.

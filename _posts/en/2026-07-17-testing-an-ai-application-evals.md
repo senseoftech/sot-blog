@@ -6,6 +6,7 @@ author: AClerbois
 ref: ai-evals
 image: /images/posts/ai-evals.png
 tags: [AI, LLM, testing, evals, quality]
+level: 200
 ---
 
 You followed [the base prompt]({{ site.baseurl }}/2026/07/12/vibe-project-dotnet-foundations/): triple A, 80% coverage, everything green. Then you add the AI feature — automatic ticket summarization — and you naively write:

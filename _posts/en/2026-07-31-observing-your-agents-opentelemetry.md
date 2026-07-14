@@ -6,6 +6,7 @@ author: AClerbois
 ref: agent-observability
 image: /images/posts/agent-observability.png
 tags: [dotnet, AI, observability, opentelemetry, aspire]
+level: 300
 ---
 
 "Why did the agent reimburse that expense claim at 3 a.m.?" With classic code, you'd read the logs and the stack trace. With an agent, the "why" lives elsewhere: in **the conversation** — which tools it called, with which arguments, what it read, what the model answered. [A non-deterministic system]({{ site.baseurl }}/2026/07/16/why-ai-hallucinates/) can't be debugged with `printf`.

@@ -7,6 +7,7 @@ lang: fr
 ref: rag-embeddings
 image: /images/posts/rag-embeddings.png
 tags: [AI, RAG, embeddings, LLM, vector-search]
+level: 100
 ---
 
 Posez à un modèle d'IA une question sur l'histoire de Rome : réponse brillante. Posez-lui une question sur **votre** procédure de remboursement interne : il invente, poliment. Normal — il n'a jamais lu vos documents. Ils sont privés, récents, ou les deux.

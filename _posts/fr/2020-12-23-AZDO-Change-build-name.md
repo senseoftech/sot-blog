@@ -7,6 +7,7 @@ lang: fr
 ref: azdo-build-name
 image: /images/posts/azuredevops.png
 tags: [azure devops, tips]
+level: 100
 ---
 
 # Changer le nom du pipeline pendant le build

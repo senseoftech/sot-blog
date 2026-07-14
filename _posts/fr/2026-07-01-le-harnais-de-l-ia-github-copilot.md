@@ -7,6 +7,7 @@ lang: fr
 ref: ai-harness
 image: /images/posts/ai-harness.png
 tags: [AI, agents, github, copilot, LLM]
+level: 100
 ---
 
 Tout le monde parle du « modèle » : GPT, Claude, Gemini… Comme si toute la magie tenait dans le cerveau. Pourtant, un modèle tout seul ne sait **rien faire** : il ne voit pas votre code, ne lance aucune commande, oublie tout d'une phrase à l'autre. Ce qui transforme ce cerveau en véritable **agent**, c'est une pièce dont on parle beaucoup moins : le **harnais** (le *harness*).

@@ -6,6 +6,7 @@ author: AClerbois
 ref: vibe-vsa
 image: /images/posts/vibe-vsa.png
 tags: [dotnet, AI, vibe-engineering, architecture, vertical-slice, best-practices]
+level: 300
 ---
 
 In [the vibe engineering post]({{ site.baseurl }}/2026/07/12/vibe-project-dotnet-foundations/), my base prompt imposed an architecture — CQRS, Minimal API, Carter, one handler per use case — promising it would serve as a "mold" for the AI. Several readers asked the right question: **why that one?**

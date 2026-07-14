@@ -7,6 +7,7 @@ lang: fr
 ref: copilot-security
 image: /images/posts/copilot-security.png
 tags: [github, copilot, AI, security, agents]
+level: 200
 ---
 
 Copilot lit votre code, lance des commandes, ouvre des Pull Requests. Formidable. Mais posez-vous la question qu'on pose pour tout nouvel arrivant dans l'équipe : **qu'est-ce qu'on lui laisse toucher, et qu'est-ce qu'on garde sous clé ?**

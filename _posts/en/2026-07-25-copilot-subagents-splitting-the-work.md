@@ -6,6 +6,7 @@ author: AClerbois
 ref: copilot-subagents
 image: /images/posts/copilot-subagents.png
 tags: [github, copilot, cli, AI, agents, prompts]
+level: 300
 ---
 
 In [episode 3 of the Copilot CLI series]({{ site.baseurl }}/2026/07/20/copilot-cli-3-the-team-in-the-terminal/), we met the team: Explore, Task, Plan, Code-review, and your own agents in `.agent.md`. Several readers gave me the same feedback: *"fine, the team exists — but how do I actually use it?"*

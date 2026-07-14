@@ -7,6 +7,7 @@ lang: fr
 ref: letsencrypt-certbot
 image: /images/posts/trust.jpg
 tags: [.net core, hosting, dns]
+level: 200
 ---
 
 Il peut parfois être compliqué de générer un certificat. Même si Let's Encrypt nous permet d'obtenir gratuitement des certificats renouvelables tous les trois mois, cette opération est parfois fastidieuse.

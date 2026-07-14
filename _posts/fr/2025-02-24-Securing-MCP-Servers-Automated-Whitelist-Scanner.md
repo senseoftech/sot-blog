@@ -7,6 +7,7 @@ lang: fr
 ref: mcp-scanner
 image: /images/posts/mcp.png
 tags: [MCP, security, AI, GitHub Actions, DevSecOps]
+level: 300
 ---
 
 ## Le Model Context Protocol : une révolution... et une surface d'attaque

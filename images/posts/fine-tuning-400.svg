@@ -1,0 +1,72 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+  <rect x="520" y="30" width="160" height="26" rx="13" fill="#0d1117" stroke="#f85149" stroke-width="2"/>
+  <text x="600" y="48" text-anchor="middle" fill="#f85149" font-size="13" letter-spacing="3" font-weight="700">NIVEAU 400</text>
+  <text x="600" y="86" text-anchor="middle" fill="#e6edf3" font-size="19" letter-spacing="2" font-weight="600">LE FINE-TUNING, QUAND C'EST VRAIMENT LA RÉPONSE</text>
+
+  <!-- The founding distinction -->
+  <g>
+    <rect x="80" y="120" width="510" height="120" rx="14" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="335" y="152" text-anchor="middle" fill="#38bdf8" font-size="15" font-weight="700">RAG = CE QU'IL FAUT SAVOIR</text>
+    <text x="335" y="178" text-anchor="middle" fill="#9198a1" font-size="13">la connaissance change → on ne la grave pas</text>
+    <text x="335" y="216" text-anchor="middle" fill="#e6edf3" font-size="12.5">politique de remboursement à jour, faits, docs privées</text>
+  </g>
+  <g>
+    <rect x="610" y="120" width="510" height="120" rx="14" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="865" y="152" text-anchor="middle" fill="#3fb950" font-size="15" font-weight="700">FINE-TUNING = COMMENT SE COMPORTER</text>
+    <text x="865" y="178" text-anchor="middle" fill="#9198a1" font-size="13">on façonne un réflexe → gravé dans les poids</text>
+    <text x="865" y="216" text-anchor="middle" fill="#e6edf3" font-size="12.5">format exact, ton de marque, raisonnement métier</text>
+  </g>
+
+  <!-- LoRA -->
+  <g>
+    <rect x="80" y="262" width="510" height="150" rx="14" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="335" y="294" text-anchor="middle" fill="#bc8cff" font-size="15" font-weight="700">LoRA / QLoRA</text>
+    <text x="335" y="318" text-anchor="middle" fill="#9198a1" font-size="12.5">au lieu de repeindre le bâtiment : une fine couche d'adaptateurs</text>
+    <g>
+      <rect x="120" y="332" width="300" height="46" rx="8" fill="#1c2430" stroke="#30363d"/>
+      <text x="270" y="360" text-anchor="middle" fill="#6e7681" font-size="12">modèle gelé (70B)</text>
+      <rect x="430" y="332" width="130" height="46" rx="8" fill="#3b2a5e" stroke="#bc8cff" stroke-width="2"/>
+      <text x="495" y="354" text-anchor="middle" fill="#bc8cff" font-size="12" font-weight="700">adaptateur</text>
+      <text x="495" y="370" text-anchor="middle" fill="#9198a1" font-size="10">qq Mo, entraîné</text>
+    </g>
+    <text x="335" y="400" text-anchor="middle" fill="#3fb950" font-size="12.5" font-weight="600">une seule carte, adaptateur branchable à chaud</text>
+  </g>
+
+  <!-- SFT/DPO + traps -->
+  <g>
+    <rect x="610" y="262" width="510" height="150" rx="14" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="865" y="294" text-anchor="middle" fill="#ffa657" font-size="15" font-weight="700">SFT → DPO · ET LES PIÈGES</text>
+    <g fill="#e6edf3" font-size="12.5">
+      <text x="636" y="322">SFT : imiter des exemples · DPO : apprendre des préférences</text>
+      <text x="636" y="348">⚠ oubli catastrophique → évals de non-régression</text>
+      <text x="636" y="374">⚠ la donnée curée = 90 % du travail</text>
+      <text x="636" y="400">⚠ artefact versionné → cycle MLOps (ADR)</text>
+    </g>
+  </g>
+
+  <!-- Order -->
+  <g>
+    <rect x="180" y="432" width="840" height="60" rx="14" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="600" y="458" text-anchor="middle" fill="#e6edf3" font-size="15" font-weight="700">L'ORDRE D'ESSAI — jamais sauté : prompt → RAG → fine-tuning</text>
+    <text x="600" y="482" text-anchor="middle" fill="#9198a1" font-size="12">si le prompt suffit, ne fine-tunez pas — souvent le fine-tuning EN COMPLÉMENT du RAG</text>
+  </g>
+
+  <text x="600" y="534" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">LA DERNIÈRE MARCHE, MONTÉE EN CONNAISSANCE DE CAUSE</text>
+</svg>

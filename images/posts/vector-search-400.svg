@@ -1,0 +1,80 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+  <rect x="520" y="30" width="160" height="26" rx="13" fill="#0d1117" stroke="#f85149" stroke-width="2"/>
+  <text x="600" y="48" text-anchor="middle" fill="#f85149" font-size="13" letter-spacing="3" font-weight="700">NIVEAU 400</text>
+  <text x="600" y="86" text-anchor="middle" fill="#e6edf3" font-size="19" letter-spacing="2" font-weight="600">RECHERCHE VECTORIELLE À L'ÉCHELLE · HNSW &amp; RE-RANKING</text>
+
+  <!-- HNSW atlas -->
+  <g>
+    <text x="300" y="126" text-anchor="middle" fill="#9198a1" font-size="14" letter-spacing="1">HNSW : L'ATLAS ROUTIER MULTI-ÉCHELLE</text>
+    <!-- top layer -->
+    <text x="90" y="164" fill="#6e7681" font-size="11">autoroutes</text>
+    <line x1="120" y1="175" x2="500" y2="175" stroke="#30363d"/>
+    <circle cx="160" cy="175" r="7" fill="#38bdf8"/>
+    <circle cx="340" cy="175" r="7" fill="#38bdf8"/>
+    <circle cx="470" cy="175" r="7" fill="#38bdf8"/>
+    <!-- mid -->
+    <line x1="120" y1="220" x2="500" y2="220" stroke="#30363d"/>
+    <g fill="#38bdf8" fill-opacity="0.7">
+      <circle cx="150" cy="220" r="5"/><circle cx="220" cy="220" r="5"/><circle cx="300" cy="220" r="5"/><circle cx="360" cy="220" r="5"/><circle cx="430" cy="220" r="5"/><circle cx="480" cy="220" r="5"/>
+    </g>
+    <!-- bottom -->
+    <text x="90" y="270" fill="#6e7681" font-size="11">rues</text>
+    <line x1="120" y1="265" x2="500" y2="265" stroke="#30363d"/>
+    <g fill="#38bdf8" fill-opacity="0.45">
+      <circle cx="135" cy="265" r="4"/><circle cx="175" cy="265" r="4"/><circle cx="215" cy="265" r="4"/><circle cx="255" cy="265" r="4"/><circle cx="295" cy="265" r="4"/><circle cx="335" cy="265" r="4"/><circle cx="375" cy="265" r="4"/><circle cx="415" cy="265" r="4"/><circle cx="455" cy="265" r="4"/><circle cx="490" cy="265" r="4"/>
+    </g>
+    <path d="M160 175 L300 220 L295 265" stroke="#ffa657" stroke-width="2.5" fill="none"/>
+    <circle cx="295" cy="265" r="7" fill="#ffa657"/>
+    <text x="300" y="300" text-anchor="middle" fill="#9198a1" font-size="12">recherche logarithmique — quelques centaines de points, pas 10 M</text>
+    <text x="300" y="324" text-anchor="middle" fill="#e6edf3" font-size="12.5" font-weight="600">ANN : 5 PROBABLEMENT parmi les plus proches (pas les vrais 5)</text>
+    <text x="300" y="348" text-anchor="middle" fill="#3fb950" font-size="12">curseur recall / latence (efSearch) — à mesurer</text>
+  </g>
+
+  <!-- Two-stage engine -->
+  <g>
+    <rect x="560" y="130" width="580" height="150" rx="14" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="850" y="160" text-anchor="middle" fill="#3fb950" font-size="15" font-weight="700">RECHERCHE HYBRIDE + RE-RANKING</text>
+    <g font-size="12.5">
+      <rect x="586" y="178" width="150" height="40" rx="6" fill="#1c2430" stroke="#38bdf8"/>
+      <text x="661" y="196" text-anchor="middle" fill="#38bdf8">sémantique (ANN)</text>
+      <text x="661" y="212" text-anchor="middle" fill="#9198a1" font-size="10">le sens</text>
+      <text x="756" y="202" text-anchor="middle" fill="#e6edf3" font-size="18">+</text>
+      <rect x="776" y="178" width="150" height="40" rx="6" fill="#1c2430" stroke="#ffa657"/>
+      <text x="851" y="196" text-anchor="middle" fill="#ffa657">mots-clés (BM25)</text>
+      <text x="851" y="212" text-anchor="middle" fill="#9198a1" font-size="10">SKU-1234, noms</text>
+      <text x="946" y="202" text-anchor="middle" fill="#e6edf3" font-size="16">→</text>
+      <rect x="966" y="178" width="150" height="40" rx="6" fill="#1c2430" stroke="#bc8cff"/>
+      <text x="1041" y="196" text-anchor="middle" fill="#bc8cff">RRF fusion</text>
+      <text x="1041" y="212" text-anchor="middle" fill="#9198a1" font-size="10">un seul classement</text>
+    </g>
+    <text x="850" y="246" text-anchor="middle" fill="#e6edf3" font-size="12.5">ANN rappelle 50 (rapide) → cross-encoder re-classe en 5 (précis)</text>
+    <text x="850" y="268" text-anchor="middle" fill="#9198a1" font-size="11.5">le videur trie grossièrement, le jury départage</text>
+  </g>
+
+  <!-- Migration warning -->
+  <g>
+    <rect x="560" y="300" width="580" height="90" rx="14" fill="url(#card)" stroke="#f85149" stroke-width="2"/>
+    <text x="850" y="330" text-anchor="middle" fill="#f85149" font-size="14" font-weight="700">⚠ CHANGER DE MODÈLE D'EMBEDDINGS = TOUT RÉ-INDEXER</text>
+    <text x="850" y="356" text-anchor="middle" fill="#9198a1" font-size="12">nouveaux vecteurs incomparables aux anciens — à anticiper, à documenter (ADR)</text>
+    <text x="850" y="378" text-anchor="middle" fill="#9198a1" font-size="12">+ quantization des vecteurs : moins de RAM, un peu de précision en moins</text>
+  </g>
+
+  <text x="600" y="440" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">LA MAGIE DU top:5, DÉSASSEMBLÉE</text>
+</svg>

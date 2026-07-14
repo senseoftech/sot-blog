@@ -7,6 +7,7 @@ lang: fr
 ref: agent-framework
 image: /images/posts/agent-framework.png
 tags: [dotnet, AI, agents, agent-framework, MCP, microsoft]
+level: 200
 ---
 
 Vous avez peut-être croisé le nom : **Microsoft Agent Framework**. C'est le nouveau framework open source de Microsoft pour construire des agents IA — le successeur officiel de **Semantic Kernel** et d'**AutoGen**, réunis en un seul projet, disponible en **.NET et en Python**.

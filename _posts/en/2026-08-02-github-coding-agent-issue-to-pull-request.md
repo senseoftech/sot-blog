@@ -6,6 +6,7 @@ author: AClerbois
 ref: coding-agent
 image: /images/posts/coding-agent.png
 tags: [github, copilot, coding-agent, AI, automation]
+level: 200
 ---
 
 In [the final episode of the CLI series]({{ site.baseurl }}/2026/07/21/copilot-cli-4-delegate-and-automate/), one magic character — `&` — shipped a task "to the cloud". Time to meet who receives it: the **Copilot coding agent**, Copilot's third face. The IDE assists, the CLI lives in your terminal… and the coding agent **works on GitHub.com while you do something else**.

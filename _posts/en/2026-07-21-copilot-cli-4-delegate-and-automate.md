@@ -6,6 +6,7 @@ author: AClerbois
 ref: copilot-cli-4
 image: /images/posts/copilot-cli-automation.png
 tags: [github, copilot, cli, AI, automation, CI]
+level: 300
 ---
 
 Final episode of the series. You know [why]({{ site.baseurl }}/2026/07/18/copilot-cli-1-take-copilot-out-of-the-ide/), you've mastered [the daily routine]({{ site.baseurl }}/2026/07/19/copilot-cli-2-the-daily-routine/), you've [built the team]({{ site.baseurl }}/2026/07/20/copilot-cli-3-the-team-in-the-terminal/). What remains is the dimension that changes the job: **working in several places at once** — delegating to the cloud, parallelizing local worksites, scheduling recurring tasks, and embedding the agent in your scripts and CI.

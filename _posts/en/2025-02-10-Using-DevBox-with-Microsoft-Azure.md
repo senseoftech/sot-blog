@@ -6,6 +6,7 @@ author: AClerbois
 ref: devbox-azure
 image: /images/posts/Desk.jpg
 tags: [DevBox, Microsoft Azure, cloud, development]
+level: 200
 ---
 
 ## Introduction to DevBox and its Benefits

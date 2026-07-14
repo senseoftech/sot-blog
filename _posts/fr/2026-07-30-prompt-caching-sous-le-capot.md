@@ -7,6 +7,7 @@ lang: fr
 ref: prompt-caching
 image: /images/posts/prompt-caching.png
 tags: [AI, LLM, tokens, caching, cost]
+level: 300
 ---
 
 Dans [l'article sur les tokens]({{ site.baseurl }}/fr/2026/07/05/tokens-llm-envoyes-sortie-cache/), une ligne du tableau de prix intriguait : les *tokens cachés*, facturés une fraction du prix normal. Et dans [la boucle du tool calling]({{ site.baseurl }}/fr/2026/07/29/tool-calling-sous-le-capot/), un détail aurait dû vous alarmer : à chaque aller-retour, **tout le contexte est renvoyé et refacturé**. Un agent qui enchaîne trente appels d'outils relit trente fois les mêmes instructions.

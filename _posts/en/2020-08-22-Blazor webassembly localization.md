@@ -9,6 +9,7 @@ github_repo_username: aclerbois
 github_repo : aclerbois
 image: /images/posts/flags.jpg
 tags: [.net core, blazor, webassembly, multilingual ]
+level: 200
 ---
 
 In this article we will discuss the possibility of adding multilingual capabilities to your Blazor WebAssembly application.

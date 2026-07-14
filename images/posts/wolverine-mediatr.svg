@@ -1,0 +1,81 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+  <text x="600" y="60" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">LE&#160;&#160;MESSAGER,&#160;&#160;LE&#160;&#160;PATTERN&#160;&#160;ET&#160;&#160;LA&#160;&#160;FACTURE</text>
+
+  <!-- The pattern above all -->
+  <g>
+    <rect x="280" y="100" width="640" height="76" rx="14" fill="#0d1117" stroke="#3fb950" stroke-width="3"/>
+    <text x="600" y="132" text-anchor="middle" fill="#3fb950" font-size="16" font-weight="700">LE PATTERN : endpoint mince → message → handler testable</text>
+    <text x="600" y="158" text-anchor="middle" fill="#9198a1" font-size="12">vos tranches verticales survivent au changement de messager</text>
+  </g>
+
+  <g stroke="#6e7681" stroke-width="2" fill="none">
+    <path d="M420 176 L220 230"/>
+    <path d="M600 176 V230"/>
+    <path d="M780 176 L980 230"/>
+  </g>
+
+  <!-- Option 1: MediatR -->
+  <g>
+    <rect x="80" y="230" width="290" height="230" rx="14" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="225" y="266" text-anchor="middle" fill="#ffa657" font-size="17" font-weight="700">PAYER MediatR</text>
+    <text x="225" y="290" text-anchor="middle" fill="#9198a1" font-size="12">licence commerciale</text>
+    <g fill="#e6edf3" font-size="13">
+      <text x="106" y="324">✓ zéro migration</text>
+      <text x="106" y="350">✓ stable, éprouvé, connu</text>
+      <text x="106" y="376">− un coût récurrent</text>
+    </g>
+    <text x="225" y="424" text-anchor="middle" fill="#9198a1" font-size="12">la continuité — légitime quand</text>
+    <text x="225" y="442" text-anchor="middle" fill="#9198a1" font-size="12">le messager n'est pas le sujet</text>
+  </g>
+
+  <!-- Option 2: homemade -->
+  <g>
+    <rect x="455" y="230" width="290" height="230" rx="14" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="600" y="266" text-anchor="middle" fill="#38bdf8" font-size="17" font-weight="700">FAIRE MAISON</text>
+    <text x="600" y="290" text-anchor="middle" fill="#9198a1" font-size="12">IHandler&lt;T,R&gt; + DI</text>
+    <g fill="#e6edf3" font-size="13">
+      <text x="481" y="324">✓ zéro dépendance, zéro licence</text>
+      <text x="481" y="350">✓ assez pour l'in-process simple</text>
+      <text x="481" y="376">− behaviors/retries à réinventer</text>
+    </g>
+    <text x="600" y="424" text-anchor="middle" fill="#9198a1" font-size="12">la sobriété — un choix,</text>
+    <text x="600" y="442" text-anchor="middle" fill="#9198a1" font-size="12">pas un dogme</text>
+  </g>
+
+  <!-- Option 3: Wolverine -->
+  <g>
+    <rect x="830" y="230" width="290" height="230" rx="14" fill="url(#card)" stroke="#3fb950" stroke-width="3"/>
+    <text x="975" y="266" text-anchor="middle" fill="#3fb950" font-size="17" font-weight="700">WOLVERINE</text>
+    <text x="975" y="290" text-anchor="middle" fill="#9198a1" font-size="12">MIT · open-core (JasperFx)</text>
+    <g fill="#e6edf3" font-size="13">
+      <text x="856" y="324">✓ handlers = méthodes pures</text>
+      <text x="856" y="350">✓ source-gen : rapide, sobre</text>
+      <text x="856" y="376">✓ messaging · outbox · sagas</text>
+    </g>
+    <text x="975" y="424" text-anchor="middle" fill="#9198a1" font-size="12">l'anticipation — le médiateur</text>
+    <text x="975" y="442" text-anchor="middle" fill="#9198a1" font-size="12">qui devient la poste</text>
+  </g>
+
+  <text x="600" y="502" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="600">dans les trois cas : un ADR — contexte, options, décision, conséquences</text>
+
+  <text x="600" y="556" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    LE  PATTERN  COMPTE  PLUS  QUE  LE  PACKAGE  ·  THE  PATTERN  BEATS  THE  PACKAGE
+  </text>
+</svg>

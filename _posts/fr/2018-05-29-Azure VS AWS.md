@@ -7,6 +7,7 @@ lang: fr
 ref: azure-vs-aws
 image: /images/posts/azure_vs_aws.jpg
 tags: [Cloud, hosting, dns]
+level: 100
 ---
 Microsoft propose une comparaison entre Microsoft Azure et Amazon Web Services.
 

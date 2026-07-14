@@ -6,6 +6,7 @@ author: AClerbois
 ref: fluentui-mcp
 image: /images/posts/mcp.png
 tags: [Blazor, Fluent UI, MCP, AI, .NET, Copilot]
+level: 300
 ---
 
 ## The Challenge of Migrating to Fluent UI Blazor V5

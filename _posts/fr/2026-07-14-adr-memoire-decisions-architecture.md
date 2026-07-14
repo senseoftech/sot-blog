@@ -7,6 +7,7 @@ lang: fr
 ref: adr
 image: /images/posts/adr.png
 tags: [architecture, documentation, ADR, AI, best-practices]
+level: 100
 ---
 
 Sprint 23. Un nouveau développeur rejoint l'équipe et pose la question fatale : *« Pourquoi MongoDB, ici ? Tout le reste est en SQL Server. »* Silence. La personne qui avait fait ce choix est partie il y a un an. Était-ce une bonne raison ? Une contrainte de l'époque ? Un pari perdu ? Personne ne sait. Alors on n'ose pas y toucher.

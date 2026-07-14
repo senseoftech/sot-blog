@@ -6,6 +6,7 @@ author: AClerbois
 ref: copilot-cli-2
 image: /images/posts/copilot-cli-daily.png
 tags: [github, copilot, cli, AI, tokens, security]
+level: 200
 ---
 
 [Episode 1]({{ site.baseurl }}/2026/07/18/copilot-cli-1-take-copilot-out-of-the-ide/): Copilot CLI is installed, you know the three driving modes. Today we settle into the daily routine — and that's where the tool shines: sessions that resume where they left off, a context that manages itself, a **memory** that learns your conventions, and a garage of models you can swap with one command.

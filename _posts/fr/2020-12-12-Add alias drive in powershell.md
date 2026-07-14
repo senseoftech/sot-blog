@@ -7,6 +7,7 @@ lang: fr
 ref: powershell-alias-drive
 image: /images/posts/powershell.jpg
 tags: [powershell, cli, tips]
+level: 100
 ---
 
 Quand vous avez plusieurs clients ou projets et que, comme moi, vous utilisez souvent votre invite de commande, il est souvent pénible de naviguer de dossier en dossier pour arriver à l'emplacement exact du projet.

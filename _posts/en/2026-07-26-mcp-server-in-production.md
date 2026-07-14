@@ -6,6 +6,7 @@ author: AClerbois
 ref: mcp-server-prod
 image: /images/posts/mcp-server-prod.png
 tags: [dotnet, AI, MCP, csharp, azure, security]
+level: 300
 ---
 
 In [the first MCP article]({{ site.baseurl }}/2026/07/13/first-mcp-server-dotnet/), we built the universal plug: a server in thirty lines, over STDIO, on your machine. And I promised the sequel: *"Streamable HTTP when you need to share."*

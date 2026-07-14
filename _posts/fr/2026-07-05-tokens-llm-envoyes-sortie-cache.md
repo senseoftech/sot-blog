@@ -7,6 +7,7 @@ lang: fr
 ref: llm-tokens
 image: /images/posts/llm-tokens.png
 tags: [AI, LLM, tokens, cost]
+level: 100
 ---
 
 Quand on commence à utiliser des modèles d'IA — que ce soit via une API, GitHub Copilot ou un chatbot — un mot revient partout : **token**. Sur votre facture, dans les limites (« context window »), dans les messages d'erreur (« trop de tokens »). Et on distingue même les **tokens envoyés**, les **tokens de sortie** et les **tokens en cache**, chacun à un prix différent.

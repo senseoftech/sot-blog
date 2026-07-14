@@ -1,0 +1,63 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#f85149" stop-opacity="0.14"/>
+      <stop offset="55%" stop-color="#f85149" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+  <rect x="520" y="30" width="160" height="26" rx="13" fill="#0d1117" stroke="#f85149" stroke-width="2"/>
+  <text x="600" y="48" text-anchor="middle" fill="#f85149" font-size="13" letter-spacing="3" font-weight="700">NIVEAU 400</text>
+  <text x="600" y="86" text-anchor="middle" fill="#e6edf3" font-size="19" letter-spacing="2" font-weight="600">PROMPT INJECTION · LA DÉFENSE EN PROFONDEUR</text>
+
+  <!-- The lethal trifecta -->
+  <g>
+    <text x="300" y="128" text-anchor="middle" fill="#9198a1" font-size="14" letter-spacing="1">LA TRIADE LÉTALE</text>
+    <circle cx="300" cy="250" r="110" fill="none" stroke="#30363d" stroke-width="1"/>
+    <g>
+      <circle cx="300" cy="180" r="58" fill="#f85149" fill-opacity="0.14" stroke="#f85149" stroke-width="2"/>
+      <text x="300" y="176" text-anchor="middle" fill="#f85149" font-size="13" font-weight="700">données</text>
+      <text x="300" y="194" text-anchor="middle" fill="#f85149" font-size="13" font-weight="700">privées</text>
+      <circle cx="245" cy="288" r="58" fill="#ffa657" fill-opacity="0.14" stroke="#ffa657" stroke-width="2"/>
+      <text x="238" y="284" text-anchor="middle" fill="#ffa657" font-size="12" font-weight="700">contenu non</text>
+      <text x="238" y="300" text-anchor="middle" fill="#ffa657" font-size="12" font-weight="700">fiable</text>
+      <circle cx="355" cy="288" r="58" fill="#bc8cff" fill-opacity="0.14" stroke="#bc8cff" stroke-width="2"/>
+      <text x="362" y="284" text-anchor="middle" fill="#bc8cff" font-size="12" font-weight="700">canal de</text>
+      <text x="362" y="300" text-anchor="middle" fill="#bc8cff" font-size="12" font-weight="700">sortie</text>
+    </g>
+    <text x="300" y="388" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">les trois = exfiltration possible</text>
+    <text x="300" y="408" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="600">retirez UN pilier → elle tombe</text>
+  </g>
+
+  <!-- Defenses -->
+  <g>
+    <rect x="560" y="120" width="580" height="360" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="850" y="154" text-anchor="middle" fill="#e6edf3" font-size="16" font-weight="700">LA DÉFENSE EN PROFONDEUR</text>
+    <text x="850" y="176" text-anchor="middle" fill="#9198a1" font-size="12">ne pas demander au modèle de se défendre — rendre sa compromission sans gravité</text>
+    <g fill="#e6edf3" font-size="14">
+      <text x="588" y="214">1 · casser la triade par design (périmètre, sandbox)</text>
+      <text x="588" y="248">2 · quarantaine dual-LLM (lire tout / ne rien pouvoir)</text>
+      <text x="588" y="282">3 · moindre privilège, par outil</text>
+      <text x="588" y="316">4 · humain sur l'irréversible (tool approval)</text>
+      <text x="588" y="350">5 · provenance &amp; étiquetage du contexte</text>
+      <text x="588" y="384">6 · red teaming en CI (golden dataset d'attaques)</text>
+    </g>
+    <rect x="588" y="410" width="524" height="52" rx="10" fill="#0d1117" stroke="#f85149" stroke-width="1.5"/>
+    <text x="850" y="432" text-anchor="middle" fill="#f85149" font-size="13" font-weight="600">pas de « requête paramétrée » pour LLM</text>
+    <text x="850" y="452" text-anchor="middle" fill="#9198a1" font-size="12">→ pas de correctif, des couches — on gère un risque</text>
+  </g>
+
+  <text x="600" y="524" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">
+    INSTRUCTIONS  ET  DONNÉES  PARTAGENT  LE  CANAL  ·  ONE  CHANNEL,  NO  PATCH
+  </text>
+</svg>

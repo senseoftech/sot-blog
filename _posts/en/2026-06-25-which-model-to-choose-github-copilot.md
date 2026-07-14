@@ -6,6 +6,7 @@ author: AClerbois
 ref: copilot-model-choice
 image: /images/posts/copilot-model-garage.png
 tags: [github, copilot, AI, LLM, models]
+level: 100
 ---
 
 You open GitHub Copilot's model picker and land on a wine list: GPT-5.5, Claude Opus 4.8, Gemini 3.5 Flash, Haiku, Sonnet, mini, nano, Codex… Which one do you take? The newest? The priciest? The one with the biggest number?

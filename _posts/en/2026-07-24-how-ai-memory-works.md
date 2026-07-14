@@ -6,6 +6,7 @@ author: AClerbois
 ref: ai-memory
 image: /images/posts/ai-memory.png
 tags: [AI, LLM, memory, context-engineering, privacy]
+level: 200
 ---
 
 "I told you yesterday!" — and yet no: yesterday doesn't exist for a language model. Its knowledge is **frozen** at training time, and its context window — [yesterday's desk]({{ site.baseurl }}/2026/07/23/context-window-compress-forget/) — empties with every new conversation. An LLM is, by construction, a **brilliant amnesiac**.

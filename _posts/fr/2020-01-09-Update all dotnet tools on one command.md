@@ -7,6 +7,7 @@ lang: fr
 ref: update-dotnet-tools
 image: /images/posts/powershell.jpg
 tags: [.net core, cli, nuget]
+level: 100
 ---
 
 Être développeur, c'est être paresseux. J'utilise souvent les dotnet global tools installés via la dotnet CLI.

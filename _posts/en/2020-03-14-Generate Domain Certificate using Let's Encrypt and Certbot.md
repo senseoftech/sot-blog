@@ -9,6 +9,7 @@ github_repo_username: aclerbois
 github_repo : aclerbois
 image: /images/posts/trust.jpg
 tags: [.net core, hosting, dns]
+level: 200
 ---
 
 It can sometimes be complicated to generate a certificate. Even though Let's Encrypt allows us to get free certificates that can be renewed every three months, it is sometimes tedious to do so.

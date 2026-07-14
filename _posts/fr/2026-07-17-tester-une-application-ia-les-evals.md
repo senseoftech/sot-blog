@@ -7,6 +7,7 @@ lang: fr
 ref: ai-evals
 image: /images/posts/ai-evals.png
 tags: [AI, LLM, testing, evals, quality]
+level: 200
 ---
 
 Vous avez suivi [le prompt de base]({{ site.baseurl }}/fr/2026/07/12/vibe-project-fondations-dotnet/) : triple A, 80 % de couverture, tout est vert. Puis vous ajoutez la fonctionnalité IA — un résumé automatique de tickets — et vous écrivez naïvement :

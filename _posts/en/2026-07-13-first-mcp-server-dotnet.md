@@ -6,6 +6,7 @@ author: AClerbois
 ref: mcp-server-dotnet
 image: /images/posts/mcp-server-dotnet.png
 tags: [dotnet, AI, MCP, csharp, agents, tutorial]
+level: 200
 ---
 
 In the last few articles, MCP kept coming back under the same nickname: **the universal plug**. We plugged it into [GitHub Copilot]({{ site.baseurl }}/2026/07/02/github-copilot-skills-instructions-agents-mcp/), into [Agent Framework]({{ site.baseurl }}/2026/07/11/microsoft-agent-framework-build-your-ai-agent-team/), we learned to [be careful with it]({{ site.baseurl }}/2026/07/10/securing-github-copilot/)… but we never built one.

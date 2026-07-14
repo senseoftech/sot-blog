@@ -9,6 +9,7 @@ github_repo_username: aclerbois
 github_repo : aclerbois
 image: /images/posts/ms_loves_git.png
 tags: [VS Code,git]
+level: 100
 ---
 By default, git is configured to use VIM as its editor, but you can configure your git environment to use Visual Studio Code.
 <!--more-->

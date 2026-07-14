@@ -9,6 +9,7 @@ github_repo_username: aclerbois
 github_repo: aclerbois
 image: /images/posts/azure-loves-docker.png
 tags: [Azure,ACR]
+level: 200
 ---
 
 ## How to create a new Azure Container Registry and push images on it.

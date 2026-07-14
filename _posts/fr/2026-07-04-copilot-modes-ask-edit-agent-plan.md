@@ -7,6 +7,7 @@ lang: fr
 ref: copilot-modes
 image: /images/posts/copilot-modes.png
 tags: [github, copilot, AI, agents, LLM]
+level: 100
 ---
 
 Même Copilot, même modèle, même projet… et pourtant quatre résultats radicalement différents selon un petit menu déroulant que la plupart des gens ignorent : le **mode**. Ask, Edit, Agent — et le petit dernier qui change tout pour les grosses tâches, **Plan**.

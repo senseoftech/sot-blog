@@ -7,6 +7,7 @@ lang: fr
 ref: dotnet-watch
 image: /images/posts/powershell.jpg
 tags: [.net core, cli]
+level: 100
 ---
 
 # Développer des applications ASP.NET Core avec un file watcher

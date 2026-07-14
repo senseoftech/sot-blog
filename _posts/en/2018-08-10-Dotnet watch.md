@@ -9,6 +9,7 @@ github_repo_username: aclerbois
 github_repo : aclerbois
 image: /images/posts/powershell.jpg
 tags: [.net core, cli]
+level: 100
 ---
 
 # Develop ASP.NET Core apps using a file watcher

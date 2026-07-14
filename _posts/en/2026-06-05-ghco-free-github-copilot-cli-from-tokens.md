@@ -9,6 +9,7 @@ github_repo_username: aclerbois
 github_repo : aclerbois
 image: /images/posts/road.jpg
 tags: [github, copilot, tokens, cli]
+level: 300
 ---
 
 # Freeing GitHub Copilot CLI from Tokens: Wiring Up a Local Model with Microsoft Foundry Local

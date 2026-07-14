@@ -6,6 +6,7 @@ author: AClerbois
 ref: copilot-cli-3
 image: /images/posts/copilot-cli-team.png
 tags: [github, copilot, cli, AI, agents, MCP]
+level: 200
 ---
 
 So far, Copilot CLI looked like **one** excellent employee in your terminal. Today, change of scale: there's a whole **team** hiding in there — built-in specialists working in parallel, your own custom agents, skills as Markdown files, plugins, and of course the MCP plug.

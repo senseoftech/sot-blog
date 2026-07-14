@@ -7,6 +7,7 @@ lang: fr
 ref: tfs-git-certificate
 image: /images/posts/trust.jpg
 tags: [azure devops, hgit]
+level: 200
 ---
 
 Lorsque vous tentez de cloner un dépôt, vous pouvez obtenir une erreur du type « ssl certificate problem: unable to get local issuer certificate »

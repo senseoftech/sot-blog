@@ -7,6 +7,7 @@ lang: fr
 ref: vibe-foundations
 image: /images/posts/vibe-foundations.png
 tags: [dotnet, AI, vibe-coding, architecture, blazor, best-practices]
+level: 200
 ---
 
 Démarrer un projet à partir de rien avec une IA, c'est grisant : quelques phrases, et le code jaillit. Mais le code jaillit **dans la direction que vous avez donnée** — ou dans celle que l'IA choisit par défaut si vous n'avez rien dit. Et là, bonne chance pour redresser le chantier au sprint 4.

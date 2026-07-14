@@ -6,6 +6,7 @@ author: AClerbois
 ref: ai-hallucinations
 image: /images/posts/ai-hallucinations.png
 tags: [AI, LLM, hallucinations, reliability]
+level: 100
 ---
 
 A `dotnet add package` for a library that **doesn't exist**. A perfectly named, perfectly documented… perfectly fictional API method. An American lawyer citing case law invented by ChatGPT in court — true story, he was sanctioned for it.

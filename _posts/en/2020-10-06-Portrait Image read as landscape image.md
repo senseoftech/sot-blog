@@ -6,6 +6,7 @@ author: AClerbois
 ref: portrait-image
 image: /images/posts/photographer.jpg
 tags: [.net core, image ]
+level: 200
 ---
 
 Portrait photos taken by an SLR camera do not have the height and width dimensions that reflect a portrait photo.

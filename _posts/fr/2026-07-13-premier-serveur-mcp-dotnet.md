@@ -7,6 +7,7 @@ lang: fr
 ref: mcp-server-dotnet
 image: /images/posts/mcp-server-dotnet.png
 tags: [dotnet, AI, MCP, csharp, agents, tutorial]
+level: 200
 ---
 
 Dans les derniers articles, MCP revient sans arrêt sous le même surnom : **la prise universelle**. On l'a branchée sur [GitHub Copilot]({{ site.baseurl }}/fr/2026/07/02/github-copilot-skills-instructions-agents-mcp/), sur [Agent Framework]({{ site.baseurl }}/fr/2026/07/11/microsoft-agent-framework-equipe-agents-ia/), on a appris à s'en [méfier]({{ site.baseurl }}/fr/2026/07/10/securiser-github-copilot/)… mais on ne l'a jamais fabriquée.

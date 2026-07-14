@@ -6,6 +6,7 @@ author: AClerbois
 ref: powershell-alias-drive
 image: /images/posts/powershell.jpg
 tags: [powershell, cli, tips]
+level: 100
 ---
 
 When you have several clients or projects and, like me, you often use your command prompt, it is often painful to navigate from folder to folder to get to the exact location of the project.

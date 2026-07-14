@@ -6,6 +6,7 @@ author: AClerbois
 ref: prompt-caching
 image: /images/posts/prompt-caching.png
 tags: [AI, LLM, tokens, caching, cost]
+level: 300
 ---
 
 In [the tokens article]({{ site.baseurl }}/2026/07/05/llm-tokens-input-output-cached/), one line of the price table was intriguing: *cached tokens*, billed at a fraction of the normal price. And in [the tool calling loop]({{ site.baseurl }}/2026/07/29/tool-calling-under-the-hood/), one detail should have alarmed you: on every round-trip, **the entire context is resent and re-billed**. An agent chaining thirty tool calls re-reads the same instructions thirty times.

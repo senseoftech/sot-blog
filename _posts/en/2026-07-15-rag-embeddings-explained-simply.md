@@ -6,6 +6,7 @@ author: AClerbois
 ref: rag-embeddings
 image: /images/posts/rag-embeddings.png
 tags: [AI, RAG, embeddings, LLM, vector-search]
+level: 100
 ---
 
 Ask an AI model a question about the history of Rome: brilliant answer. Ask it about **your** internal expense reimbursement procedure: it makes things up, politely. Fair enough — it has never read your documents. They're private, recent, or both.

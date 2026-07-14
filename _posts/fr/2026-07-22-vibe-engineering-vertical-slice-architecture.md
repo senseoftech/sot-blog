@@ -7,6 +7,7 @@ lang: fr
 ref: vibe-vsa
 image: /images/posts/vibe-vsa.png
 tags: [dotnet, AI, vibe-engineering, architecture, vertical-slice, best-practices]
+level: 300
 ---
 
 Dans [le billet sur le vibe engineering]({{ site.baseurl }}/fr/2026/07/12/vibe-project-fondations-dotnet/), mon prompt de base imposait une architecture — CQRS, Minimal API, Carter, un handler par cas d'usage — en promettant qu'elle servirait de « moule » à l'IA. Plusieurs lecteurs m'ont posé la bonne question : **pourquoi celle-là ?**

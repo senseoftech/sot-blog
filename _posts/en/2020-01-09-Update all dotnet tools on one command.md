@@ -9,6 +9,7 @@ github_repo_username: aclerbois
 github_repo : aclerbois
 image: /images/posts/powershell.jpg
 tags: [.net core, cli, nuget]
+level: 100
 ---
 
 To be a developer is to be lazy. I often use the dotnet global tools set up through the dotnet CLI.

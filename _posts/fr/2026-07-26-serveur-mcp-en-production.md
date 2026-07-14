@@ -7,6 +7,7 @@ lang: fr
 ref: mcp-server-prod
 image: /images/posts/mcp-server-prod.png
 tags: [dotnet, AI, MCP, csharp, azure, security]
+level: 300
 ---
 
 Dans [le premier article MCP]({{ site.baseurl }}/fr/2026/07/13/premier-serveur-mcp-dotnet/), on a fabriqué la prise universelle : un serveur en trente lignes, en STDIO, sur votre poste. Et je vous avais promis la suite : *« Streamable HTTP quand il faudra partager. »*

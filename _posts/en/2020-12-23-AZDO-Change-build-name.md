@@ -6,6 +6,7 @@ author: AClerbois
 ref: azdo-build-name
 image: /images/posts/azuredevops.png
 tags: [azure devops, tips]
+level: 100
 ---
 
 # Change pipeline name in build time

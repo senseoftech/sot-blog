@@ -7,6 +7,7 @@ lang: fr
 ref: agent-framework-workflow
 image: /images/posts/agent-framework-workflow.png
 tags: [dotnet, AI, agent-framework, workflows, csharp]
+level: 300
 ---
 
 Dans [l'article de présentation d'Agent Framework]({{ site.baseurl }}/fr/2026/07/11/microsoft-agent-framework-equipe-agents-ia/), je promettais que les workflows permettaient d'instruire « le dossier de prêt automatiquement, mais l'accord final reste une signature humaine ». Promesse conceptuelle — aujourd'hui, on la tient **en code**.

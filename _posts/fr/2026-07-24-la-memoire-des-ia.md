@@ -7,6 +7,7 @@ lang: fr
 ref: ai-memory
 image: /images/posts/ai-memory.png
 tags: [AI, LLM, memory, context-engineering, privacy]
+level: 200
 ---
 
 « Je te l'ai dit hier ! » — et pourtant non : hier n'existe pas pour un modèle de langage. Ses connaissances sont **figées** à l'entraînement, et sa fenêtre de contexte — [le bureau d'hier]({{ site.baseurl }}/fr/2026/07/23/fenetre-de-contexte-compresser-oublier/) — se vide à chaque nouvelle conversation. Un LLM est, par construction, un **amnésique brillant**.

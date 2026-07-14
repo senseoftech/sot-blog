@@ -6,6 +6,7 @@ author: AClerbois
 ref: llm-tokens
 image: /images/posts/llm-tokens.png
 tags: [AI, LLM, tokens, cost]
+level: 100
 ---
 
 The moment you start using AI models — through an API, GitHub Copilot or a chatbot — one word is everywhere: **token**. On your bill, in the limits ("context window"), in the error messages ("too many tokens"). And there's even a distinction between **input tokens**, **output tokens** and **cached tokens**, each at a different price.

@@ -8,6 +8,7 @@ github_repo_username: aclerbois
 github_repo : aclerbois
 image: /images/posts/azuredevops.png
 tags: [azuredevops, gitversion]
+level: 200
 ---
 
 # Introduction:

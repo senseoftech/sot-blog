@@ -7,6 +7,7 @@ lang: fr
 ref: copilot-cli-1
 image: /images/posts/copilot-cli-terminal.png
 tags: [github, copilot, cli, AI, agents, terminal]
+level: 100
 ---
 
 Pour beaucoup, GitHub Copilot vit dans VS Code. Complétion, chat, [modes]({{ site.baseurl }}/fr/2026/07/04/copilot-modes-ask-edit-agent-plan/) — tout se passe dans l'éditeur. Et pendant ce temps, un autre Copilot a grandi ailleurs, plus discret et redoutablement efficace : **GitHub Copilot CLI**, l'agent complet qui vit dans votre terminal. Disponibilité générale depuis février 2026, et un rythme de sorties hebdomadaire depuis.

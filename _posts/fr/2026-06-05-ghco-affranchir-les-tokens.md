@@ -12,6 +12,7 @@ github_repo_username: aclerbois
 github_repo : aclerbois
 image: /images/posts/road.jpg
 tags: [github, copilot, tokens, cli]
+level: 300
 ---
 
 # Affranchir GitHub Copilot CLI des tokens : brancher un modèle local avec Microsoft Foundry Local

@@ -7,6 +7,7 @@ lang: fr
 ref: rag-dotnet
 image: /images/posts/rag-dotnet.png
 tags: [dotnet, AI, RAG, embeddings, csharp]
+level: 300
 ---
 
 Dans [l'article RAG et embeddings]({{ site.baseurl }}/fr/2026/07/15/rag-embeddings-expliques-simplement/), on a compris la théorie : la carte des idées, la bibliothèque rangée par sens, le bibliothécaire qui pose trois extraits sur le bureau de l'expert. Aujourd'hui, on l'embauche pour de vrai : **un RAG complet en C#**, avec les abstractions officielles `Microsoft.Extensions.AI` — le même genre d'interface standard que `ILogger`, mais pour l'IA.

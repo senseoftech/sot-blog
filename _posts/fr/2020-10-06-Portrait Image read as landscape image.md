@@ -7,6 +7,7 @@ lang: fr
 ref: portrait-image
 image: /images/posts/photographer.jpg
 tags: [.net core, image ]
+level: 200
 ---
 
 Les photos en portrait prises par un appareil reflex n'ont pas des dimensions de hauteur et de largeur qui reflètent une photo en portrait.

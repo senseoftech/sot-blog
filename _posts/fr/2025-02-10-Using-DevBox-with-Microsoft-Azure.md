@@ -7,6 +7,7 @@ lang: fr
 ref: devbox-azure
 image: /images/posts/Desk.jpg
 tags: [DevBox, Microsoft Azure, cloud, development]
+level: 200
 ---
 
 ## Introduction à DevBox et à ses avantages

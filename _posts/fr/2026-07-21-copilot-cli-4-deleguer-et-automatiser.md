@@ -7,6 +7,7 @@ lang: fr
 ref: copilot-cli-4
 image: /images/posts/copilot-cli-automation.png
 tags: [github, copilot, cli, AI, automation, CI]
+level: 300
 ---
 
 Dernier épisode de la série. Vous savez [pourquoi]({{ site.baseurl }}/fr/2026/07/18/copilot-cli-1-sortez-copilot-de-l-ide/), vous maîtrisez [le quotidien]({{ site.baseurl }}/fr/2026/07/19/copilot-cli-2-le-quotidien/), vous avez [monté l'équipe]({{ site.baseurl }}/fr/2026/07/20/copilot-cli-3-l-equipe-dans-le-terminal/). Reste la dimension qui change le métier : **travailler à plusieurs endroits à la fois** — déléguer au cloud, paralléliser les chantiers en local, planifier des tâches récurrentes, et embarquer l'agent dans vos scripts et votre CI.

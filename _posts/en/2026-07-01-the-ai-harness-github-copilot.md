@@ -6,6 +6,7 @@ author: AClerbois
 ref: ai-harness
 image: /images/posts/ai-harness.png
 tags: [AI, agents, github, copilot, LLM]
+level: 100
 ---
 
 Everyone talks about "the model": GPT, Claude, Gemini… as if all the magic lived in the brain. Yet a model on its own can't **do** anything: it can't see your code, it can't run a command, it forgets everything from one sentence to the next. What turns that brain into a real **agent** is a part we talk about far less: the **harness**.

@@ -7,6 +7,7 @@ lang: fr
 ref: agent-observability
 image: /images/posts/agent-observability.png
 tags: [dotnet, AI, observability, opentelemetry, aspire]
+level: 300
 ---
 
 « Pourquoi l'agent a-t-il remboursé cette note de frais à 3 h du matin ? » Avec du code classique, vous liriez les logs et la stack trace. Avec un agent, le « pourquoi » est ailleurs : dans **la conversation** — quels outils il a appelés, avec quels arguments, ce qu'il a lu, ce que le modèle a répondu. [Un système non déterministe]({{ site.baseurl }}/fr/2026/07/16/pourquoi-l-ia-hallucine/) ne se débogue pas au `printf`.

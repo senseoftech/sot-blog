@@ -9,6 +9,7 @@ github_repo_username: aclerbois
 github_repo : aclerbois
 image: /images/posts/azure_vs_aws.jpg
 tags: [Cloud, hosting, dns]
+level: 100
 ---
 Microsoft provides a comparison between Microsoft Azure and Amazon Web Services.
 

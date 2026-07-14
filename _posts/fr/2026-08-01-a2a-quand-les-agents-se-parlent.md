@@ -7,6 +7,7 @@ lang: fr
 ref: a2a-protocol
 image: /images/posts/a2a-protocol.png
 tags: [AI, A2A, agents, MCP, interop]
+level: 200
 ---
 
 Toute cette série a construit **votre** entreprise d'agents : des employés ([Agent Framework]({{ site.baseurl }}/fr/2026/07/11/microsoft-agent-framework-equipe-agents-ia/)), leurs outils ([MCP]({{ site.baseurl }}/fr/2026/07/13/premier-serveur-mcp-dotnet/)), leurs procédures ([workflows]({{ site.baseurl }}/fr/2026/07/27/agent-framework-workflow-pratique/)). Mais une entreprise ne vit pas en vase clos : elle a des fournisseurs, des transporteurs, des partenaires — qui ont, eux aussi, leurs agents.

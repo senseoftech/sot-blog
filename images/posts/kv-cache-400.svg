@@ -1,0 +1,73 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+  <rect x="520" y="30" width="160" height="26" rx="13" fill="#0d1117" stroke="#f85149" stroke-width="2"/>
+  <text x="600" y="48" text-anchor="middle" fill="#f85149" font-size="13" letter-spacing="3" font-weight="700">NIVEAU 400</text>
+  <text x="600" y="86" text-anchor="middle" fill="#e6edf3" font-size="19" letter-spacing="2" font-weight="600">ATTENTION &amp; KV CACHE · DANS LES 30 ms D'UN TOKEN</text>
+
+  <!-- Attention: token looking back -->
+  <g>
+    <text x="300" y="130" text-anchor="middle" fill="#9198a1" font-size="14" letter-spacing="1">L'ATTENTION : chaque token regarde les précédents</text>
+    <g font-family="Consolas, monospace">
+      <rect x="80" y="150" width="70" height="40" rx="6" fill="url(#card)" stroke="#30363d"/>
+      <text x="115" y="175" text-anchor="middle" fill="#9198a1" font-size="13">Marie</text>
+      <rect x="160" y="150" width="60" height="40" rx="6" fill="url(#card)" stroke="#30363d"/>
+      <text x="190" y="175" text-anchor="middle" fill="#9198a1" font-size="13">est</text>
+      <rect x="230" y="150" width="80" height="40" rx="6" fill="url(#card)" stroke="#30363d"/>
+      <text x="270" y="175" text-anchor="middle" fill="#9198a1" font-size="13">partie…</text>
+      <rect x="400" y="150" width="70" height="40" rx="6" fill="#1c2430" stroke="#38bdf8" stroke-width="2"/>
+      <text x="435" y="175" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="700">elle</text>
+    </g>
+    <path d="M420 150 Q270 110 115 150" stroke="#38bdf8" stroke-width="2" fill="none" stroke-opacity="0.7"/>
+    <text x="270" y="106" text-anchor="middle" fill="#38bdf8" font-size="12">poids d'attention fort</text>
+    <text x="300" y="228" text-anchor="middle" fill="#9198a1" font-size="13">chaque token → Query · Key · Value</text>
+  </g>
+
+  <!-- Quadratic -->
+  <g>
+    <rect x="70" y="260" width="470" height="120" rx="14" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="305" y="292" text-anchor="middle" fill="#ffa657" font-size="16" font-weight="700">COÛT QUADRATIQUE — N × N paires</text>
+    <text x="305" y="320" text-anchor="middle" fill="#e6edf3" font-size="13">contexte ×2 → attention ×4</text>
+    <text x="305" y="346" text-anchor="middle" fill="#9198a1" font-size="12.5">→ pourquoi la fenêtre géante coûte cher</text>
+    <text x="305" y="366" text-anchor="middle" fill="#9198a1" font-size="12.5">→ pourquoi « lost in the middle » (attention diluée)</text>
+  </g>
+
+  <!-- KV cache -->
+  <g>
+    <rect x="620" y="150" width="520" height="230" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="880" y="184" text-anchor="middle" fill="#3fb950" font-size="16" font-weight="700">LE KV CACHE</text>
+    <text x="880" y="206" text-anchor="middle" fill="#9198a1" font-size="12">les Keys/Values déjà calculées, gardées en VRAM</text>
+    <g font-family="Consolas, monospace" font-size="12">
+      <rect x="650" y="224" width="90" height="34" rx="5" fill="#14432c" stroke="#3fb950"/>
+      <text x="695" y="246" text-anchor="middle" fill="#3fb950">K/V t1 ✓</text>
+      <rect x="748" y="224" width="90" height="34" rx="5" fill="#14432c" stroke="#3fb950"/>
+      <text x="793" y="246" text-anchor="middle" fill="#3fb950">K/V t2 ✓</text>
+      <rect x="846" y="224" width="90" height="34" rx="5" fill="#14432c" stroke="#3fb950"/>
+      <text x="891" y="246" text-anchor="middle" fill="#3fb950">K/V t3 ✓</text>
+      <rect x="944" y="224" width="90" height="34" rx="5" fill="#3b2a5e" stroke="#bc8cff"/>
+      <text x="989" y="246" text-anchor="middle" fill="#bc8cff">t4 calcule</text>
+    </g>
+    <text x="880" y="296" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">prompt caching = persistance du KV cache</text>
+    <text x="880" y="322" text-anchor="middle" fill="#9198a1" font-size="12">K/V d'un token dépendent de TOUT ce qui précède</text>
+    <text x="880" y="346" text-anchor="middle" fill="#f85149" font-size="12.5" font-weight="600">→ seul le préfixe identique reste valide</text>
+    <text x="880" y="368" text-anchor="middle" fill="#9198a1" font-size="12">→ le KV cache vit dans la VRAM (cf. l'inférence à l'échelle)</text>
+  </g>
+
+  <text x="600" y="428" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="600">Q · K · V : la facture, la dilution et la règle du préfixe, d'un seul bloc</text>
+  <text x="600" y="470" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">VOIR LE MÉCANISME LÀ OÙ LE 100 VOYAIT LA RÈGLE</text>
+</svg>

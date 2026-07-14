@@ -9,6 +9,7 @@ github_repo_username: aclerbois
 github_repo : aclerbois
 image: /images/posts/conquer-1.png
 tags: [.net core, global tool, cli]
+level: 200
 ---
 # Conquering the global tool in .NET Core
 

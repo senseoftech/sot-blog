@@ -145,6 +145,38 @@
     }
 }
 
+// Difficulty level of a post (Microsoft-style 100/200/300/400), set via the
+// `level` front-matter field. Same visual family as .lang-badge.
+.level-badge {
+    font-family: $font-mono;
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 1px 7px;
+    border-radius: 5px;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+
+    &.level-100 {
+        color: var(--green);
+        border-color: var(--green);
+    }
+
+    &.level-200 {
+        color: var(--accent);
+        border-color: var(--accent);
+    }
+
+    &.level-300 {
+        color: var(--orange);
+        border-color: var(--orange);
+    }
+
+    &.level-400 {
+        color: var(--red);
+        border-color: var(--red);
+    }
+}
+
 .post-card-title {
     font-size: 1.12rem;
     margin: 0;

@@ -6,6 +6,7 @@ author: AClerbois
 ref: context-window
 image: /images/posts/context-window.png
 tags: [AI, LLM, context-window, tokens, context-engineering]
+level: 200
 ---
 
 You've been chatting with Claude or ChatGPT for an hour, and something degrades: it "forgets" what you said at the beginning, mixes up instructions, goes in circles. Not a bug — a **context window** reaching saturation, and a tool handling it more or less gracefully.

@@ -9,6 +9,7 @@ ref: ia-agilite
 permalink: /2026/05/22/l-ia-au-service-de-l-agilit-discernement-humain-et-production-augmentee/
 image: /images/posts/Mountain.jpg
 tags: [Agile,IA]
+level: 100
 ---
 
 À l’heure où l’intelligence artificielle accélère massivement la production, une question s’impose : comment rester pertinent et irremplaçable ? Lors de l’événement La journée Agile à Namur, François Francart et Adrien Clerbois ont partagé un retour d’expérience concret sur l’intégration de l’IA dans les pratiques agiles en grande entreprise.

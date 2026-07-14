@@ -6,6 +6,7 @@ author: AClerbois
 ref: ia-agilite
 image: /images/posts/Mountain.jpg
 tags: [Agile,IA]
+level: 100
 ---
 
 At a time when artificial intelligence is massively accelerating production, one question becomes unavoidable: how do we stay relevant and irreplaceable? At the La journée Agile event in Namur, François Francart and Adrien Clerbois shared a concrete field report on integrating AI into agile practices in a large enterprise.

@@ -7,6 +7,7 @@ lang: fr
 ref: apple-pay-pfx
 image: /images/posts/iPhone-In-Hand.jpg
 tags: [apple, certificate, dns]
+level: 300
 ---
 
 Sur l'un des projets que j'ai menés chez Ingenico ePayments, je devais intégrer ApplePay comme nouveau moyen de paiement supporté par la nouvelle API Ingenico.

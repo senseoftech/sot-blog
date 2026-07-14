@@ -7,6 +7,7 @@ lang: fr
 ref: copilot-cli-3
 image: /images/posts/copilot-cli-team.png
 tags: [github, copilot, cli, AI, agents, MCP]
+level: 200
 ---
 
 Jusqu'ici, Copilot CLI ressemblait à **un** excellent employé dans votre terminal. Aujourd'hui, changement d'échelle : c'est toute une **équipe** qui s'y cache — des spécialistes intégrés qui travaillent en parallèle, vos propres agents sur mesure, des compétences en fichiers Markdown, des plugins, et bien sûr la prise MCP.

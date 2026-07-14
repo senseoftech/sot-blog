@@ -6,6 +6,7 @@ author: AClerbois
 ref: copilot-modes
 image: /images/posts/copilot-modes.png
 tags: [github, copilot, AI, agents, LLM]
+level: 100
 ---
 
 Same Copilot, same model, same project… and yet four radically different outcomes depending on a little dropdown most people ignore: the **mode**. Ask, Edit, Agent — and the newcomer that changes everything for big tasks, **Plan**.

@@ -7,6 +7,7 @@ lang: fr
 ref: context-window
 image: /images/posts/context-window.png
 tags: [AI, LLM, context-window, tokens, context-engineering]
+level: 200
 ---
 
 Vous discutez avec Claude ou ChatGPT depuis une heure, et quelque chose se dégrade : il « oublie » ce que vous avez dit au début, mélange des consignes, tourne en rond. Pas un bug — une **fenêtre de contexte** qui arrive à saturation, et un outil qui gère ça plus ou moins élégamment.

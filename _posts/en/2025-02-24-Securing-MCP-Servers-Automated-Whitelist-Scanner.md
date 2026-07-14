@@ -6,6 +6,7 @@ author: AClerbois
 ref: mcp-scanner
 image: /images/posts/mcp.png
 tags: [MCP, security, AI, GitHub Actions, DevSecOps]
+level: 300
 ---
 
 ## The Model Context Protocol: A Revolution... and an Attack Surface

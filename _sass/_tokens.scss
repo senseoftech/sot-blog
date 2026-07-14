@@ -16,6 +16,8 @@ html[data-theme="dark"] {
     --accent-bg: rgba(56, 189, 248, 0.12);
     --green: #3fb950;
     --purple: #bc8cff;
+    --orange: #ffa657;
+    --red: #f85149;
     --card-shadow: 0 0 0 1px var(--border);
     --card-shadow-hover: 0 0 0 1px var(--accent), 0 8px 24px rgba(1, 4, 9, 0.6);
     --code-bg: #161b22;
@@ -38,6 +40,8 @@ html[data-theme="light"] {
     --accent-bg: rgba(2, 132, 199, 0.08);
     --green: #1a7f37;
     --purple: #8250df;
+    --orange: #bc4c00;
+    --red: #cf222e;
     --card-shadow: 0 0 0 1px var(--border);
     --card-shadow-hover: 0 0 0 1px var(--accent), 0 8px 24px rgba(31, 35, 40, 0.12);
     --code-bg: #f6f8fa;

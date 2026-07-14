@@ -6,6 +6,7 @@ author: AClerbois
 ref: agent-framework-workflow
 image: /images/posts/agent-framework-workflow.png
 tags: [dotnet, AI, agent-framework, workflows, csharp]
+level: 300
 ---
 
 In [the Agent Framework overview article]({{ site.baseurl }}/2026/07/11/microsoft-agent-framework-build-your-ai-agent-team/), I promised that workflows let you process "the loan application automatically, while the final approval remains a human signature". A conceptual promise — today we keep it **in code**.

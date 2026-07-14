@@ -6,6 +6,7 @@ author: AClerbois
 ref: vibe-foundations
 image: /images/posts/vibe-foundations.png
 tags: [dotnet, AI, vibe-coding, architecture, blazor, best-practices]
+level: 200
 ---
 
 Starting a project from scratch with an AI is exhilarating: a few sentences, and code pours out. But it pours out **in the direction you set** — or in whatever direction the AI picks by default if you said nothing. And then, good luck straightening the building at sprint 4.

@@ -6,6 +6,7 @@ author: AClerbois
 ref: tool-calling
 image: /images/posts/tool-calling.png
 tags: [AI, LLM, tool-calling, function-calling, MCP]
+level: 200
 ---
 
 This whole blog rests on one little phrase repeated everywhere: *"the agent calls a tool"*. Copilot runs your tests, [your MCP server]({{ site.baseurl }}/2026/07/13/first-mcp-server-dotnet/) answers the model, [Agent Framework]({{ site.baseurl }}/2026/07/11/microsoft-agent-framework-build-your-ai-agent-team/) executes your function tools… But concretely, **how** does a model that can only produce text "call" a C# function?
