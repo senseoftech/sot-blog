@@ -1,0 +1,84 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="60" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">LA&#160;&#160;MÉMOIRE&#160;&#160;DES&#160;&#160;IA</text>
+
+  <!-- Center: the amnesiac model + desk -->
+  <g>
+    <circle cx="600" cy="250" r="58" fill="#1c2430" stroke="#f85149" stroke-width="3"/>
+    <text x="600" y="242" text-anchor="middle" fill="#e6edf3" font-size="16" font-weight="700">LLM</text>
+    <text x="600" y="264" text-anchor="middle" fill="#f85149" font-size="12">amnésique</text>
+    <text x="600" y="282" text-anchor="middle" fill="#9198a1" font-size="11">poids figés</text>
+
+    <rect x="450" y="350" width="300" height="52" rx="10" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="600" y="382" text-anchor="middle" fill="#38bdf8" font-size="15" font-weight="600">le bureau (contexte)</text>
+    <path d="M600 350 V312" stroke="#38bdf8" stroke-width="3" marker-mid="none"/>
+    <text x="668" y="336" fill="#9198a1" font-size="11">tout souvenir passe par ici</text>
+  </g>
+
+  <!-- Memory cards flowing to the desk -->
+  <g>
+    <rect x="80" y="150" width="270" height="96" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="215" y="184" text-anchor="middle" fill="#3fb950" font-size="15" font-weight="700">FICHES UTILISATEUR</text>
+    <text x="215" y="208" text-anchor="middle" fill="#e6edf3" font-size="12">« développe en .NET »</text>
+    <text x="215" y="228" text-anchor="middle" fill="#9198a1" font-size="11">ChatGPT Memory · Claude</text>
+    <path d="M350 220 Q440 300 452 366" stroke="#3fb950" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+
+    <rect x="80" y="300" width="270" height="96" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="215" y="334" text-anchor="middle" fill="#3fb950" font-size="15" font-weight="700">MÉMOIRE D'OUTIL</text>
+    <text x="215" y="358" text-anchor="middle" fill="#e6edf3" font-size="12">« tests xUnit en triple A »</text>
+    <text x="215" y="378" text-anchor="middle" fill="#9198a1" font-size="11">repository memory · fichiers .md</text>
+    <path d="M350 356 H444" stroke="#3fb950" stroke-width="2" stroke-dasharray="6 4"/>
+
+    <rect x="850" y="150" width="270" height="96" rx="12" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="985" y="184" text-anchor="middle" fill="#ffa657" font-size="15" font-weight="700">ÉCRITE PAR VOUS</text>
+    <text x="985" y="208" text-anchor="middle" fill="#e6edf3" font-size="12">AGENTS.md · ADR · instructions</text>
+    <text x="985" y="228" text-anchor="middle" fill="#9198a1" font-size="11">la plus fiable des mémoires</text>
+    <path d="M850 220 Q760 300 748 366" stroke="#ffa657" stroke-width="2" fill="none" stroke-dasharray="6 4"/>
+
+    <rect x="850" y="300" width="270" height="96" rx="12" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="985" y="334" text-anchor="middle" fill="#bc8cff" font-size="15" font-weight="700">MÉMOIRE INDEXÉE</text>
+    <text x="985" y="358" text-anchor="middle" fill="#e6edf3" font-size="12">RAG sur l'historique, graphes</text>
+    <text x="985" y="378" text-anchor="middle" fill="#9198a1" font-size="11">rappel par similarité</text>
+    <path d="M850 356 H756" stroke="#bc8cff" stroke-width="2" stroke-dasharray="6 4"/>
+  </g>
+
+  <!-- The cycle -->
+  <g>
+    <text x="600" y="462" text-anchor="middle" fill="#e6edf3" font-size="15" font-weight="600">le cycle : </text>
+    <g font-size="14" fill="#38bdf8" font-weight="600">
+      <text x="330" y="500" text-anchor="middle">extraire</text>
+      <text x="510" y="500" text-anchor="middle">stocker</text>
+      <text x="690" y="500" text-anchor="middle">rappeler</text>
+      <text x="880" y="500" text-anchor="middle">entretenir</text>
+    </g>
+    <g stroke="#6e7681" stroke-width="2">
+      <path d="M375 495 H455 l-8 -6 M455 495 l-8 6" fill="none"/>
+      <path d="M553 495 H635 l-8 -6 M635 495 l-8 6" fill="none"/>
+      <path d="M740 495 H818 l-8 -6 M818 495 l-8 6" fill="none"/>
+    </g>
+    <text x="600" y="530" text-anchor="middle" fill="#9198a1" font-size="12">une bonne mémoire oublie aussi — c'est une fonctionnalité</text>
+  </g>
+
+  <text x="600" y="572" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    LE  COLLÈGUE  MEMENTO  ·  THE  MEMENTO  COLLEAGUE
+  </text>
+</svg>

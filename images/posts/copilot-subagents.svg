@@ -1,0 +1,82 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="60" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">COPILOT&#160;&#160;·&#160;&#160;LES&#160;&#160;SOUS-AGENTS</text>
+
+  <!-- Pipeline of missions -->
+  <g>
+    <rect x="60" y="110" width="160" height="96" rx="12" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="140" y="148" text-anchor="middle" fill="#38bdf8" font-size="16" font-weight="700">Explore</text>
+    <text x="140" y="172" text-anchor="middle" fill="#9198a1" font-size="11">la carte du terrain</text>
+    <path d="M220 158 H262 l-8 -6 M262 158 l-8 6" stroke="#6e7681" stroke-width="2" fill="none"/>
+
+    <rect x="270" y="110" width="160" height="96" rx="12" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="350" y="148" text-anchor="middle" fill="#ffa657" font-size="16" font-weight="700">Plan</text>
+    <text x="350" y="172" text-anchor="middle" fill="#9198a1" font-size="11">écrit le plan → fichier</text>
+    <path d="M430 158 H472 l-8 -6 M472 158 l-8 6" stroke="#6e7681" stroke-width="2" fill="none"/>
+
+    <rect x="480" y="110" width="240" height="96" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="3"/>
+    <text x="600" y="142" text-anchor="middle" fill="#3fb950" font-size="16" font-weight="700">Implémentation</text>
+    <text x="600" y="164" text-anchor="middle" fill="#9198a1" font-size="11">1 tranche = 1 agent = 1 worktree</text>
+    <g fill="#0d1117" stroke="#3fb950" stroke-width="1.5">
+      <rect x="520" y="174" width="48" height="18" rx="4"/>
+      <rect x="576" y="174" width="48" height="18" rx="4"/>
+      <rect x="632" y="174" width="48" height="18" rx="4"/>
+    </g>
+    <path d="M720 158 H762 l-8 -6 M762 158 l-8 6" stroke="#6e7681" stroke-width="2" fill="none"/>
+
+    <rect x="770" y="110" width="160" height="96" rx="12" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="850" y="148" text-anchor="middle" fill="#38bdf8" font-size="16" font-weight="700">Task</text>
+    <text x="850" y="172" text-anchor="middle" fill="#9198a1" font-size="11">« OK » ou 3 erreurs</text>
+    <path d="M930 158 H972 l-8 -6 M972 158 l-8 6" stroke="#6e7681" stroke-width="2" fill="none"/>
+
+    <rect x="980" y="110" width="160" height="96" rx="12" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="1060" y="142" text-anchor="middle" fill="#bc8cff" font-size="15" font-weight="700">Code-review</text>
+    <text x="1060" y="164" text-anchor="middle" fill="#9198a1" font-size="11">max 5 findings</text>
+    <text x="1060" y="186" text-anchor="middle" fill="#9198a1" font-size="11">+ docs-writer</text>
+  </g>
+
+  <!-- The shared plan file -->
+  <g>
+    <rect x="440" y="280" width="320" height="110" rx="14" fill="#0d1117" stroke="#ffa657" stroke-width="3"/>
+    <text x="600" y="320" text-anchor="middle" fill="#ffa657" font-size="17" font-weight="700" font-family="Consolas, monospace">docs/plans/add-order-note.md</text>
+    <text x="600" y="348" text-anchor="middle" fill="#e6edf3" font-size="13">la mémoire partagée entre missions</text>
+    <text x="600" y="372" text-anchor="middle" fill="#9198a1" font-size="12">les sous-agents ne partagent pas de contexte — ils partagent des fichiers</text>
+
+    <g stroke="#ffa657" stroke-width="1.5" stroke-dasharray="5 4" stroke-opacity="0.7" fill="none">
+      <path d="M350 206 Q380 260 450 292"/>
+      <path d="M600 206 V280"/>
+      <path d="M850 206 Q820 260 752 292"/>
+      <path d="M1055 206 Q1000 270 762 330"/>
+    </g>
+  </g>
+
+  <!-- The brief anatomy -->
+  <g>
+    <rect x="120" y="430" width="960 " height="86 " rx="14" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="600" y="466" text-anchor="middle" fill="#e6edf3" font-size="16" font-weight="700">LE BRIEF : [ Contexte ]  [ Mission ]  [ Contraintes ]  [ Livrable ]</text>
+    <text x="600" y="496" text-anchor="middle" fill="#9198a1" font-size="13">le sous-agent ne sait que ce que le brief dit — et vous ne saurez que ce que la synthèse rapporte</text>
+  </g>
+
+  <text x="600" y="566" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    DES  BONS  DE  MISSION,  PAS  DES  CONVERSATIONS  ·  WORK  ORDERS,  NOT  CHATTER
+  </text>
+</svg>

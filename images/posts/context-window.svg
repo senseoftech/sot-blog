@@ -1,0 +1,79 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+    <linearGradient id="fillbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3fb950"/>
+      <stop offset="60%" stop-color="#ffa657"/>
+      <stop offset="100%" stop-color="#f85149"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="60" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">LA&#160;&#160;FENÊTRE&#160;&#160;DE&#160;&#160;CONTEXTE</text>
+
+  <!-- The desk gauge -->
+  <g>
+    <rect x="100" y="100" width="1000" height="150" rx="16" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="600" y="140" text-anchor="middle" fill="#e6edf3" font-size="19" font-weight="700">LE BUREAU DU MODÈLE</text>
+
+    <rect x="140" y="164" width="880" height="30" rx="15" fill="#21262d"/>
+    <rect x="140" y="164" width="700" height="30" rx="15" fill="url(#fillbar)"/>
+    <path d="M1020 154 V204" stroke="#f85149" stroke-width="4"/>
+    <text x="1032" y="186" fill="#f85149" font-size="13" font-weight="700">LE MUR</text>
+
+    <text x="240" y="228" fill="#9198a1" font-size="13">instructions · messages · fichiers · sorties d'outils</text>
+    <text x="840" y="228" fill="#ffa657" font-size="13" font-weight="600">la dilution commence bien avant ↑</text>
+  </g>
+
+  <!-- Six patterns -->
+  <g>
+    <rect x="80" y="290" width="330" height="110" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="245" y="326" text-anchor="middle" fill="#3fb950" font-size="16" font-weight="700">1 · GLISSER</text>
+    <text x="245" y="352" text-anchor="middle" fill="#e6edf3" font-size="13">jeter les plus vieux papiers</text>
+    <text x="245" y="376" text-anchor="middle" fill="#9198a1" font-size="12">simple — mais le brief part avec</text>
+
+    <rect x="435" y="290" width="330" height="110" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="600" y="326" text-anchor="middle" fill="#3fb950" font-size="16" font-weight="700">2 · COMPACTER</text>
+    <text x="600" y="352" text-anchor="middle" fill="#e6edf3" font-size="13">la fiche de synthèse avant de jeter</text>
+    <text x="600" y="376" text-anchor="middle" fill="#9198a1" font-size="12">Claude Code · Copilot CLI à 95 %</text>
+
+    <rect x="790" y="290" width="330" height="110" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="955" y="326" text-anchor="middle" fill="#3fb950" font-size="16" font-weight="700">3 · OUBLIER</text>
+    <text x="955" y="352" text-anchor="middle" fill="#e6edf3" font-size="13">jeter les gros blocs périmés</text>
+    <text x="955" y="376" text-anchor="middle" fill="#9198a1" font-size="12">context editing : vieilles sorties d'outils</text>
+
+    <rect x="80" y="420" width="330" height="110" rx="12" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="245" y="456" text-anchor="middle" fill="#bc8cff" font-size="16" font-weight="700">4 · EXTERNALISER</text>
+    <text x="245" y="482" text-anchor="middle" fill="#e6edf3" font-size="13">le post-it sur le disque + un pointeur</text>
+    <text x="245" y="506" text-anchor="middle" fill="#9198a1" font-size="12">TODO.md, notes, fichiers mémoire</text>
+
+    <rect x="435" y="420" width="330" height="110" rx="12" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="600" y="456" text-anchor="middle" fill="#bc8cff" font-size="16" font-weight="700">5 · À LA DEMANDE</text>
+    <text x="600" y="482" text-anchor="middle" fill="#e6edf3" font-size="13">n'apporter que le dossier utile</text>
+    <text x="600" y="506" text-anchor="middle" fill="#9198a1" font-size="12">RAG · recherches ciblées · tranches</text>
+
+    <rect x="790" y="420" width="330" height="110" rx="12" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="955" y="456" text-anchor="middle" fill="#bc8cff" font-size="16" font-weight="700">6 · SÉPARER</text>
+    <text x="955" y="482" text-anchor="middle" fill="#e6edf3" font-size="13">un bureau par spécialiste</text>
+    <text x="955" y="506" text-anchor="middle" fill="#9198a1" font-size="12">sous-agents : la synthèse seule remonte</text>
+  </g>
+
+  <text x="600" y="570" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    UN  BUREAU  BIEN  TENU  ·  A  WELL-KEPT  DESK
+  </text>
+</svg>
