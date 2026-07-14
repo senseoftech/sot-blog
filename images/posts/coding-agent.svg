@@ -1,0 +1,80 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+  <text x="600" y="60" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">GITHUB&#160;&#160;COPILOT&#160;&#160;·&#160;&#160;CODING&#160;&#160;AGENT</text>
+
+  <!-- Issue -->
+  <g>
+    <rect x="80" y="130" width="300" height="240" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <circle cx="116" cy="166" r="9" fill="none" stroke="#3fb950" stroke-width="2.5"/>
+    <text x="136" y="172" fill="#e6edf3" font-size="16" font-weight="700">Issue #482</text>
+    <text x="106" y="204" fill="#e6edf3" font-size="13">GET /orders/{id} → 500 si absent</text>
+    <g fill="#9198a1" font-size="12">
+      <text x="106" y="234">[Contexte] log en pièce jointe</text>
+      <text x="106" y="258">[Mission] retourner 404 + test</text>
+      <text x="106" y="282">[Contraintes] pattern GetOrderById</text>
+      <text x="106" y="306">[Livrable] PR + test AAA</text>
+    </g>
+    <rect x="106" y="326" width="150" height="26" rx="13" fill="#12161d" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="181" y="344" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600">Assignee: Copilot</text>
+  </g>
+
+  <path d="M380 250 H460 l-10 -9 M460 250 l-10 9" stroke="#6e7681" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Actions environment -->
+  <g>
+    <rect x="460" y="130" width="300" height="240" rx="16" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="610" y="168" text-anchor="middle" fill="#bc8cff" font-size="16" font-weight="700">GITHUB ACTIONS</text>
+    <text x="610" y="190" text-anchor="middle" fill="#9198a1" font-size="12">l'environnement isolé</text>
+    <g fill="#e6edf3" font-size="13">
+      <text x="490" y="222">✓ clone + branche copilot/*</text>
+      <text x="490" y="248">✓ AGENTS.md : les fondations</text>
+      <text x="490" y="274">✓ copilot-setup-steps.yml</text>
+      <text x="490" y="300">✓ MCP : les mêmes prises</text>
+      <text x="490" y="326">✓ code, build, test — en boucle</text>
+    </g>
+    <text x="610" y="356" text-anchor="middle" fill="#9198a1" font-size="11">pare-feu réseau · pas d'accès à main</text>
+  </g>
+
+  <path d="M760 250 H840 l-10 -9 M840 250 l-10 9" stroke="#6e7681" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Draft PR -->
+  <g>
+    <rect x="840" y="130" width="280" height="240" rx="16" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="980" y="168" text-anchor="middle" fill="#ffa657" font-size="16" font-weight="700">Draft PR #483</text>
+    <text x="980" y="194" text-anchor="middle" fill="#9198a1" font-size="12">fix + test, description complète</text>
+    <g fill="#e6edf3" font-size="13">
+      <text x="870" y="228">⏸ attend VOTRE revue</text>
+      <text x="870" y="254">💬 répond aux commentaires</text>
+      <text x="870" y="280">🔁 …par des commits</text>
+    </g>
+    <text x="980" y="322" text-anchor="middle" fill="#9198a1" font-size="11">pas d'auto-merge · CI sous votre accord</text>
+    <text x="980" y="344" text-anchor="middle" fill="#9198a1" font-size="11">branch protections : comme tout le monde</text>
+  </g>
+
+  <!-- Bottom strip -->
+  <g>
+    <rect x="180" y="420" width="840" height="90" rx="14" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="600" y="454" text-anchor="middle" fill="#e6edf3" font-size="15" font-weight="700">3 issues assignées à 9 h → 3 PR à relire à 11 h — pendant votre réunion</text>
+    <text x="600" y="484" text-anchor="middle" fill="#9198a1" font-size="13">le pire scénario réaliste : une PR médiocre… que vous refusez</text>
+  </g>
+
+  <text x="600" y="556" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    UNE  ISSUE  ENTRE,  UNE  PR  SORT  ·  ISSUE  IN,  PULL  REQUEST  OUT
+  </text>
+</svg>

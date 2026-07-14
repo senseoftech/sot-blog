@@ -1,0 +1,74 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+  <text x="600" y="60" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">AGENT&#160;&#160;FRAMEWORK&#160;&#160;·&#160;&#160;WORKFLOW&#160;&#160;HITL</text>
+
+  <!-- analyzer -->
+  <rect x="80" y="200" width="200" height="80" rx="12" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+  <text x="180" y="234" text-anchor="middle" fill="#38bdf8" font-size="15" font-weight="700">Agent IA</text>
+  <text x="180" y="258" text-anchor="middle" fill="#9198a1" font-size="12">analyse la note de frais</text>
+
+  <path d="M280 240 H350" stroke="#6e7681" stroke-width="2"/>
+
+  <!-- switch -->
+  <g>
+    <path d="M420 175 L490 240 L420 305 L350 240 Z" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="420" y="235" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="600">montant ?</text>
+    <text x="420" y="256" text-anchor="middle" fill="#9198a1" font-size="11">AddSwitch</text>
+  </g>
+
+  <path d="M420 305 V370" stroke="#3fb950" stroke-width="2"/>
+  <text x="440" y="345" fill="#3fb950" font-size="12">&lt; 50 €</text>
+  <rect x="320" y="370" width="200" height="70" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+  <text x="420" y="400" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700">auto-remboursé</text>
+  <text x="420" y="422" text-anchor="middle" fill="#9198a1" font-size="11">executor C#</text>
+
+  <path d="M490 240 H580" stroke="#ffa657" stroke-width="2"/>
+  <text x="530" y="228" fill="#ffa657" font-size="12">&gt; 50 €</text>
+
+  <!-- RequestPort pause -->
+  <g>
+    <rect x="580" y="190" width="260" height="100" rx="14" fill="#0d1117" stroke="#ffa657" stroke-width="3" stroke-dasharray="8 5"/>
+    <text x="710" y="224" text-anchor="middle" fill="#ffa657" font-size="15" font-weight="700">⏸ RequestPort</text>
+    <text x="710" y="248" text-anchor="middle" fill="#e6edf3" font-size="12">le workflow s'arrête —</text>
+    <text x="710" y="268" text-anchor="middle" fill="#e6edf3" font-size="12">le manager signe (1 h… ou 3 jours)</text>
+  </g>
+
+  <path d="M840 220 H930" stroke="#3fb950" stroke-width="2"/>
+  <text x="885" y="208" fill="#3fb950" font-size="12">signé ✓</text>
+  <rect x="930" y="185" width="190" height="66" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+  <text x="1025" y="212" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700">remboursement</text>
+  <text x="1025" y="234" text-anchor="middle" fill="#9198a1" font-size="11">executor C#</text>
+
+  <path d="M840 265 H930" stroke="#f85149" stroke-width="2"/>
+  <text x="885" y="288" fill="#f85149" font-size="12">refusé ✗</text>
+  <rect x="930" y="262" width="190" height="66" rx="12" fill="url(#card)" stroke="#f85149" stroke-width="2"/>
+  <text x="1025" y="289" text-anchor="middle" fill="#f85149" font-size="14" font-weight="700">notification</text>
+  <text x="1025" y="311" text-anchor="middle" fill="#9198a1" font-size="11">executor C#</text>
+
+  <!-- checkpoints -->
+  <g>
+    <rect x="260" y="480" width="680" height="60" rx="12" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="600" y="505" text-anchor="middle" fill="#bc8cff" font-size="14" font-weight="700">💾 CHECKPOINTS à chaque superstep</text>
+    <text x="600" y="527" text-anchor="middle" fill="#9198a1" font-size="12">redémarrage, crash, 3 jours d'attente : le dossier reprend où il était</text>
+  </g>
+
+  <text x="600" y="576" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    L'IA  INSTRUIT  ·  L'HUMAIN  SIGNE  ·  AI  PREPARES,  HUMANS  SIGN
+  </text>
+</svg>

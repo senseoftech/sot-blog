@@ -1,0 +1,76 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+  <text x="600" y="60" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">TOOL&#160;&#160;CALLING&#160;&#160;·&#160;&#160;SOUS&#160;&#160;LE&#160;&#160;CAPOT</text>
+
+  <!-- Model -->
+  <g>
+    <rect x="80" y="150" width="300" height="270" rx="16" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="230" y="192" text-anchor="middle" fill="#bc8cff" font-size="19" font-weight="700">LE MODÈLE</text>
+    <text x="230" y="216" text-anchor="middle" fill="#9198a1" font-size="12">n'exécute RIEN — il rédige</text>
+    <rect x="110" y="240" width="240" height="140" rx="10" fill="#0d1117" stroke="#30363d"/>
+    <text x="128" y="270" fill="#9198a1" font-size="12" font-family="Consolas, monospace">« je souhaite appeler :</text>
+    <text x="128" y="298" fill="#e6edf3" font-size="13" font-family="Consolas, monospace">  GetStock(</text>
+    <text x="128" y="322" fill="#3fb950" font-size="13" font-family="Consolas, monospace">   reference: "SKU-1234"</text>
+    <text x="128" y="346" fill="#e6edf3" font-size="13" font-family="Consolas, monospace">  ) »</text>
+    <text x="230" y="404" text-anchor="middle" fill="#9198a1" font-size="12">le bon de commande</text>
+  </g>
+
+  <!-- Arrows -->
+  <path d="M380 230 H540 l-10 -9 M540 230 l-10 9" stroke="#bc8cff" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="460" y="214" text-anchor="middle" fill="#9198a1" font-size="12">demande</text>
+  <path d="M540 350 H390 l10 -9 M390 350 l10 9" stroke="#3fb950" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="460" y="378" text-anchor="middle" fill="#9198a1" font-size="12">résultat : 12 (nouveau message)</text>
+
+  <!-- Harness -->
+  <g>
+    <rect x="540" y="150" width="300" height="270" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="3"/>
+    <text x="690" y="192" text-anchor="middle" fill="#3fb950" font-size="19" font-weight="700">LE HARNAIS</text>
+    <text x="690" y="216" text-anchor="middle" fill="#9198a1" font-size="12">VOTRE code exécute</text>
+    <g fill="#e6edf3" font-size="13">
+      <text x="570" y="258">✓ lit la demande</text>
+      <text x="570" y="288">✓ demande l'approbation si requis</text>
+      <text x="570" y="318">✓ revalide les paramètres</text>
+      <text x="570" y="348">✓ exécute la vraie fonction C#</text>
+      <text x="570" y="378">✓ renvoie le résultat au modèle</text>
+    </g>
+  </g>
+
+  <!-- Schema -->
+  <g>
+    <rect x="880" y="150" width="240" height="270" rx="16" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="1000" y="188" text-anchor="middle" fill="#ffa657" font-size="15" font-weight="700">LE CONTRAT</text>
+    <text x="1000" y="210" text-anchor="middle" fill="#9198a1" font-size="11">JSON Schema, à chaque tour</text>
+    <rect x="900" y="226" width="200" height="150" rx="8" fill="#0d1117" stroke="#30363d"/>
+    <g font-size="11" font-family="Consolas, monospace">
+      <text x="912" y="252" fill="#38bdf8">"name": "GetStock"</text>
+      <text x="912" y="276" fill="#e6edf3">"description":</text>
+      <text x="912" y="294" fill="#9198a1"> "la vitrine…"</text>
+      <text x="912" y="318" fill="#e6edf3">"parameters":</text>
+      <text x="912" y="336" fill="#9198a1"> types stricts,</text>
+      <text x="912" y="354" fill="#9198a1"> enums, required</text>
+    </g>
+    <text x="1000" y="402" text-anchor="middle" fill="#9198a1" font-size="11">généré depuis vos [Description]</text>
+  </g>
+
+  <text x="600" y="486" text-anchor="middle" fill="#e6edf3" font-size="15" font-weight="600">structured outputs = le contrat qui contraint la génération · « réponds en JSON » = la prière</text>
+
+  <text x="600" y="552" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    LE  MODÈLE  DEMANDE  ·  LE  HARNAIS  EXÉCUTE  ·  THE  MODEL  ASKS,  THE  HARNESS  EXECUTES
+  </text>
+</svg>

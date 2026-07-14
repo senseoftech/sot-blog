@@ -1,0 +1,71 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+  <text x="600" y="60" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">SERVEUR&#160;&#160;MCP&#160;&#160;EN&#160;&#160;PRODUCTION</text>
+
+  <!-- Before: STDIO -->
+  <g>
+    <rect x="70" y="120" width="300" height="330" rx="16" fill="url(#card)" stroke="#6e7681" stroke-width="2"/>
+    <text x="220" y="162" text-anchor="middle" fill="#9198a1" font-size="18" font-weight="700">STDIO — LE POSTE</text>
+    <g fill="#12161d" stroke="#30363d" stroke-width="1.5">
+      <rect x="100" y="190" width="240" height="60" rx="10"/>
+      <rect x="100" y="262" width="240" height="60" rx="10"/>
+      <rect x="100" y="334" width="240" height="60" rx="10"/>
+    </g>
+    <g fill="#9198a1" font-size="13">
+      <text x="220" y="225" text-anchor="middle">poste d'Alice · sa copie</text>
+      <text x="220" y="297" text-anchor="middle">poste de Bob · sa copie</text>
+      <text x="220" y="369" text-anchor="middle">poste de Chloé · sa copie</text>
+    </g>
+    <text x="220" y="428" text-anchor="middle" fill="#6e7681" font-size="12">une copie par machine</text>
+  </g>
+
+  <path d="M390 285 H460 l-10 -9 M460 285 l-10 9" stroke="#38bdf8" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- After: HTTP -->
+  <g>
+    <rect x="480" y="120" width="650" height="330" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="805" y="162" text-anchor="middle" fill="#e6edf3" font-size="18" font-weight="700">STREAMABLE HTTP — LE SERVICE</text>
+
+    <rect x="640" y="190" width="330" height="110" rx="14" fill="#0d1117" stroke="#3fb950" stroke-width="3"/>
+    <text x="805" y="228" text-anchor="middle" fill="#3fb950" font-size="16" font-weight="700">UN serveur · Azure Container Apps</text>
+    <text x="805" y="254" text-anchor="middle" fill="#9198a1" font-size="13" font-family="Consolas, monospace">app.MapMcp("/mcp").RequireAuthorization()</text>
+    <text x="805" y="280" text-anchor="middle" fill="#ffa657" font-size="13">🔒 JWT / clés · scale-to-zero</text>
+
+    <g stroke="#3fb950" stroke-width="2" stroke-opacity="0.6">
+      <path d="M700 300 L620 370"/>
+      <path d="M805 300 V370"/>
+      <path d="M910 300 L990 370"/>
+    </g>
+    <g fill="#12161d" stroke="#30363d" stroke-width="1.5">
+      <rect x="530" y="370" width="180" height="52" rx="10"/>
+      <rect x="715" y="370" width="180" height="52" rx="10"/>
+      <rect x="900" y="370" width="180" height="52" rx="10"/>
+    </g>
+    <g fill="#e6edf3" font-size="13" text-anchor="middle">
+      <text x="620" y="401">Copilot d'Alice</text>
+      <text x="805" y="401">agents de Bob</text>
+      <text x="990" y="401">Claude de Chloé</text>
+    </g>
+    <text x="805" y="440" text-anchor="middle" fill="#9198a1" font-size="12">.github/mcp.json : toute l'équipe branchée en un commit</text>
+  </g>
+
+  <text x="600" y="540" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    MÊME  CODE  D'OUTILS  ·  AUTRE  PRISE  MURALE  ·  SAME  TOOLS,  NEW  SOCKET
+  </text>
+</svg>
