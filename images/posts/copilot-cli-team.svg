@@ -1,0 +1,83 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="60" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">GITHUB&#160;&#160;COPILOT&#160;&#160;CLI&#160;&#160;·&#160;&#160;ÉPISODE&#160;&#160;3/4</text>
+
+  <!-- Main agent -->
+  <circle cx="600" cy="170" r="34" fill="#1c2430" stroke="#3fb950" stroke-width="3"/>
+  <text x="600" y="178" text-anchor="middle" fill="#3fb950" font-size="17" font-weight="700">CLI</text>
+  <text x="600" y="120" text-anchor="middle" fill="#9198a1" font-size="13">il délègue tout seul</text>
+
+  <!-- edges to specialists -->
+  <g stroke="#38bdf8" stroke-width="2" stroke-opacity="0.55">
+    <path d="M600 204 L240 300"/>
+    <path d="M600 204 L440 300"/>
+    <path d="M600 204 L640 300"/>
+    <path d="M600 204 L840 300"/>
+  </g>
+  <path d="M600 204 L1020 300" stroke="#ffa657" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <!-- specialists -->
+  <g>
+    <rect x="150" y="300" width="180" height="84" rx="12" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="240" y="336" text-anchor="middle" fill="#e6edf3" font-size="16" font-weight="700">Explore</text>
+    <text x="240" y="360" text-anchor="middle" fill="#9198a1" font-size="12">analyse la codebase</text>
+
+    <rect x="350" y="300" width="180" height="84" rx="12" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="440" y="336" text-anchor="middle" fill="#e6edf3" font-size="16" font-weight="700">Task</text>
+    <text x="440" y="360" text-anchor="middle" fill="#9198a1" font-size="12">builds &amp; tests</text>
+
+    <rect x="550" y="300" width="180" height="84" rx="12" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="640" y="336" text-anchor="middle" fill="#e6edf3" font-size="16" font-weight="700">Plan</text>
+    <text x="640" y="360" text-anchor="middle" fill="#9198a1" font-size="12">bâtit la stratégie</text>
+
+    <rect x="750" y="300" width="180" height="84" rx="12" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="840" y="336" text-anchor="middle" fill="#e6edf3" font-size="16" font-weight="700">Code-review</text>
+    <text x="840" y="360" text-anchor="middle" fill="#9198a1" font-size="12">du signal, pas du bruit</text>
+
+    <rect x="950" y="300" width="140" height="84" rx="12" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="1020" y="336" text-anchor="middle" fill="#e6edf3" font-size="16" font-weight="700">🦆 Duck</text>
+    <text x="1020" y="360" text-anchor="middle" fill="#9198a1" font-size="12">critique indépendant</text>
+  </g>
+
+  <!-- extension row -->
+  <g>
+    <rect x="150" y="430" width="215" height="82" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="257" y="462" text-anchor="middle" fill="#3fb950" font-size="15" font-weight="700">.agent.md</text>
+    <text x="257" y="488" text-anchor="middle" fill="#9198a1" font-size="12">vos collègues sur mesure</text>
+
+    <rect x="385" y="430" width="215" height="82" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="492" y="462" text-anchor="middle" fill="#3fb950" font-size="15" font-weight="700">skills</text>
+    <text x="492" y="488" text-anchor="middle" fill="#9198a1" font-size="12">Markdown, partagés partout</text>
+
+    <rect x="620" y="430" width="215" height="82" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="727" y="462" text-anchor="middle" fill="#3fb950" font-size="15" font-weight="700">/plugin install</text>
+    <text x="727" y="488" text-anchor="middle" fill="#9198a1" font-size="12">l'écosystème contribue</text>
+
+    <rect x="855" y="430" width="235" height="82" rx="12" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="972" y="462" text-anchor="middle" fill="#bc8cff" font-size="15" font-weight="700">.github/mcp.json</text>
+    <text x="972" y="488" text-anchor="middle" fill="#9198a1" font-size="12">la prise, versionnée</text>
+  </g>
+
+  <text x="600" y="570" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    L'ÉQUIPE  DANS  LE  TERMINAL  ·  THE  TEAM  IN  THE  TERMINAL
+  </text>
+</svg>

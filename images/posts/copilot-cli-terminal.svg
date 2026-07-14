@@ -1,0 +1,61 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="60" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">GITHUB&#160;&#160;COPILOT&#160;&#160;CLI&#160;&#160;·&#160;&#160;ÉPISODE&#160;&#160;1/4</text>
+
+  <!-- Terminal window -->
+  <g>
+    <rect x="120" y="100" width="960" height="290" rx="14" fill="url(#card)" stroke="#30363d" stroke-width="2"/>
+    <rect x="120" y="100" width="960" height="38" rx="14" fill="#12161d"/>
+    <circle cx="148" cy="119" r="6" fill="#f85149"/>
+    <circle cx="170" cy="119" r="6" fill="#ffa657"/>
+    <circle cx="192" cy="119" r="6" fill="#3fb950"/>
+    <text x="600" y="125" text-anchor="middle" fill="#9198a1" font-size="13">terminal — la salle des machines</text>
+
+    <text x="150" y="180" fill="#3fb950" font-size="17" font-family="Consolas, monospace">$ copilot</text>
+    <text x="150" y="216" fill="#e6edf3" font-size="16" font-family="Consolas, monospace">&gt; Ajoute la validation des e-mails et mets à jour les tests.</text>
+    <text x="150" y="252" fill="#9198a1" font-size="15" font-family="Consolas, monospace">✓ explore le code    ✓ propose un plan    ⏸ demande avant d'agir</text>
+    <text x="150" y="292" fill="#38bdf8" font-size="15" font-family="Consolas, monospace">Run `dotnet test` ?  [y/n]  ← vous signez le bon de commande</text>
+    <text x="150" y="336" fill="#9198a1" font-size="14" font-family="Consolas, monospace">Esc Esc = remonter le temps   ·   /init = générer les instructions</text>
+    <text x="150" y="366" fill="#9198a1" font-size="14" font-family="Consolas, monospace">git · dotnet · npm · docker : l'agent est chez lui</text>
+  </g>
+
+  <!-- Three modes -->
+  <g>
+    <rect x="120" y="420" width="296" height="92" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="268" y="458" text-anchor="middle" fill="#3fb950" font-size="18" font-weight="700">NORMAL</text>
+    <text x="268" y="484" text-anchor="middle" fill="#9198a1" font-size="13">vous validez chaque action</text>
+
+    <rect x="452" y="420" width="296" height="92" rx="12" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="600" y="458" text-anchor="middle" fill="#ffa657" font-size="18" font-weight="700">PLAN</text>
+    <text x="600" y="484" text-anchor="middle" fill="#9198a1" font-size="13">cadrer d'abord, coder ensuite</text>
+
+    <rect x="784" y="420" width="296" height="92" rx="12" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="932" y="458" text-anchor="middle" fill="#bc8cff" font-size="18" font-weight="700">AUTOPILOT</text>
+    <text x="932" y="484" text-anchor="middle" fill="#9198a1" font-size="13">il enchaîne, bordé de garde-fous</text>
+
+    <text x="600" y="540" text-anchor="middle" fill="#6e7681" font-size="13">Shift+Tab pour changer de régime</text>
+  </g>
+
+  <text x="600" y="576" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    SORTEZ  COPILOT  DE  L'IDE  ·  TAKE  COPILOT  OUT  OF  THE  IDE
+  </text>
+</svg>

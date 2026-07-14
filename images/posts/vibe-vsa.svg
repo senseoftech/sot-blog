@@ -1,0 +1,76 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="60" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">VIBE&#160;&#160;ENGINEERING&#160;&#160;·&#160;&#160;VERTICAL&#160;&#160;SLICE</text>
+
+  <!-- Left: layered -->
+  <g>
+    <rect x="80" y="104" width="480" height="380" rx="16" fill="url(#card)" stroke="#f85149" stroke-width="2"/>
+    <text x="320" y="146" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">EN COUCHES</text>
+    <text x="320" y="170" text-anchor="middle" fill="#9198a1" font-size="13">une fonctionnalité éparpillée partout</text>
+
+    <rect x="120" y="192" width="400" height="52" rx="8" fill="#12161d" stroke="#30363d" stroke-width="1.5"/>
+    <text x="140" y="224" fill="#9198a1" font-size="14">Controllers/</text>
+    <rect x="120" y="256" width="400" height="52" rx="8" fill="#12161d" stroke="#30363d" stroke-width="1.5"/>
+    <text x="140" y="288" fill="#9198a1" font-size="14">Services/          ← partagé par 12 fonctionnalités</text>
+    <rect x="120" y="320" width="400" height="52" rx="8" fill="#12161d" stroke="#30363d" stroke-width="1.5"/>
+    <text x="140" y="352" fill="#9198a1" font-size="14">Repositories/</text>
+    <rect x="120" y="384" width="400" height="52" rx="8" fill="#12161d" stroke="#30363d" stroke-width="1.5"/>
+    <text x="140" y="416" fill="#9198a1" font-size="14">Entities/</text>
+
+    <!-- feature crossing all layers -->
+    <path d="M200 192 L250 244 M250 256 L210 308 M210 320 L260 372 M260 384 L230 436" stroke="#f85149" stroke-width="3" stroke-dasharray="7 5" fill="none"/>
+    <circle cx="200" cy="192" r="7" fill="#f85149"/>
+    <text x="320" y="466" text-anchor="middle" fill="#f85149" font-size="13" font-weight="600">« ajoute un champ » = 6 fichiers, 6 dossiers</text>
+  </g>
+
+  <!-- Right: slices -->
+  <g>
+    <rect x="640" y="104" width="480" height="380" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="880" y="146" text-anchor="middle" fill="#e6edf3" font-size="20" font-weight="700">EN TRANCHES</text>
+    <text x="880" y="170" text-anchor="middle" fill="#9198a1" font-size="13">tout ce qui change ensemble, rangé ensemble</text>
+
+    <!-- three slices -->
+    <rect x="676" y="192" width="128" height="244" rx="10" fill="#12161d" stroke="#30363d" stroke-width="1.5"/>
+    <text x="740" y="220" text-anchor="middle" fill="#9198a1" font-size="13">GetOrder</text>
+
+    <rect x="816" y="192" width="128" height="244" rx="10" fill="#0d1117" stroke="#3fb950" stroke-width="3"/>
+    <text x="880" y="220" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="700">CreateOrder</text>
+    <g fill="#e6edf3" font-size="11" font-family="Consolas, monospace">
+      <text x="880" y="252" text-anchor="middle">Endpoint.cs</text>
+      <text x="880" y="278" text-anchor="middle">Command.cs</text>
+      <text x="880" y="304" text-anchor="middle">Handler.cs</text>
+      <text x="880" y="330" text-anchor="middle">Validator.cs</text>
+      <text x="880" y="356" text-anchor="middle">Tests.cs</text>
+    </g>
+    <text x="880" y="392" text-anchor="middle" fill="#38bdf8" font-size="11">l'agent travaille ici,</text>
+    <text x="880" y="408" text-anchor="middle" fill="#38bdf8" font-size="11">ne casse qu'ici</text>
+
+    <rect x="956" y="192" width="128" height="244" rx="10" fill="#12161d" stroke="#30363d" stroke-width="1.5"/>
+    <text x="1020" y="220" text-anchor="middle" fill="#9198a1" font-size="13">AddNote</text>
+
+    <text x="880" y="466" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="600">1 fonctionnalité = 1 dossier = 1 contexte = 1 agent</text>
+  </g>
+
+  <text x="600" y="556" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    CE  QUI  CHANGE  ENSEMBLE  VIT  ENSEMBLE  ·  WHAT  CHANGES  TOGETHER  LIVES  TOGETHER
+  </text>
+</svg>

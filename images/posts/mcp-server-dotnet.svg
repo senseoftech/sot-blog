@@ -1,0 +1,68 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">SERVEUR&#160;&#160;MCP&#160;&#160;EN&#160;&#160;.NET</text>
+
+  <!-- Left: your code -->
+  <g>
+    <rect x="70" y="130" width="360" height="330" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="250" y="174" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="700">VOTRE CODE C#</text>
+    <rect x="100" y="200" width="300" height="220" rx="10" fill="#0d1117" stroke="#30363d"/>
+    <text x="118" y="236" fill="#bc8cff" font-size="14" font-family="Consolas, monospace">[McpServerToolType]</text>
+    <text x="118" y="262" fill="#9198a1" font-size="14" font-family="Consolas, monospace">public static class</text>
+    <text x="118" y="284" fill="#e6edf3" font-size="14" font-family="Consolas, monospace">    StockTools</text>
+    <text x="118" y="320" fill="#bc8cff" font-size="14" font-family="Consolas, monospace">[McpServerTool]</text>
+    <text x="118" y="346" fill="#e6edf3" font-size="14" font-family="Consolas, monospace">int GetStock(...)</text>
+    <text x="118" y="382" fill="#3fb950" font-size="13" font-family="Consolas, monospace">// logique métier</text>
+    <text x="250" y="444" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="600">~30 lignes</text>
+  </g>
+
+  <!-- Middle: the plug -->
+  <g>
+    <path d="M446 295 H520" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+    <rect x="520" y="265" width="56" height="60" rx="10" fill="#1c2430" stroke="#38bdf8" stroke-width="3"/>
+    <rect x="576" y="279" width="16" height="10" rx="3" fill="#38bdf8"/>
+    <rect x="576" y="301" width="16" height="10" rx="3" fill="#38bdf8"/>
+    <text x="548" y="360" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="600">MCP</text>
+    <text x="548" y="380" text-anchor="middle" fill="#9198a1" font-size="12">la prise universelle</text>
+  </g>
+
+  <!-- Right: the clients -->
+  <g>
+    <path d="M604 295 H660 M660 295 L720 175 M660 295 H730 M660 295 L720 415" stroke="#6e7681" stroke-width="2" fill="none"/>
+
+    <rect x="730" y="140" width="380" height="70" rx="12" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="920" y="170" text-anchor="middle" fill="#e6edf3" font-size="17" font-weight="600">GitHub Copilot</text>
+    <text x="920" y="192" text-anchor="middle" fill="#9198a1" font-size="12">.vscode/mcp.json</text>
+
+    <rect x="740" y="260" width="380" height="70" rx="12" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="930" y="290" text-anchor="middle" fill="#e6edf3" font-size="17" font-weight="600">Claude</text>
+    <text x="930" y="312" text-anchor="middle" fill="#9198a1" font-size="12">claude_desktop_config.json</text>
+
+    <rect x="730" y="380" width="380" height="70" rx="12" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="920" y="410" text-anchor="middle" fill="#e6edf3" font-size="17" font-weight="600">Vos agents</text>
+    <text x="920" y="432" text-anchor="middle" fill="#9198a1" font-size="12">Agent Framework &amp; co.</text>
+  </g>
+
+  <text x="600" y="548" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    ÉCRIT  UNE  FOIS  ·  BRANCHÉ  PARTOUT  ·  WRITTEN  ONCE,  PLUGGED  EVERYWHERE
+  </text>
+</svg>

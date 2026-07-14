@@ -1,0 +1,84 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">RAG&#160;&#160;&amp;&#160;&#160;EMBEDDINGS</text>
+
+  <!-- Left: the map of ideas -->
+  <g>
+    <rect x="70" y="110" width="440" height="370" rx="16" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="290" y="152" text-anchor="middle" fill="#e6edf3" font-size="21" font-weight="700">LA CARTE DES IDÉES</text>
+    <text x="290" y="176" text-anchor="middle" fill="#9198a1" font-size="13">un texte = un point · proche en sens = proche sur la carte</text>
+
+    <g stroke="#30363d" stroke-opacity="0.5" stroke-width="1">
+      <path d="M100 220 H480 M100 280 H480 M100 340 H480 M100 400 H480"/>
+      <path d="M160 196 V450 M240 196 V450 M320 196 V450 M400 196 V450"/>
+    </g>
+
+    <!-- cluster animals -->
+    <circle cx="180" cy="250" r="9" fill="#3fb950"/>
+    <text x="180" y="232" text-anchor="middle" fill="#3fb950" font-size="13">chat</text>
+    <circle cx="215" cy="278" r="9" fill="#3fb950"/>
+    <text x="222" y="302" text-anchor="middle" fill="#3fb950" font-size="13">chaton</text>
+    <circle cx="152" cy="296" r="9" fill="#3fb950"/>
+    <text x="146" y="320" text-anchor="middle" fill="#3fb950" font-size="13">vétérinaire</text>
+
+    <!-- cluster HR -->
+    <circle cx="330" cy="256" r="9" fill="#bc8cff"/>
+    <text x="330" y="238" text-anchor="middle" fill="#bc8cff" font-size="13">congés payés</text>
+    <circle cx="366" cy="284" r="9" fill="#bc8cff"/>
+    <text x="376" y="308" text-anchor="middle" fill="#bc8cff" font-size="13">vacances</text>
+
+    <!-- lonely invoice -->
+    <circle cx="428" cy="420" r="9" fill="#ffa657"/>
+    <text x="420" y="446" text-anchor="middle" fill="#ffa657" font-size="13">facture impayée</text>
+
+    <text x="188" y="416" fill="#9198a1" font-size="12">« vacances » et « congés payés » :</text>
+    <text x="188" y="434" fill="#9198a1" font-size="12">voisins sans un mot en commun</text>
+  </g>
+
+  <!-- Right: the librarian pipeline -->
+  <g>
+    <text x="840" y="152" text-anchor="middle" fill="#e6edf3" font-size="21" font-weight="700">LE BIBLIOTHÉCAIRE</text>
+
+    <rect x="600" y="180" width="480" height="56" rx="12" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="626" y="214" fill="#38bdf8" font-size="15" font-weight="700">1</text>
+    <text x="650" y="214" fill="#e6edf3" font-size="15">la question devient un point sur la carte</text>
+
+    <path d="M840 236 V252" stroke="#6e7681" stroke-width="2"/>
+    <rect x="600" y="252" width="480" height="56" rx="12" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="626" y="286" fill="#38bdf8" font-size="15" font-weight="700">2</text>
+    <text x="650" y="286" fill="#e6edf3" font-size="15">la base vectorielle sort les 3 passages voisins</text>
+
+    <path d="M840 308 V324" stroke="#6e7681" stroke-width="2"/>
+    <rect x="600" y="324" width="480" height="56" rx="12" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="626" y="358" fill="#ffa657" font-size="15" font-weight="700">3</text>
+    <text x="650" y="358" fill="#e6edf3" font-size="15">posés sur le bureau du modèle (le contexte)</text>
+
+    <path d="M840 380 V396" stroke="#6e7681" stroke-width="2"/>
+    <rect x="600" y="396" width="480" height="56" rx="12" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="626" y="430" fill="#3fb950" font-size="15" font-weight="700">4</text>
+    <text x="650" y="430" fill="#e6edf3" font-size="15">réponse appuyée sur VOS documents, citée</text>
+  </g>
+
+  <text x="600" y="548" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    LE  BIBLIOTHÉCAIRE  DE  L'EXPERT  ·  THE  EXPERT'S  LIBRARIAN
+  </text>
+</svg>

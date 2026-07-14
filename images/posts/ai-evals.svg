@@ -1,0 +1,77 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">TESTER&#160;&#160;UNE&#160;&#160;APPLICATION&#160;&#160;IA&#160;&#160;·&#160;&#160;LES&#160;&#160;ÉVALS</text>
+
+  <!-- Left: classic test -->
+  <g>
+    <rect x="80" y="120" width="440" height="360" rx="16" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="300" y="164" text-anchor="middle" fill="#e6edf3" font-size="21" font-weight="700">LA MACHINE</text>
+    <text x="300" y="190" text-anchor="middle" fill="#9198a1" font-size="14">le harnais : prompts, parsing, outils</text>
+
+    <rect x="120" y="216" width="360" height="52" rx="10" fill="#0d1117" stroke="#30363d"/>
+    <text x="140" y="248" fill="#e6edf3" font-size="15" font-family="Consolas, monospace">Assert.Equal(attendu, sortie)</text>
+
+    <g font-size="15" font-family="Consolas, monospace">
+      <circle cx="150" cy="306" r="9" fill="#3fb950"/>
+      <text x="176" y="312" fill="#e6edf3">ParseTicket_JsonValide</text>
+      <circle cx="150" cy="344" r="9" fill="#3fb950"/>
+      <text x="176" y="350" fill="#e6edf3">AppelOutil_BonHandler</text>
+      <circle cx="150" cy="382" r="9" fill="#3fb950"/>
+      <text x="176" y="388" fill="#e6edf3">Retry_ApresTimeout</text>
+    </g>
+
+    <text x="300" y="446" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="600">déterministe · vert ou rouge · triple A</text>
+  </g>
+
+  <!-- Right: the exam -->
+  <g>
+    <rect x="680" y="120" width="440" height="360" rx="16" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="900" y="164" text-anchor="middle" fill="#e6edf3" font-size="21" font-weight="700">L'EMPLOYÉ</text>
+    <text x="900" y="190" text-anchor="middle" fill="#9198a1" font-size="14">le cerveau : la réponse du modèle</text>
+
+    <text x="720" y="238" fill="#e6edf3" font-size="15">fidèle au ticket ?</text>
+    <rect x="920" y="226" width="150" height="12" rx="6" fill="#21262d"/>
+    <rect x="920" y="226" width="128" height="12" rx="6" fill="#3fb950"/>
+
+    <text x="720" y="276" fill="#e6edf3" font-size="15">rien d'inventé ?</text>
+    <rect x="920" y="264" width="150" height="12" rx="6" fill="#21262d"/>
+    <rect x="920" y="264" width="135" height="12" rx="6" fill="#3fb950"/>
+
+    <text x="720" y="314" fill="#e6edf3" font-size="15">ton adapté ?</text>
+    <rect x="920" y="302" width="150" height="12" rx="6" fill="#21262d"/>
+    <rect x="920" y="302" width="98" height="12" rx="6" fill="#ffa657"/>
+
+    <path d="M720 340 H1080" stroke="#30363d" stroke-width="1.5"/>
+
+    <text x="720" y="386" fill="#e6edf3" font-size="17" font-weight="600">golden dataset : 94 % ≥ seuil 90 %</text>
+    <rect x="720" y="404" width="360" height="16" rx="8" fill="#21262d"/>
+    <rect x="720" y="404" width="338" height="16" rx="8" fill="#3fb950"/>
+    <rect x="1040" y="398" width="3" height="28" fill="#ffa657"/>
+    <text x="1046" y="394" fill="#ffa657" font-size="12">seuil</text>
+
+    <text x="900" y="456" text-anchor="middle" fill="#ffa657" font-size="14" font-weight="600">une note et un seuil · juge calibré · en CI</text>
+  </g>
+
+  <text x="600" y="548" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    ON  NOTE  L'EMPLOYÉ,  ON  TESTE  LA  MACHINE  ·  GRADE  THE  BRAIN,  TEST  THE  PLUMBING
+  </text>
+</svg>

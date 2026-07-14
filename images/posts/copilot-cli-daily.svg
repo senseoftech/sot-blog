@@ -1,0 +1,68 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="60" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">GITHUB&#160;&#160;COPILOT&#160;&#160;CLI&#160;&#160;·&#160;&#160;ÉPISODE&#160;&#160;2/4</text>
+
+  <!-- Sessions -->
+  <g>
+    <rect x="90" y="96" width="490" height="200" rx="14" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="335" y="136" text-anchor="middle" fill="#e6edf3" font-size="19" font-weight="700">SESSIONS &amp; MÉMOIRE</text>
+    <text x="120" y="172" fill="#3fb950" font-size="14" font-family="Consolas, monospace">copilot --resume</text>
+    <text x="120" y="198" fill="#9198a1" font-size="13">fermez le terminal, pas la conversation</text>
+    <text x="120" y="232" fill="#e6edf3" font-size="14">repository memory : il apprend vos conventions</text>
+    <text x="120" y="258" fill="#e6edf3" font-size="14">cross-session : « sur quoi travaillait-on lundi ? »</text>
+  </g>
+
+  <!-- Context -->
+  <g>
+    <rect x="620" y="96" width="490" height="200" rx="14" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="865" y="136" text-anchor="middle" fill="#e6edf3" font-size="19" font-weight="700">LE CONTEXTE, VISIBLE</text>
+    <text x="650" y="172" fill="#38bdf8" font-size="14" font-family="Consolas, monospace">/context</text>
+    <rect x="650" y="188" width="420" height="16" rx="8" fill="#21262d"/>
+    <rect x="650" y="188" width="399" height="16" rx="8" fill="#38bdf8"/>
+    <text x="650" y="232" fill="#e6edf3" font-size="14">à 95 % : auto-compaction en arrière-plan</text>
+    <text x="650" y="258" fill="#9198a1" font-size="14" font-family="Consolas, monospace">/compact pour faire le ménage à la demande</text>
+  </g>
+
+  <!-- Models -->
+  <g>
+    <rect x="90" y="326" width="490" height="200" rx="14" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="335" y="366" text-anchor="middle" fill="#e6edf3" font-size="19" font-weight="700">LE GARAGE DE MODÈLES</text>
+    <text x="120" y="402" fill="#bc8cff" font-size="14" font-family="Consolas, monospace">/model — changer en pleine session</text>
+    <text x="120" y="430" fill="#e6edf3" font-size="14">rapide pour cadrer · costaud pour implémenter</text>
+    <text x="120" y="458" fill="#e6edf3" font-size="14">GPT-5 mini : 0 premium request</text>
+    <text x="120" y="486" fill="#9198a1" font-size="13">épinglable par dépôt : .github/copilot/settings.json</text>
+  </g>
+
+  <!-- Guardrails -->
+  <g>
+    <rect x="620" y="326" width="490" height="200" rx="14" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="865" y="366" text-anchor="middle" fill="#e6edf3" font-size="19" font-weight="700">LES GARDE-FOUS</text>
+    <text x="650" y="402" fill="#ffa657" font-size="14" font-family="Consolas, monospace">--sandbox : l'enclos au niveau OS</text>
+    <text x="650" y="430" fill="#e6edf3" font-size="14">allowed_urls / denied_urls : le périmètre web</text>
+    <text x="650" y="458" fill="#e6edf3" font-size="14">permissions par dépôt, jamais globales</text>
+    <text x="650" y="486" fill="#9198a1" font-size="13">autopilot + sandbox + périmètre = bride lâchée, contrôle gardé</text>
+  </g>
+
+  <text x="600" y="570" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    LE  QUOTIDIEN  ·  THE  DAILY  ROUTINE
+  </text>
+</svg>
