@@ -1,0 +1,81 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">DIAGRAMMES&#160;&#160;AS&#160;&#160;CODE&#160;&#160;·&#160;&#160;MERMAID&#160;&#160;&amp;&#160;&#160;C4</text>
+
+  <!-- Left: the text source -->
+  <g>
+    <rect x="80" y="130" width="420" height="330" rx="16" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="112" cy="160" r="6" fill="#f85149"/>
+    <circle cx="134" cy="160" r="6" fill="#ffa657"/>
+    <circle cx="156" cy="160" r="6" fill="#3fb950"/>
+    <text x="470" y="166" text-anchor="end" fill="#9198a1" font-size="13" font-family="Consolas, monospace">docs/architecture.md</text>
+
+    <g font-family="Consolas, monospace" font-size="16">
+      <text x="112" y="212" fill="#9198a1">```mermaid</text>
+      <text x="112" y="242" fill="#bc8cff">flowchart LR</text>
+      <text x="130" y="272" fill="#e6edf3">Client --&gt;|HTTP| API</text>
+      <text x="130" y="302" fill="#e6edf3">API --&gt; H{Handler}</text>
+      <text x="130" y="332" fill="#e6edf3">H --&gt;|cmd| DB[(SQL)]</text>
+      <text x="112" y="362" fill="#9198a1">```</text>
+    </g>
+    <text x="112" y="424" fill="#3fb950" font-size="14">+ versionné · relu en PR · éditable par l'agent</text>
+  </g>
+
+  <!-- Arrow -->
+  <g>
+    <path d="M520 295 H600" stroke="#38bdf8" stroke-width="3" fill="none"/>
+    <path d="M600 295 l-14 -9 v18 z" fill="#38bdf8"/>
+    <text x="560" y="278" text-anchor="middle" fill="#9198a1" font-size="12">rendu</text>
+  </g>
+
+  <!-- Right: the rendered diagram -->
+  <g>
+    <text x="860" y="150" text-anchor="middle" fill="#9198a1" font-size="14" letter-spacing="1">LE DESSIN, PARTOUT OÙ ON LIT</text>
+
+    <rect x="640" y="250" width="140" height="56" rx="10" fill="#12161d" stroke="#38bdf8" stroke-width="2"/>
+    <text x="710" y="284" text-anchor="middle" fill="#e6edf3" font-size="15" font-family="Consolas, monospace">Client</text>
+
+    <path d="M780 278 H830" stroke="#3fb950" stroke-width="2.5" fill="none"/>
+    <path d="M830 278 l-12 -8 v16 z" fill="#3fb950"/>
+    <text x="805" y="264" text-anchor="middle" fill="#9198a1" font-size="11" font-family="Consolas, monospace">HTTP</text>
+
+    <rect x="836" y="250" width="110" height="56" rx="10" fill="#12161d" stroke="#38bdf8" stroke-width="2"/>
+    <text x="891" y="284" text-anchor="middle" fill="#e6edf3" font-size="15" font-family="Consolas, monospace">API</text>
+
+    <path d="M946 278 H996" stroke="#3fb950" stroke-width="2.5" fill="none"/>
+    <path d="M996 278 l-12 -8 v16 z" fill="#3fb950"/>
+
+    <path d="M1002 278 l28 -28 l28 28 l-28 28 z" fill="#12161d" stroke="#ffa657" stroke-width="2"/>
+    <text x="1030" y="284" text-anchor="middle" fill="#ffa657" font-size="13" font-family="Consolas, monospace">H</text>
+
+    <path d="M1030 310 V352" stroke="#3fb950" stroke-width="2.5" fill="none"/>
+    <path d="M1030 352 l-8 -12 h16 z" fill="#3fb950"/>
+    <ellipse cx="1030" cy="380" rx="52" ry="22" fill="#12161d" stroke="#bc8cff" stroke-width="2"/>
+    <text x="1030" y="386" text-anchor="middle" fill="#e6edf3" font-size="13" font-family="Consolas, monospace">SQL</text>
+
+    <text x="860" y="440" text-anchor="middle" fill="#9198a1" font-size="14">une image se regarde · du texte se lit et se met à jour</text>
+  </g>
+
+  <text x="600" y="548" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    LA  CARTE  VIT  AVEC  LE  CODE  ·  THE  MAP  LIVES  WITH  THE  CODE
+  </text>
+</svg>

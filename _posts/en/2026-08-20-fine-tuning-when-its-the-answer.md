@@ -9,7 +9,7 @@ tags: [AI, LLM, fine-tuning, lora, training]
 level: 400
 ---
 
-Level 400, episode 8 — the last of the series, and a rehabilitation. In [the RAG article]({{ site.baseurl }}/2026/07/15/rag-embeddings-explained-simply/), I waved fine-tuning away: *"expensive, slow, frozen — prefer context"*. That was true **at level 100**, for the problem of the moment (giving fresh knowledge). But it was a half-truth, and an architect deserves the other half.
+Level 400, episode 8 — the last of the series, and a rehabilitation. In [the RAG article]({{ site.baseurl }}/2026/07/18/rag-embeddings-explained-simply/), I waved fine-tuning away: *"expensive, slow, frozen — prefer context"*. That was true **at level 100**, for the problem of the moment (giving fresh knowledge). But it was a half-truth, and an architect deserves the other half.
 
 Today: *when* fine-tuning is the right answer — and it is, sometimes, honestly — without the heavy math. LoRA, SFT vs DPO, catastrophic forgetting, and the break-even calculation. You'll see: it's not rocket science.
 
@@ -21,9 +21,9 @@ The misunderstanding that ruins everything. Fine-tuning gets misclassified becau
 
 > **RAG teaches the model *what to know*. Fine-tuning teaches it *how to behave*.**
 
-You want it to know your up-to-date refund policy? [RAG]({{ site.baseurl }}/2026/07/28/build-your-rag-in-dotnet/) — the knowledge changes, you don't carve it. You want it to *always* answer in your system's exact JSON format, with your brand's tone, following a specific business reasoning that three pages of prompt can't reliably impose? **There**, fine-tuning wins. You don't inject facts, you shape a **reflex**.
+You want it to know your up-to-date refund policy? [RAG]({{ site.baseurl }}/2026/08/01/build-your-rag-in-dotnet/) — the knowledge changes, you don't carve it. You want it to *always* answer in your system's exact JSON format, with your brand's tone, following a specific business reasoning that three pages of prompt can't reliably impose? **There**, fine-tuning wins. You don't inject facts, you shape a **reflex**.
 
-The signal that should make you consider it: your [system prompt]({{ site.baseurl }}/2026/07/12/vibe-project-dotnet-foundations/) has swollen to two thousand tokens of examples and style rules, you [pay for it on every turn]({{ site.baseurl }}/2026/07/30/prompt-caching-under-the-hood/), and it still "goes off the rails" one time in ten. That's when moving the behavior from the prompt *into the weights* becomes profitable.
+The signal that should make you consider it: your [system prompt]({{ site.baseurl }}/2026/07/12/vibe-project-dotnet-foundations/) has swollen to two thousand tokens of examples and style rules, you [pay for it on every turn]({{ site.baseurl }}/2026/08/03/prompt-caching-under-the-hood/), and it still "goes off the rails" one time in ten. That's when moving the behavior from the prompt *into the weights* becomes profitable.
 
 ## LoRA: fine-tuning without retraining the world
 
@@ -31,7 +31,7 @@ Why fine-tuning had its "expensive" reputation: retraining **all** the weights o
 
 The idea, as an image: instead of repainting the whole building, you **add a thin layer of adapters** — small matrices grafted onto the model, representing a tiny fraction of the parameters. You freeze the original model, you train only those adapters. Decisive consequences:
 
-- **Accessible**: a LoRA fine-tune often fits on **a single card** (QLoRA adds [quantization]({{ site.baseurl }}/2026/08/12/the-economics-of-inference/) to lower memory further). Not a farm, one GPU.
+- **Accessible**: a LoRA fine-tune often fits on **a single card** (QLoRA adds [quantization]({{ site.baseurl }}/2026/08/16/the-economics-of-inference/) to lower memory further). Not a farm, one GPU.
 - **Light to deploy**: the adapter weighs a few megabytes, plugs onto the base model, swaps hot. You can have *several* (one per task) on the same model.
 
 LoRA turned fine-tuning from an infrastructure project into a product-team operation. That's what makes this article relevant in 2026 and not in 2022.
@@ -47,7 +47,7 @@ The reflex: **SFT to install the behavior, DPO to refine it** on the nuances tha
 
 ## The word of honesty: the three traps
 
-- **Catastrophic forgetting.** In learning your task, the model can **unlearn** general capabilities — the price of too narrow a specialization. You watch it with [evals]({{ site.baseurl }}/2026/08/16/eval-engineering-statistical-rigor/) that *also* cover the skills you want to preserve, not just the new task.
+- **Catastrophic forgetting.** In learning your task, the model can **unlearn** general capabilities — the price of too narrow a specialization. You watch it with [evals]({{ site.baseurl }}/2026/08/18/eval-engineering-statistical-rigor/) that *also* cover the skills you want to preserve, not just the new task.
 - **The data is all the work.** 90% of a successful fine-tune's effort is **curating the dataset**: hundreds to thousands of clean, representative, consistent examples. A mediocre dataset carves flaws into the weights — far harder to fix than a bad prompt.
 - **Frozen, again.** A fine-tuned model is a **versioned** artifact: new need, new training round, new eval, new deployment. An MLOps-style cycle, not a prompt edit. It's [an ADR]({{ site.baseurl }}/2026/07/14/adr-memory-of-architecture-decisions/) in its own right.
 

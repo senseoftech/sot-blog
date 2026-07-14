@@ -1,0 +1,89 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowBack" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#bc8cff"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">SPEC-DRIVEN&#160;&#160;·&#160;&#160;LA&#160;&#160;SPEC&#160;&#160;SOURCE&#160;&#160;DE&#160;&#160;VÉRITÉ</text>
+
+  <!-- The SPEC sheet -->
+  <g>
+    <rect x="90" y="130" width="330" height="320" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="120" y="176" fill="#e6edf3" font-size="22" font-weight="700">SPEC</text>
+    <rect x="300" y="152" width="94" height="26" rx="13" fill="#12161d" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="347" y="170" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600">relue en PR</text>
+
+    <text x="120" y="222" fill="#3fb950" font-size="16" font-weight="700">✓</text>
+    <text x="144" y="222" fill="#e6edf3" font-size="15">comportements observables</text>
+
+    <text x="120" y="258" fill="#3fb950" font-size="16" font-weight="700">✓</text>
+    <text x="144" y="258" fill="#e6edf3" font-size="15">critères d'acceptation</text>
+
+    <text x="120" y="294" fill="#3fb950" font-size="16" font-weight="700">✓</text>
+    <text x="144" y="294" fill="#e6edf3" font-size="15">cas limites</text>
+
+    <text x="120" y="330" fill="#f85149" font-size="16" font-weight="700">✗</text>
+    <text x="144" y="330" fill="#9198a1" font-size="15">design d'implémentation</text>
+
+    <rect x="120" y="356" width="270" height="8" rx="4" fill="#21262d"/>
+    <rect x="120" y="372" width="220" height="8" rx="4" fill="#21262d"/>
+    <text x="120" y="418" fill="#9198a1" font-size="12">docs/specs/password-reset.md</text>
+  </g>
+
+  <!-- Arrow SPEC -> PLAN -->
+  <path d="M430 250 H505" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- The PLAN card -->
+  <g>
+    <rect x="520" y="170" width="230" height="160" rx="16" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="548" y="212" fill="#e6edf3" font-size="20" font-weight="700">PLAN</text>
+    <rect x="548" y="234" width="170" height="8" rx="4" fill="#ffa657" fill-opacity="0.5"/>
+    <rect x="548" y="252" width="130" height="8" rx="4" fill="#21262d"/>
+    <rect x="548" y="270" width="150" height="8" rx="4" fill="#21262d"/>
+    <text x="548" y="308" fill="#9198a1" font-size="12">les étapes techniques</text>
+  </g>
+
+  <!-- Arrow PLAN -> CODE -->
+  <path d="M760 250 H835" stroke="#38bdf8" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- The CODE card -->
+  <g>
+    <rect x="850" y="170" width="230" height="160" rx="16" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="878" y="212" fill="#e6edf3" font-size="20" font-weight="700">CODE</text>
+    <rect x="878" y="234" width="60" height="8" rx="4" fill="#bc8cff" fill-opacity="0.6"/>
+    <rect x="946" y="234" width="90" height="8" rx="4" fill="#21262d"/>
+    <rect x="894" y="252" width="110" height="8" rx="4" fill="#38bdf8" fill-opacity="0.45"/>
+    <rect x="894" y="270" width="80" height="8" rx="4" fill="#21262d"/>
+    <text x="878" y="308" fill="#9198a1" font-size="12">généré, testé, revu</text>
+  </g>
+
+  <!-- Dashed return arrow: the code regenerates, the spec stays -->
+  <path d="M965 340 Q790 480 445 462" stroke="#bc8cff" stroke-width="2.5" stroke-dasharray="7 6" fill="none" marker-end="url(#arrowBack)"/>
+  <text x="740" y="478" text-anchor="middle" fill="#bc8cff" font-size="15" font-weight="600">le code se régénère, la spec reste</text>
+  <text x="740" y="500" text-anchor="middle" fill="#9198a1" font-size="13">quand ils divergent, la spec gagne</text>
+
+  <text x="600" y="548" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    LA  SPEC  EST  LE  CAPITAL  ·  THE  SPEC  IS  THE  CAPITAL
+  </text>
+</svg>

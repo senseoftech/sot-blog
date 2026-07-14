@@ -1,0 +1,100 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#6e7681"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">TESTS&#160;&#160;·&#160;&#160;LA&#160;&#160;SPEC&#160;&#160;EXÉCUTABLE</text>
+
+  <!-- Left: the prose spec, grey, can lie -->
+  <g>
+    <rect x="70" y="130" width="310" height="330" rx="16" fill="url(#card)" stroke="#6e7681" stroke-width="2"/>
+    <text x="100" y="174" fill="#9198a1" font-size="20" font-weight="700">SPEC</text>
+    <rect x="256" y="154" width="100" height="26" rx="13" fill="#12161d" stroke="#6e7681" stroke-width="1.5"/>
+    <text x="306" y="172" text-anchor="middle" fill="#9198a1" font-size="12" font-weight="600">prose</text>
+
+    <rect x="100" y="200" width="250" height="8" rx="4" fill="#21262d"/>
+    <rect x="100" y="218" width="220" height="8" rx="4" fill="#21262d"/>
+    <rect x="100" y="236" width="240" height="8" rx="4" fill="#21262d"/>
+
+    <text x="100" y="282" fill="#9198a1" font-size="13" font-style="italic">« livraison offerte dès 100 € »</text>
+    <path d="M96 277 H330" stroke="#f85149" stroke-width="1.5" stroke-opacity="0.7"/>
+    <text x="100" y="304" fill="#f85149" font-size="12">périmée depuis trois mois</text>
+
+    <rect x="100" y="326" width="230" height="8" rx="4" fill="#21262d"/>
+    <rect x="100" y="344" width="190" height="8" rx="4" fill="#21262d"/>
+    <rect x="100" y="362" width="250" height="8" rx="4" fill="#21262d"/>
+
+    <text x="100" y="412" fill="#9198a1" font-size="13">elle dérive en silence —</text>
+    <text x="100" y="432" fill="#9198a1" font-size="13">personne ne la voit mentir</text>
+  </g>
+
+  <!-- Center: red-green-refactor cycle -->
+  <g>
+    <path d="M635.9 201.3 A105 105 0 0 1 703.4 318.2" stroke="#6e7681" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+    <path d="M667.5 380.4 A105 105 0 0 1 532.5 380.4" stroke="#6e7681" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+    <path d="M496.6 318.2 A105 105 0 0 1 564.1 201.3" stroke="#6e7681" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+    <circle cx="600" cy="195" r="34" fill="#12161d" stroke="#f85149" stroke-width="2.5"/>
+    <text x="600" y="200" text-anchor="middle" fill="#f85149" font-size="13" font-weight="700">ROUGE</text>
+
+    <circle cx="691" cy="352" r="34" fill="#12161d" stroke="#3fb950" stroke-width="2.5"/>
+    <text x="691" y="357" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="700">VERT</text>
+
+    <circle cx="509" cy="352" r="34" fill="#12161d" stroke="#bc8cff" stroke-width="2.5"/>
+    <text x="509" y="357" text-anchor="middle" fill="#bc8cff" font-size="11.5" font-weight="700">REFACTOR</text>
+
+    <text x="600" y="305" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="600">TDD</text>
+
+    <text x="600" y="452" text-anchor="middle" fill="#9198a1" font-size="14">le cycle tourne à la vitesse du LLM</text>
+    <text x="600" y="476" text-anchor="middle" fill="#9198a1" font-size="13">le test donne la cible · l'agent boucle</text>
+  </g>
+
+  <!-- Right: the test suite, the doc that fails -->
+  <g>
+    <rect x="820" y="130" width="310" height="330" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="850" y="174" fill="#e6edf3" font-size="20" font-weight="700">TESTS</text>
+    <rect x="1006" y="154" width="100" height="26" rx="13" fill="#12161d" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="1056" y="172" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600">exécutable</text>
+
+    <g font-family="Consolas, 'Courier New', monospace" font-size="12.5">
+      <text x="850" y="216" fill="#3fb950">✓</text>
+      <text x="872" y="216" fill="#e6edf3">Quand_le_panier_depasse_100e…</text>
+      <text x="850" y="248" fill="#3fb950">✓</text>
+      <text x="872" y="248" fill="#e6edf3">Quand_le_stock_est_epuise…</text>
+      <text x="850" y="280" fill="#3fb950">✓</text>
+      <text x="872" y="280" fill="#e6edf3">Quand_le_client_est_premium…</text>
+      <text x="850" y="312" fill="#f85149" font-weight="700">✗</text>
+      <text x="872" y="312" fill="#f85149">Quand_le_code_promo_expire…</text>
+    </g>
+
+    <path d="M850 336 H1100" stroke="#30363d" stroke-width="1"/>
+
+    <text x="850" y="368" fill="#e6edf3" font-size="14" font-weight="600">elle échoue,</text>
+    <text x="850" y="390" fill="#e6edf3" font-size="14" font-weight="600">donc elle dit vrai</text>
+    <text x="850" y="424" fill="#9198a1" font-size="13">le code se régénère,</text>
+    <text x="850" y="444" fill="#9198a1" font-size="13">le contrat reste</text>
+  </g>
+
+  <text x="600" y="548" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    LA  DOC  QUI  NE  PEUT  PAS  MENTIR  ·  THE  DOC  THAT  CANNOT  LIE
+  </text>
+</svg>

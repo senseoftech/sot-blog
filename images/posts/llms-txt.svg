@@ -1,0 +1,110 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">LLMS.TXT&#160;&#160;·&#160;&#160;LA&#160;&#160;DOC&#160;&#160;POUR&#160;&#160;LES&#160;&#160;MACHINES</text>
+
+  <!-- Left: the noisy HTML page, crossed out -->
+  <g>
+    <rect x="70" y="130" width="280" height="330" rx="16" fill="url(#card)" stroke="#f85149" stroke-width="2"/>
+    <!-- browser chrome -->
+    <circle cx="98" cy="156" r="5" fill="#f85149"/>
+    <circle cx="116" cy="156" r="5" fill="#ffa657"/>
+    <circle cx="134" cy="156" r="5" fill="#3fb950"/>
+    <!-- nav bar -->
+    <rect x="94" y="176" width="232" height="26" rx="6" fill="#21262d"/>
+    <text x="106" y="194" fill="#9198a1" font-size="12">MENU&#160;&#160;·&#160;&#160;MENU&#160;&#160;·&#160;&#160;MENU&#160;&#160;·&#160;&#160;MENU</text>
+    <!-- ad block -->
+    <rect x="94" y="212" width="110" height="64" rx="6" fill="#21262d"/>
+    <text x="149" y="249" text-anchor="middle" fill="#f85149" font-size="13" font-weight="600">PUB</text>
+    <rect x="214" y="212" width="112" height="64" rx="6" fill="#21262d"/>
+    <text x="270" y="249" text-anchor="middle" fill="#f85149" font-size="13" font-weight="600">JS…</text>
+    <!-- the actual content, tiny -->
+    <rect x="94" y="288" width="200" height="7" rx="3" fill="#38bdf8" fill-opacity="0.5"/>
+    <rect x="94" y="302" width="160" height="7" rx="3" fill="#38bdf8" fill-opacity="0.5"/>
+    <text x="94" y="330" fill="#9198a1" font-size="12">le contenu, quelque part…</text>
+    <!-- cookie banner -->
+    <rect x="94" y="346" width="232" height="52" rx="8" fill="#21262d" stroke="#f85149" stroke-width="1.5"/>
+    <text x="210" y="368" text-anchor="middle" fill="#e6edf3" font-size="12">Accepter les cookies ?</text>
+    <rect x="150" y="376" width="120" height="14" rx="7" fill="#f85149" fill-opacity="0.55"/>
+    <!-- crossed out -->
+    <path d="M78 142 L342 448 M342 142 L78 448" stroke="#f85149" stroke-width="4" stroke-linecap="round" stroke-opacity="0.75"/>
+    <text x="210" y="490" text-anchor="middle" fill="#f85149" font-size="14" font-weight="600">HTML : le contenu noyé</text>
+  </g>
+
+  <!-- Center: the /llms.txt file at the site root -->
+  <g>
+    <rect x="430" y="110" width="380" height="370" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="460" y="152" fill="#e6edf3" font-size="20" font-weight="700">/llms.txt</text>
+    <rect x="640" y="134" width="140" height="26" rx="13" fill="#12161d" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="710" y="152" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="600">racine du site</text>
+
+    <text x="460" y="196" fill="#e6edf3" font-size="15" font-weight="700"># Contoso.Payments</text>
+    <text x="460" y="222" fill="#9198a1" font-size="14">&gt; SDK .NET de paiements</text>
+
+    <text x="460" y="262" fill="#38bdf8" font-size="14" font-weight="600" letter-spacing="1">## DOCUMENTATION</text>
+    <text x="460" y="292" fill="#38bdf8" font-size="15">→ quickstart.md</text>
+    <text x="460" y="322" fill="#38bdf8" font-size="15">→ api-reference.md</text>
+    <text x="460" y="352" fill="#38bdf8" font-size="15">→ webhooks.md</text>
+
+    <text x="460" y="392" fill="#ffa657" font-size="14" font-weight="600" letter-spacing="1">## OPTIONAL</text>
+    <text x="460" y="420" fill="#9198a1" font-size="15">→ changelog.md</text>
+
+    <text x="620" y="458" text-anchor="middle" fill="#9198a1" font-size="12">des liens curés, pas un inventaire</text>
+  </g>
+
+  <!-- Right: the reading robot following the links -->
+  <g>
+    <!-- robot -->
+    <line x1="1035" y1="152" x2="1035" y2="134" stroke="#38bdf8" stroke-width="3"/>
+    <circle cx="1035" cy="128" r="6" fill="#38bdf8"/>
+    <rect x="980" y="152" width="110" height="84" rx="16" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <circle cx="1015" cy="186" r="9" fill="#38bdf8"/>
+    <circle cx="1055" cy="186" r="9" fill="#38bdf8"/>
+    <path d="M1015 212 Q1035 224 1055 212" stroke="#9198a1" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <text x="1035" y="262" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="600">l'agent d'un utilisateur</text>
+
+    <!-- docs it follows, in order -->
+    <path d="M810 288 Q880 292 928 306" stroke="#ffa657" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+    <path d="M810 318 Q880 336 928 364" stroke="#ffa657" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+    <path d="M810 348 Q880 382 928 422" stroke="#ffa657" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+
+    <rect x="936" y="288" width="196" height="38" rx="10" fill="url(#card)" stroke="#30363d" stroke-width="1.5"/>
+    <circle cx="958" cy="307" r="9" fill="#3fb950"/>
+    <text x="958" y="311" text-anchor="middle" fill="#0d1117" font-size="11" font-weight="700">1</text>
+    <text x="974" y="312" fill="#e6edf3" font-size="13">quickstart.md</text>
+
+    <rect x="936" y="346" width="196" height="38" rx="10" fill="url(#card)" stroke="#30363d" stroke-width="1.5"/>
+    <circle cx="958" cy="365" r="9" fill="#3fb950"/>
+    <text x="958" y="369" text-anchor="middle" fill="#0d1117" font-size="11" font-weight="700">2</text>
+    <text x="974" y="370" fill="#e6edf3" font-size="13">api-reference.md</text>
+
+    <rect x="936" y="404" width="196" height="38" rx="10" fill="url(#card)" stroke="#30363d" stroke-width="1.5"/>
+    <circle cx="958" cy="423" r="9" fill="#3fb950"/>
+    <text x="958" y="427" text-anchor="middle" fill="#0d1117" font-size="11" font-weight="700">3</text>
+    <text x="974" y="428" fill="#e6edf3" font-size="13">webhooks.md</text>
+
+    <text x="1034" y="478" text-anchor="middle" fill="#9198a1" font-size="12">il lit ce qui compte, dans l'ordre</text>
+  </g>
+
+  <text x="600" y="548" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    LA  DOC  PENSÉE  POUR  LES  IA  ·  DOCS  WRITTEN  FOR  MACHINES
+  </text>
+</svg>

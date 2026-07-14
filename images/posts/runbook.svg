@@ -1,0 +1,81 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">RUNBOOK&#160;&#160;·&#160;&#160;LE&#160;&#160;MODE&#160;&#160;D'EMPLOI&#160;&#160;OPÉRATIONNEL</text>
+
+  <!-- Left: the runbook card -->
+  <g>
+    <rect x="80" y="120" width="520" height="360" rx="16" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="110" y="162" fill="#e6edf3" font-size="19" font-weight="700">docs/runbook.md</text>
+    <rect x="410" y="142" width="160" height="26" rx="13" fill="#12161d" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="490" y="160" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600">vérifié 2026-08-05</text>
+
+    <text x="110" y="200" fill="#ffa657" font-size="14" font-weight="600" letter-spacing="1">SYMPTÔME : 502 EN CASCADE</text>
+
+    <g font-family="Consolas, monospace" font-size="14">
+      <circle cx="122" cy="234" r="11" fill="#12161d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="122" y="239" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="700">1</text>
+      <text x="146" y="239" fill="#e6edf3">redis-cli INFO clients</text>
+      <text x="146" y="261" fill="#9198a1" font-size="12">&#8594; si &gt; 95 : fuite connue (ADR-0021)</text>
+
+      <circle cx="122" cy="296" r="11" fill="#12161d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="122" y="301" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="700">2</text>
+      <text x="146" y="301" fill="#e6edf3">docker restart worker</text>
+      <text x="146" y="323" fill="#9198a1" font-size="12">le worker D'ABORD, jamais l'API</text>
+
+      <circle cx="122" cy="358" r="11" fill="#12161d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="122" y="363" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="700">3</text>
+      <text x="146" y="363" fill="#e6edf3">curl /health &#8594; Healthy &lt; 2 s</text>
+    </g>
+
+    <rect x="110" y="392" width="460" height="52" rx="8" fill="#12161d" stroke="#f85149" stroke-width="1.5"/>
+    <text x="130" y="416" fill="#f85149" font-size="14" font-weight="700">&#9888; NE PAS redémarrer Redis</text>
+    <text x="130" y="436" fill="#9198a1" font-size="12">perte des sessions actives — escalader</text>
+  </g>
+
+  <!-- Right: the loop -->
+  <g>
+    <text x="880" y="150" text-anchor="middle" fill="#9198a1" font-size="14" letter-spacing="1">LA BOUCLE DE L'AGENT</text>
+
+    <g font-size="16" fill="#e6edf3" text-anchor="middle">
+      <rect x="790" y="180" width="180" height="46" rx="23" fill="#12161d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="880" y="209">coder</text>
+      <rect x="790" y="256" width="180" height="46" rx="23" fill="#12161d" stroke="#38bdf8" stroke-width="2"/>
+      <text x="880" y="285">lancer</text>
+      <rect x="790" y="332" width="180" height="46" rx="23" fill="#12161d" stroke="#3fb950" stroke-width="2.5"/>
+      <text x="880" y="361" fill="#3fb950" font-weight="600">vérifier</text>
+    </g>
+    <path d="M880 226 V250" stroke="#38bdf8" stroke-width="2.5"/>
+    <path d="M880 250 l-8 -12 h16 z" fill="#38bdf8"/>
+    <path d="M880 302 V326" stroke="#38bdf8" stroke-width="2.5"/>
+    <path d="M880 326 l-8 -12 h16 z" fill="#38bdf8"/>
+    <path d="M970 355 Q1040 280 970 205" stroke="#3fb950" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+    <path d="M970 205 l16 2 l-8 14 z" fill="#3fb950"/>
+    <text x="1052" y="284" fill="#9198a1" font-size="12">corriger</text>
+
+    <text x="880" y="430" text-anchor="middle" fill="#e6edf3" font-size="15">« ça devrait marcher »</text>
+    <text x="880" y="456" text-anchor="middle" fill="#3fb950" font-size="15" font-weight="600">&#8594; « ça marche, vérifié »</text>
+  </g>
+
+  <text x="600" y="548" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    DÉMARRER  ·  VÉRIFIER  ·  DIAGNOSTIQUER  ·  RÉPARER
+  </text>
+</svg>

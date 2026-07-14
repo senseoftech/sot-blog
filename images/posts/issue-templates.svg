@@ -1,0 +1,85 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">TEMPLATES&#160;&#160;D'ISSUES&#160;&#160;·&#160;&#160;LE&#160;&#160;BRIEF&#160;&#160;DE&#160;&#160;L'AGENT</text>
+
+  <!-- Left: the issue form -->
+  <g>
+    <rect x="80" y="120" width="440" height="360" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <circle cx="112" cy="156" r="9" fill="none" stroke="#3fb950" stroke-width="2.5"/>
+    <text x="132" y="162" fill="#e6edf3" font-size="18" font-weight="700">Issue #418</text>
+    <text x="490" y="162" text-anchor="end" fill="#9198a1" font-size="12" font-family="Consolas, monospace">feature.yml</text>
+
+    <text x="110" y="204" fill="#38bdf8" font-size="14" font-weight="600" letter-spacing="1">CONTEXTE <tspan fill="#f85149">*</tspan></text>
+    <rect x="110" y="214" width="350" height="8" rx="4" fill="#21262d"/>
+    <rect x="110" y="228" width="280" height="8" rx="4" fill="#21262d"/>
+
+    <text x="110" y="266" fill="#38bdf8" font-size="14" font-weight="600" letter-spacing="1">CRITÈRES D'ACCEPTATION <tspan fill="#f85149">*</tspan></text>
+    <text x="110" y="292" fill="#3fb950" font-size="14" font-family="Consolas, monospace">[ ] filtre prix : liste ET carte</text>
+    <text x="110" y="316" fill="#3fb950" font-size="14" font-family="Consolas, monospace">[ ] filtre vide = zéro requête</text>
+
+    <text x="110" y="354" fill="#38bdf8" font-size="14" font-weight="600" letter-spacing="1">ZONE DE TRAVAIL</text>
+    <text x="110" y="378" fill="#9198a1" font-size="14" font-family="Consolas, monospace">Features/Catalog/*</text>
+
+    <text x="110" y="416" fill="#ffa657" font-size="14" font-weight="600" letter-spacing="1">HORS PÉRIMÈTRE</text>
+    <text x="110" y="440" fill="#9198a1" font-size="14">ne pas toucher la TVA (ADR-0021)</text>
+  </g>
+
+  <!-- Arrow to agent -->
+  <g>
+    <path d="M540 300 H620" stroke="#38bdf8" stroke-width="3" fill="none"/>
+    <path d="M620 300 l-14 -9 v18 z" fill="#38bdf8"/>
+    <text x="580" y="283" text-anchor="middle" fill="#9198a1" font-size="12">assignée</text>
+  </g>
+
+  <!-- Middle: agent -->
+  <g>
+    <rect x="640" y="250" width="120" height="100" rx="16" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <circle cx="685" cy="292" r="7" fill="#bc8cff"/>
+    <circle cx="715" cy="292" r="7" fill="#bc8cff"/>
+    <rect x="682" y="314" width="36" height="6" rx="3" fill="#bc8cff"/>
+    <text x="700" y="378" text-anchor="middle" fill="#9198a1" font-size="13">l'agent exécute</text>
+  </g>
+
+  <!-- Arrow to PR -->
+  <g>
+    <path d="M780 300 H860" stroke="#38bdf8" stroke-width="3" fill="none"/>
+    <path d="M860 300 l-14 -9 v18 z" fill="#38bdf8"/>
+  </g>
+
+  <!-- Right: the PR -->
+  <g>
+    <rect x="880" y="220" width="240" height="160" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <path d="M918 260 v46 m0 0 a14 14 0 0 0 14 14 h24" stroke="#3fb950" stroke-width="3" fill="none"/>
+    <circle cx="918" cy="252" r="8" fill="#12161d" stroke="#3fb950" stroke-width="3"/>
+    <circle cx="964" cy="320" r="8" fill="#12161d" stroke="#3fb950" stroke-width="3"/>
+    <text x="1000" y="282" fill="#e6edf3" font-size="17" font-weight="700">PR #419</text>
+    <text x="1000" y="308" fill="#9198a1" font-size="13">chaque critère</text>
+    <text x="1000" y="328" fill="#9198a1" font-size="13">= un test vert</text>
+    <text x="1000" y="352" fill="#3fb950" font-size="13" font-weight="600">&#10003; revue humaine</text>
+  </g>
+
+  <text x="850" y="452" text-anchor="middle" fill="#9198a1" font-size="14">ce qui n'est pas écrit sera inventé</text>
+
+  <text x="600" y="548" text-anchor="middle" fill="#6e7681" font-size="16" letter-spacing="2">
+    L'ISSUE  EST  UN  PROMPT  ·  THE  ISSUE  IS  A  PROMPT
+  </text>
+</svg>
