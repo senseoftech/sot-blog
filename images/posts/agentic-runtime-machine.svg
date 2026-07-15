@@ -1,0 +1,80 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">AGENTIC&#160;&#160;SDLC&#160;&#160;&#183;&#160;&#160;&#201;PISODE&#160;&#160;2/9</text>
+  <text x="600" y="100" text-anchor="middle" fill="#e6edf3" font-size="30" font-weight="700">La machine agentique : quatre pi&#232;ces</text>
+
+  <!-- Client -->
+  <g>
+    <rect x="70" y="230" width="220" height="150" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="180" y="272" text-anchor="middle" fill="#3fb950" font-size="18" font-weight="700">CLIENT</text>
+    <text x="180" y="302" text-anchor="middle" fill="#e6edf3" font-size="13">terminal &#183; IDE</text>
+    <text x="180" y="324" text-anchor="middle" fill="#e6edf3" font-size="13">GitHub Action &#183; cron</text>
+    <text x="180" y="354" text-anchor="middle" fill="#9198a1" font-size="12">d&#233;clenche la session</text>
+  </g>
+
+  <path d="M290 305 H360" stroke="#38bdf8" stroke-width="2" fill="none"/>
+  <path d="M352 299 L364 305 L352 311 Z" fill="#38bdf8"/>
+
+  <!-- Harness -->
+  <g>
+    <rect x="365" y="180" width="280" height="250" rx="16" fill="url(#card)" stroke="#38bdf8" stroke-width="2.5"/>
+    <text x="505" y="222" text-anchor="middle" fill="#38bdf8" font-size="18" font-weight="700">HARNAIS</text>
+    <text x="505" y="250" text-anchor="middle" fill="#e6edf3" font-size="13">charge les fichiers</text>
+    <text x="505" y="272" text-anchor="middle" fill="#e6edf3" font-size="13">appelle les outils</text>
+    <text x="505" y="294" text-anchor="middle" fill="#e6edf3" font-size="13">g&#232;re la conversation</text>
+    <text x="505" y="330" text-anchor="middle" fill="#ffa657" font-size="13" font-weight="600">&#171; le harnais est</text>
+    <text x="505" y="350" text-anchor="middle" fill="#ffa657" font-size="13" font-weight="600">un compilateur &#187;</text>
+    <text x="505" y="400" text-anchor="middle" fill="#9198a1" font-size="12">copilot &#183; claude &#183; cursor</text>
+  </g>
+
+  <path d="M645 305 H715" stroke="#38bdf8" stroke-width="2" fill="none"/>
+  <path d="M707 299 L719 305 L707 311 Z" fill="#38bdf8"/>
+
+  <!-- Model -->
+  <g>
+    <rect x="720" y="230" width="200" height="150" rx="16" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="820" y="272" text-anchor="middle" fill="#bc8cff" font-size="18" font-weight="700">MOD&#200;LE</text>
+    <text x="820" y="302" text-anchor="middle" fill="#e6edf3" font-size="13">texte entre, texte sort</text>
+    <text x="820" y="330" text-anchor="middle" fill="#9198a1" font-size="12">ni m&#233;moire, ni outils,</text>
+    <text x="820" y="348" text-anchor="middle" fill="#9198a1" font-size="12">ni acc&#232;s au code</text>
+  </g>
+
+  <!-- Agent source code -->
+  <g>
+    <rect x="950" y="200" width="185" height="210" rx="16" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="1042" y="238" text-anchor="middle" fill="#ffa657" font-size="15" font-weight="700">CODE SOURCE</text>
+    <text x="1042" y="258" text-anchor="middle" fill="#ffa657" font-size="15" font-weight="700">D'AGENT</text>
+    <text x="1042" y="290" text-anchor="middle" fill="#e6edf3" font-size="13" font-family="Consolas, monospace">AGENTS.md</text>
+    <text x="1042" y="312" text-anchor="middle" fill="#e6edf3" font-size="13" font-family="Consolas, monospace">*.instructions.md</text>
+    <text x="1042" y="334" text-anchor="middle" fill="#e6edf3" font-size="13" font-family="Consolas, monospace">SKILL.md</text>
+    <text x="1042" y="370" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600">le markdown est du code</text>
+  </g>
+
+  <path d="M950 300 Q935 300 920 300" stroke="#ffa657" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
+  <path d="M700 430 Q505 470 505 430" stroke="#ffa657" stroke-width="0" fill="none"/>
+  <path d="M1000 410 Q760 500 560 432" stroke="#ffa657" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
+  <text x="790" y="490" text-anchor="middle" fill="#9198a1" font-size="12">charg&#233; par le harnais, en contexte</text>
+
+  <text x="600" y="560" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">
+    L'AGENTIC&#160;SDLC&#160;&#183;&#160;THE&#160;AGENTIC&#160;SDLC&#160;&#8212;&#160;D'APR&#200;S&#160;/&#160;AFTER&#160;DANIEL&#160;MEPPIEL
+  </text>
+</svg>

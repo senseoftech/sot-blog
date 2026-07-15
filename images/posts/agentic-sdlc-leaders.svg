@@ -1,0 +1,70 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#3fb950" stop-opacity="0.14"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">AGENTIC&#160;&#160;SDLC&#160;&#160;&#183;&#160;&#160;&#201;PISODE&#160;&#160;9/9</text>
+  <text x="600" y="100" text-anchor="middle" fill="#e6edf3" font-size="30" font-weight="700">C&#244;t&#233; direction : le business case, la gouvernance, la facture</text>
+
+  <!-- J curve -->
+  <g>
+    <rect x="80" y="170" width="420" height="280" rx="16" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="290" y="205" text-anchor="middle" fill="#38bdf8" font-size="15" font-weight="700">LA COURBE EN J</text>
+    <path d="M120 420 H460" stroke="#6e7681" stroke-width="1.5"/>
+    <path d="M120 420 V230" stroke="#6e7681" stroke-width="1.5"/>
+    <path d="M125 330 C170 330 190 395 240 392 C300 388 330 300 420 245" fill="none" stroke="#3fb950" stroke-width="3.5"/>
+    <rect x="175" y="360" width="120" height="52" fill="#f85149" opacity="0.10"/>
+    <text x="235" y="392" text-anchor="middle" fill="#f85149" font-size="12" font-weight="600">la vall&#233;e</text>
+    <text x="235" y="408" text-anchor="middle" fill="#9198a1" font-size="10.5">mois 2-4</text>
+    <text x="400" y="270" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600">capitalisation</text>
+    <text x="290" y="440" text-anchor="middle" fill="#9198a1" font-size="11.5">point mort : mois 6-10</text>
+  </g>
+
+  <!-- the bill -->
+  <g>
+    <rect x="530" y="170" width="300" height="280" rx="16" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="680" y="205" text-anchor="middle" fill="#ffa657" font-size="15" font-weight="700">LA FACTURE</text>
+    <text x="680" y="250" text-anchor="middle" fill="#9198a1" font-size="13">m&#234;me refactoring, 19 fichiers</text>
+    <text x="680" y="300" text-anchor="middle" fill="#f85149" font-size="30" font-weight="800">41,01 $</text>
+    <text x="680" y="330" text-anchor="middle" fill="#9198a1" font-size="13">sans m&#233;thode</text>
+    <text x="680" y="375" text-anchor="middle" fill="#3fb950" font-size="30" font-weight="800">4,81 $</text>
+    <text x="680" y="405" text-anchor="middle" fill="#9198a1" font-size="13">boucle optimis&#233;e &#183; &#215;8,5</text>
+    <text x="680" y="435" text-anchor="middle" fill="#e6edf3" font-size="12.5" font-weight="600">le co&#251;t est une variable d'ing&#233;nierie</text>
+  </g>
+
+  <!-- governance / teams -->
+  <g>
+    <rect x="860" y="170" width="260" height="280" rx="16" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="990" y="205" text-anchor="middle" fill="#bc8cff" font-size="15" font-weight="700">LES INVARIANTS</text>
+    <text x="990" y="248" text-anchor="middle" fill="#e6edf3" font-size="13">audit + acc&#232;s d'abord</text>
+    <text x="990" y="280" text-anchor="middle" fill="#e6edf3" font-size="13">politiques internes</text>
+    <text x="990" y="300" text-anchor="middle" fill="#e6edf3" font-size="13">= primitives machine</text>
+    <text x="990" y="332" text-anchor="middle" fill="#e6edf3" font-size="13">le 10&#215;, c'est l'&#233;quipe</text>
+    <text x="990" y="364" text-anchor="middle" fill="#e6edf3" font-size="13">le contexte : l'actif</text>
+    <text x="990" y="384" text-anchor="middle" fill="#e6edf3" font-size="13">qui ne se commoditise pas</text>
+    <text x="990" y="425" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="600">les mod&#232;les passent,</text>
+    <text x="990" y="444" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="600">les contraintes restent</text>
+  </g>
+
+  <text x="600" y="497" text-anchor="middle" fill="#9198a1" font-size="13.5">mesurer les r&#233;sultats, pas les lignes de code &#8212; measure outcomes, not lines of code</text>
+
+  <text x="600" y="560" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">
+    L'AGENTIC&#160;SDLC&#160;&#183;&#160;THE&#160;AGENTIC&#160;SDLC&#160;&#8212;&#160;D'APR&#200;S&#160;/&#160;AFTER&#160;DANIEL&#160;MEPPIEL
+  </text>
+</svg>

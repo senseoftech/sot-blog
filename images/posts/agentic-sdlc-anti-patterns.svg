@@ -1,0 +1,73 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#f85149" stop-opacity="0.13"/>
+      <stop offset="55%" stop-color="#f85149" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">AGENTIC&#160;&#160;SDLC&#160;&#160;&#183;&#160;&#160;&#201;PISODE&#160;&#160;8/9</text>
+  <text x="600" y="100" text-anchor="middle" fill="#e6edf3" font-size="30" font-weight="700">Dix-neuf fa&#231;ons de saboter ses agents</text>
+
+  <!-- big 19 -->
+  <g>
+    <rect x="90" y="180" width="250" height="270" rx="16" fill="url(#card)" stroke="#f85149" stroke-width="2.5"/>
+    <text x="215" y="320" text-anchor="middle" fill="#f85149" font-size="120" font-weight="800">19</text>
+    <text x="215" y="370" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="600">anti-patterns nomm&#233;s</text>
+    <text x="215" y="395" text-anchor="middle" fill="#9198a1" font-size="12">named failure modes</text>
+  </g>
+
+  <!-- warning cards -->
+  <g>
+    <rect x="380" y="180" width="350" height="60" rx="12" fill="url(#card)" stroke="#ffa657" stroke-width="1.8"/>
+    <path d="M405 224 L419 200 L433 224 Z" fill="none" stroke="#ffa657" stroke-width="2"/>
+    <text x="419" y="221" text-anchor="middle" fill="#ffa657" font-size="12" font-weight="800">!</text>
+    <text x="450" y="216" fill="#e6edf3" font-size="14.5" font-weight="600">le prompt monolithique</text>
+
+    <rect x="380" y="250" width="350" height="60" rx="12" fill="url(#card)" stroke="#ffa657" stroke-width="1.8"/>
+    <path d="M405 294 L419 270 L433 294 Z" fill="none" stroke="#ffa657" stroke-width="2"/>
+    <text x="419" y="291" text-anchor="middle" fill="#ffa657" font-size="12" font-weight="800">!</text>
+    <text x="450" y="286" fill="#e6edf3" font-size="14.5" font-weight="600">le saut de l'ange &#8212; croire sans v&#233;rifier</text>
+
+    <rect x="380" y="320" width="350" height="60" rx="12" fill="url(#card)" stroke="#ffa657" stroke-width="1.8"/>
+    <path d="M405 364 L419 340 L433 364 Z" fill="none" stroke="#ffa657" stroke-width="2"/>
+    <text x="419" y="361" text-anchor="middle" fill="#ffa657" font-size="12" font-weight="800">!</text>
+    <text x="450" y="356" fill="#e6edf3" font-size="14.5" font-weight="600">les &#233;ditions hallucin&#233;es</text>
+
+    <rect x="380" y="390" width="350" height="60" rx="12" fill="url(#card)" stroke="#ffa657" stroke-width="1.8"/>
+    <path d="M405 434 L419 410 L433 434 Z" fill="none" stroke="#ffa657" stroke-width="2"/>
+    <text x="419" y="431" text-anchor="middle" fill="#ffa657" font-size="12" font-weight="800">!</text>
+    <text x="450" y="426" fill="#e6edf3" font-size="14.5" font-weight="600">ne pas r&#233;parer les primitives</text>
+  </g>
+
+  <!-- the remedy card -->
+  <g>
+    <rect x="770" y="180" width="340" height="270" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="940" y="220" text-anchor="middle" fill="#3fb950" font-size="16" font-weight="700">LE R&#201;FLEXE</text>
+    <rect x="800" y="245" width="280" height="44" rx="8" fill="#12161d" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="940" y="273" text-anchor="middle" fill="#e6edf3" font-size="15" font-family="Consolas, monospace">git diff</text>
+    <text x="940" y="320" text-anchor="middle" fill="#e6edf3" font-size="13.5">jamais le r&#233;cit, toujours la preuve</text>
+    <text x="940" y="344" text-anchor="middle" fill="#9198a1" font-size="12.5">never the narrative, always the proof</text>
+    <text x="940" y="390" text-anchor="middle" fill="#f85149" font-size="13" font-weight="600">les &#233;checs IA ne plantent pas :</text>
+    <text x="940" y="412" text-anchor="middle" fill="#f85149" font-size="13" font-weight="600">ils produisent du plausible faux</text>
+  </g>
+
+  <text x="600" y="497" text-anchor="middle" fill="#9198a1" font-size="13.5">5 fondamentaux (PROSE en n&#233;gatif) &#183; 5 d'ex&#233;cution &#183; 9 d'usure de session</text>
+
+  <text x="600" y="560" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">
+    L'AGENTIC&#160;SDLC&#160;&#183;&#160;THE&#160;AGENTIC&#160;SDLC&#160;&#8212;&#160;D'APR&#200;S&#160;/&#160;AFTER&#160;DANIEL&#160;MEPPIEL
+  </text>
+</svg>

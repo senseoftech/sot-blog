@@ -1,0 +1,72 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#bc8cff" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#bc8cff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">AGENTIC&#160;&#160;SDLC&#160;&#160;&#183;&#160;&#160;&#201;PISODE&#160;&#160;4/9</text>
+  <text x="600" y="100" text-anchor="middle" fill="#e6edf3" font-size="30" font-weight="700">PROSE : cinq contraintes pour des agents fiables</text>
+
+  <!-- Beam held by 5 pillars -->
+  <rect x="140" y="180" width="920" height="56" rx="12" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+  <text x="600" y="216" text-anchor="middle" fill="#38bdf8" font-size="19" font-weight="700">FIABILIT&#201;&#160;&#160;&#183;&#160;&#160;MODULARIT&#201;&#160;&#160;&#183;&#160;&#160;AUDITABILIT&#201;</text>
+
+  <!-- 5 pillars -->
+  <g>
+    <rect x="160" y="256" width="150" height="200" rx="12" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="235" y="310" text-anchor="middle" fill="#bc8cff" font-size="42" font-weight="800">P</text>
+    <text x="235" y="345" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">Progressive</text>
+    <text x="235" y="364" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">Disclosure</text>
+    <text x="235" y="400" text-anchor="middle" fill="#9198a1" font-size="11.5">just-in-time,</text>
+    <text x="235" y="417" text-anchor="middle" fill="#9198a1" font-size="11.5">pas just-in-case</text>
+
+    <rect x="345" y="256" width="150" height="200" rx="12" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="420" y="310" text-anchor="middle" fill="#bc8cff" font-size="42" font-weight="800">R</text>
+    <text x="420" y="345" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">Reduced</text>
+    <text x="420" y="364" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">Scope</text>
+    <text x="420" y="400" text-anchor="middle" fill="#9198a1" font-size="11.5">t&#226;che taill&#233;e</text>
+    <text x="420" y="417" text-anchor="middle" fill="#9198a1" font-size="11.5">au contexte</text>
+
+    <rect x="530" y="256" width="150" height="200" rx="12" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="605" y="310" text-anchor="middle" fill="#bc8cff" font-size="42" font-weight="800">O</text>
+    <text x="605" y="345" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">Orchestrated</text>
+    <text x="605" y="364" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">Composition</text>
+    <text x="605" y="400" text-anchor="middle" fill="#9198a1" font-size="11.5">petites briques,</text>
+    <text x="605" y="417" text-anchor="middle" fill="#9198a1" font-size="11.5">pas de monolithe</text>
+
+    <rect x="715" y="256" width="150" height="200" rx="12" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="790" y="310" text-anchor="middle" fill="#bc8cff" font-size="42" font-weight="800">S</text>
+    <text x="790" y="345" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">Safety</text>
+    <text x="790" y="364" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">Boundaries</text>
+    <text x="790" y="400" text-anchor="middle" fill="#9198a1" font-size="11.5">outils, savoir,</text>
+    <text x="790" y="417" text-anchor="middle" fill="#9198a1" font-size="11.5">autorit&#233; born&#233;s</text>
+
+    <rect x="900" y="256" width="150" height="200" rx="12" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="975" y="310" text-anchor="middle" fill="#bc8cff" font-size="42" font-weight="800">E</text>
+    <text x="975" y="345" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">Explicit</text>
+    <text x="975" y="364" text-anchor="middle" fill="#e6edf3" font-size="13" font-weight="600">Hierarchy</text>
+    <text x="975" y="400" text-anchor="middle" fill="#9198a1" font-size="11.5">du global</text>
+    <text x="975" y="417" text-anchor="middle" fill="#9198a1" font-size="11.5">au local</text>
+  </g>
+
+  <text x="600" y="497" text-anchor="middle" fill="#ffa657" font-size="14" font-weight="600">comme REST : les contraintes induisent les propri&#233;t&#233;s &#8212; constraints induce properties</text>
+
+  <text x="600" y="560" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">
+    L'AGENTIC&#160;SDLC&#160;&#183;&#160;THE&#160;AGENTIC&#160;SDLC&#160;&#8212;&#160;D'APR&#200;S&#160;/&#160;AFTER&#160;DANIEL&#160;MEPPIEL
+  </text>
+</svg>

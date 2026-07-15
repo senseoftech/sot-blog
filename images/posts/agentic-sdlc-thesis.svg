@@ -1,0 +1,74 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">AGENTIC&#160;&#160;SDLC&#160;&#160;&#183;&#160;&#160;&#201;PISODE&#160;&#160;1/9</text>
+  <text x="600" y="100" text-anchor="middle" fill="#e6edf3" font-size="30" font-weight="700">La falaise du vibe coding</text>
+
+  <!-- The cliff shape -->
+  <g>
+    <!-- rising demo slope then cliff drop -->
+    <path d="M90 430 L250 400 L390 340 L470 300 L470 520 L90 520 Z" fill="#1c2430" stroke="#3fb950" stroke-width="2"/>
+    <text x="240" y="470" fill="#3fb950" font-size="15" font-weight="600">la d&#233;mo du vendredi</text>
+    <text x="240" y="494" fill="#9198a1" font-size="12">friday's demo</text>
+
+    <!-- the chasm -->
+    <text x="580" y="470" text-anchor="middle" fill="#f85149" font-size="14" font-weight="600">la falaise</text>
+    <text x="580" y="490" text-anchor="middle" fill="#9198a1" font-size="12">the cliff</text>
+
+    <!-- landing plateau -->
+    <path d="M690 300 L1110 300 L1110 520 L690 520 Z" fill="#1c2430" stroke="#38bdf8" stroke-width="2"/>
+    <text x="900" y="470" text-anchor="middle" fill="#38bdf8" font-size="15" font-weight="600">le vrai d&#233;p&#244;t &#8212; the real repo</text>
+    <text x="900" y="494" text-anchor="middle" fill="#9198a1" font-size="12">15 ans d'histoire &#183; conventions implicites</text>
+
+    <!-- PROSE bridge -->
+    <g>
+      <rect x="480" y="286" width="40" height="26" rx="5" fill="url(#card)" stroke="#bc8cff" stroke-width="1.5"/>
+      <rect x="522" y="286" width="40" height="26" rx="5" fill="url(#card)" stroke="#bc8cff" stroke-width="1.5"/>
+      <rect x="564" y="286" width="40" height="26" rx="5" fill="url(#card)" stroke="#bc8cff" stroke-width="1.5"/>
+      <rect x="606" y="286" width="40" height="26" rx="5" fill="url(#card)" stroke="#bc8cff" stroke-width="1.5"/>
+      <rect x="648" y="286" width="40" height="26" rx="5" fill="url(#card)" stroke="#bc8cff" stroke-width="1.5"/>
+      <text x="500" y="305" text-anchor="middle" fill="#bc8cff" font-size="16" font-weight="700">P</text>
+      <text x="542" y="305" text-anchor="middle" fill="#bc8cff" font-size="16" font-weight="700">R</text>
+      <text x="584" y="305" text-anchor="middle" fill="#bc8cff" font-size="16" font-weight="700">O</text>
+      <text x="626" y="305" text-anchor="middle" fill="#bc8cff" font-size="16" font-weight="700">S</text>
+      <text x="668" y="305" text-anchor="middle" fill="#bc8cff" font-size="16" font-weight="700">E</text>
+      <text x="584" y="268" text-anchor="middle" fill="#bc8cff" font-size="13" font-weight="600">le pont : des contraintes, pas de la magie</text>
+    </g>
+
+    <!-- little agent standing on the demo slope -->
+    <circle cx="370" cy="330" r="16" fill="#12161d" stroke="#ffa657" stroke-width="2"/>
+    <circle cx="364" cy="327" r="2.5" fill="#ffa657"/>
+    <circle cx="376" cy="327" r="2.5" fill="#ffa657"/>
+    <path d="M364 337 Q370 341 376 337" stroke="#ffa657" stroke-width="1.8" fill="none"/>
+    <text x="330" y="300" text-anchor="middle" fill="#ffa657" font-size="12" font-weight="600">votre agent</text>
+  </g>
+
+  <!-- failure labels in the chasm -->
+  <g fill="#f85149" font-size="12">
+    <text x="580" y="360" text-anchor="middle">contexte &#233;puis&#233;</text>
+    <text x="580" y="382" text-anchor="middle">API hallucin&#233;es</text>
+    <text x="580" y="404" text-anchor="middle">conventions viol&#233;es</text>
+  </g>
+
+  <text x="600" y="560" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">
+    L'AGENTIC&#160;SDLC&#160;&#183;&#160;THE&#160;AGENTIC&#160;SDLC&#160;&#8212;&#160;D'APR&#200;S&#160;/&#160;AFTER&#160;DANIEL&#160;MEPPIEL
+  </text>
+</svg>

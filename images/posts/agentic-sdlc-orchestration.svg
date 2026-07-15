@@ -1,0 +1,91 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">AGENTIC&#160;&#160;SDLC&#160;&#160;&#183;&#160;&#160;&#201;PISODE&#160;&#160;7/9</text>
+  <text x="600" y="100" text-anchor="middle" fill="#e6edf3" font-size="30" font-weight="700">Orchestrer une flotte : vagues et points de contr&#244;le</text>
+
+  <!-- timeline -->
+  <path d="M110 320 H1090" stroke="#30363d" stroke-width="2"/>
+
+  <!-- Wave 1 -->
+  <g>
+    <rect x="130" y="180" width="220" height="220" rx="16" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="240" y="212" text-anchor="middle" fill="#38bdf8" font-size="15" font-weight="700">VAGUE 0</text>
+    <text x="240" y="234" text-anchor="middle" fill="#9198a1" font-size="12">fondations : types, contrats</text>
+    <circle cx="190" cy="280" r="20" fill="#12161d" stroke="#bc8cff" stroke-width="2"/>
+    <circle cx="240" cy="280" r="20" fill="#12161d" stroke="#bc8cff" stroke-width="2"/>
+    <circle cx="290" cy="280" r="20" fill="#12161d" stroke="#bc8cff" stroke-width="2"/>
+    <text x="190" y="286" text-anchor="middle" fill="#bc8cff" font-size="13" font-weight="700">A1</text>
+    <text x="240" y="286" text-anchor="middle" fill="#bc8cff" font-size="13" font-weight="700">A2</text>
+    <text x="290" y="286" text-anchor="middle" fill="#bc8cff" font-size="13" font-weight="700">A3</text>
+    <text x="240" y="330" text-anchor="middle" fill="#e6edf3" font-size="12.5">1 fichier = 1 agent</text>
+    <text x="240" y="370" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="600">tests &#10003; &#183; commit &#10003;</text>
+  </g>
+
+  <!-- checkpoint 1 -->
+  <circle cx="400" cy="320" r="14" fill="#12161d" stroke="#3fb950" stroke-width="3"/>
+  <text x="400" y="326" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="800">&#10003;</text>
+  <text x="400" y="360" text-anchor="middle" fill="#9198a1" font-size="11.5">checkpoint</text>
+
+  <!-- Wave 2 -->
+  <g>
+    <rect x="450" y="180" width="220" height="220" rx="16" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="560" y="212" text-anchor="middle" fill="#38bdf8" font-size="15" font-weight="700">VAGUE 1</text>
+    <text x="560" y="234" text-anchor="middle" fill="#9198a1" font-size="12">impl&#233;mentations parall&#232;les</text>
+    <circle cx="510" cy="280" r="20" fill="#12161d" stroke="#bc8cff" stroke-width="2"/>
+    <circle cx="560" cy="280" r="20" fill="#12161d" stroke="#bc8cff" stroke-width="2"/>
+    <circle cx="610" cy="280" r="20" fill="#12161d" stroke="#bc8cff" stroke-width="2"/>
+    <text x="510" y="286" text-anchor="middle" fill="#bc8cff" font-size="13" font-weight="700">A4</text>
+    <text x="560" y="286" text-anchor="middle" fill="#bc8cff" font-size="13" font-weight="700">A5</text>
+    <text x="610" y="286" text-anchor="middle" fill="#bc8cff" font-size="13" font-weight="700">A6</text>
+    <text x="560" y="330" text-anchor="middle" fill="#e6edf3" font-size="12.5">l'&#233;tat committ&#233; = la v&#233;rit&#233;</text>
+    <text x="560" y="370" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="600">tests &#10003; &#183; commit &#10003;</text>
+  </g>
+
+  <!-- checkpoint 2 -->
+  <circle cx="720" cy="320" r="14" fill="#12161d" stroke="#3fb950" stroke-width="3"/>
+  <text x="720" y="326" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="800">&#10003;</text>
+  <text x="720" y="360" text-anchor="middle" fill="#9198a1" font-size="11.5">checkpoint</text>
+
+  <!-- Wave 3 / validate-ship -->
+  <g>
+    <rect x="770" y="180" width="220" height="220" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="880" y="212" text-anchor="middle" fill="#3fb950" font-size="15" font-weight="700">VALIDER &#183; LIVRER</text>
+    <text x="880" y="234" text-anchor="middle" fill="#9198a1" font-size="12">suite compl&#232;te + relecture</text>
+    <rect x="810" y="258" width="140" height="40" rx="8" fill="#12161d" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="880" y="283" text-anchor="middle" fill="#e6edf3" font-size="13" font-family="Consolas, monospace">merge &#8594; main</text>
+    <text x="880" y="330" text-anchor="middle" fill="#e6edf3" font-size="12.5">historique bisectable</text>
+    <text x="880" y="370" text-anchor="middle" fill="#ffa657" font-size="12.5" font-weight="600">l'humain : plan et escalades</text>
+  </g>
+
+  <!-- orchestrator -->
+  <circle cx="1055" cy="250" r="26" fill="#12161d" stroke="#ffa657" stroke-width="2.5"/>
+  <circle cx="1046" cy="245" r="3.5" fill="#ffa657"/>
+  <circle cx="1064" cy="245" r="3.5" fill="#ffa657"/>
+  <path d="M1046 260 Q1055 267 1064 260" stroke="#ffa657" stroke-width="2" fill="none"/>
+  <text x="1055" y="300" text-anchor="middle" fill="#ffa657" font-size="12.5" font-weight="600">orchestrateur</text>
+
+  <text x="600" y="470" text-anchor="middle" fill="#9198a1" font-size="13.5">audit &#8594; plan &#8594; vagues &#8594; validation &#8594; ship &#8212; jamais deux agents sur le m&#234;me fichier</text>
+
+  <text x="600" y="560" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">
+    L'AGENTIC&#160;SDLC&#160;&#183;&#160;THE&#160;AGENTIC&#160;SDLC&#160;&#8212;&#160;D'APR&#200;S&#160;/&#160;AFTER&#160;DANIEL&#160;MEPPIEL
+  </text>
+</svg>
