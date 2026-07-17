@@ -24,7 +24,7 @@ D'où l'échec canonique du chapitre : une équipe ajoute un document d'architec
 
 ## Le cycle de chargement : quatre phases, trois modes
 
-Avant de se demander ce que le modèle *regarde*, encore faut-il que le contenu *arrive*. Le chapitre 14 décrit le pipeline complet de vos primitives :
+Avant de se demander ce que le modèle *regarde*, encore faut-il que le contenu *arrive*. Le [chapitre 14](https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch14-the-load-lifecycle.html) décrit le pipeline complet de vos primitives :
 
 **Resolve** (résolution des dépendances, lockfile) → **Materialize** (les fichiers atterrissent là où le harnais les attend : `.github/`, `.claude/`…) → **Bind** (le harnais classe chaque fichier dans un mode de chargement) → **Activate** (le dispatcher choisit ce qui entre vraiment, selon la tâche et le budget restant).
 

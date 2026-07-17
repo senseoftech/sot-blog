@@ -1,0 +1,57 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">MICROSOFT.EXTENSIONS.AI&#160;&#160;&#183;&#160;&#160;&#201;PISODE&#160;&#160;3/5</text>
+  <text x="600" y="100" text-anchor="middle" fill="#e6edf3" font-size="30" font-weight="700">Le m&#234;me code, trois clouds</text>
+
+  <!-- three clouds -->
+  <g>
+    <path d="M180 230 q-36 0 -36 -30 q0 -30 34 -30 q8 -34 46 -34 q36 0 46 29 q36 -3 41 26 q5 33 -31 39 Z" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="240" y="196" text-anchor="middle" fill="#38bdf8" font-size="15" font-weight="700">Azure AI Foundry</text>
+    <text x="240" y="218" text-anchor="middle" fill="#9198a1" font-size="11.5">Entra ID &#183; Foundry Models</text>
+
+    <path d="M540 230 q-36 0 -36 -30 q0 -30 34 -30 q8 -34 46 -34 q36 0 46 29 q36 -3 41 26 q5 33 -31 39 Z" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="600" y="196" text-anchor="middle" fill="#ffa657" font-size="15" font-weight="700">Anthropic</text>
+    <text x="600" y="218" text-anchor="middle" fill="#9198a1" font-size="11.5">SDK officiel &#183; Claude</text>
+
+    <path d="M900 230 q-36 0 -36 -30 q0 -30 34 -30 q8 -34 46 -34 q36 0 46 29 q36 -3 41 26 q5 33 -31 39 Z" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="960" y="196" text-anchor="middle" fill="#3fb950" font-size="15" font-weight="700">AWS Bedrock</text>
+    <text x="960" y="218" text-anchor="middle" fill="#9198a1" font-size="11.5">Converse &#183; IAM</text>
+  </g>
+
+  <!-- converging arrows -->
+  <path d="M240 240 Q300 300 520 322" stroke="#38bdf8" stroke-width="2" fill="none" stroke-dasharray="6 5"/>
+  <path d="M600 240 V310" stroke="#ffa657" stroke-width="2" stroke-dasharray="6 5"/>
+  <path d="M960 240 Q900 300 680 322" stroke="#3fb950" stroke-width="2" fill="none" stroke-dasharray="6 5"/>
+
+  <!-- the single code card -->
+  <g>
+    <rect x="330" y="318" width="540 " height="130" rx="16" fill="url(#card)" stroke="#bc8cff" stroke-width="2.5"/>
+    <text x="600" y="352" text-anchor="middle" fill="#bc8cff" font-size="15" font-weight="700" font-family="Consolas, monospace">config["AI:Provider"]</text>
+    <rect x="360" y="368" width="480" height="36" rx="8" fill="#12161d" stroke="#30363d" stroke-width="1.5"/>
+    <text x="600" y="392" text-anchor="middle" fill="#e6edf3" font-size="13.5" font-family="Consolas, monospace">inner.AsBuilder().UseFunctionInvocation()...</text>
+    <text x="600" y="432" text-anchor="middle" fill="#9198a1" font-size="12.5">un c&#339;ur m&#233;tier, la bascule en une ligne de config</text>
+  </g>
+
+  <text x="600" y="490" text-anchor="middle" fill="#9198a1" font-size="13.5">portabilit&#233; syntaxique garantie &#8212; la s&#233;mantique se gagne avec des &#233;vals</text>
+
+  <text x="600" y="560" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">MICROSOFT.EXTENSIONS.AI&#160;EN&#160;PRATIQUE&#160;&#183;&#160;HANDS-ON&#160;WITH&#160;MICROSOFT.EXTENSIONS.AI</text>
+</svg>

@@ -1,0 +1,82 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#ffa657" stop-opacity="0.14"/>
+      <stop offset="55%" stop-color="#ffa657" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">MICROSOFT.EXTENSIONS.AI&#160;&#160;&#183;&#160;&#160;&#201;PISODE&#160;&#160;5/5</text>
+  <text x="600" y="100" text-anchor="middle" fill="#e6edf3" font-size="30" font-weight="700">Le RAG de production : six pi&#232;ges, six parades</text>
+
+  <!-- question -->
+  <g>
+    <rect x="70" y="255" width="230" height="90" rx="14" fill="url(#card)" stroke="#e6edf3" stroke-width="1.8"/>
+    <text x="185" y="292" text-anchor="middle" fill="#e6edf3" font-size="13.5">&#171; les commandes du</text>
+    <text x="185" y="314" text-anchor="middle" fill="#e6edf3" font-size="13.5">client M&#252;ller en mars ? &#187;</text>
+  </g>
+
+  <path d="M300 300 H360" stroke="#6e7681" stroke-width="2.2"/>
+  <path d="M352 294 L364 300 L352 306 Z" fill="#6e7681"/>
+
+  <!-- router -->
+  <g>
+    <rect x="368" y="245" width="220" height="110" rx="14" fill="url(#card)" stroke="#bc8cff" stroke-width="2.2"/>
+    <text x="478" y="282" text-anchor="middle" fill="#bc8cff" font-size="15" font-weight="700">LE LLM ROUTE</text>
+    <text x="478" y="308" text-anchor="middle" fill="#9198a1" font-size="12">tool calling + fuzzy match</text>
+    <text x="478" y="330" text-anchor="middle" fill="#9198a1" font-size="12">entit&#233; extraite, jamais embedd&#233;e</text>
+  </g>
+
+  <!-- SQL branch -->
+  <path d="M588 275 Q640 240 690 226" stroke="#3fb950" stroke-width="2.2" fill="none"/>
+  <path d="M682 222 L694 224 L686 234 Z" fill="#3fb950"/>
+  <g>
+    <rect x="700" y="180" width="420" height="92" rx="14" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="910" y="212" text-anchor="middle" fill="#3fb950" font-size="14.5" font-weight="700">SQL &#8212; l'exact</text>
+    <text x="910" y="240" text-anchor="middle" fill="#e6edf3" font-size="12.5" font-family="Consolas, monospace">WHERE customer = @n AND date BETWEEN ...</text>
+    <text x="910" y="262" text-anchor="middle" fill="#9198a1" font-size="11.5">z&#233;ro bruit &#183; lookups structur&#233;s</text>
+  </g>
+
+  <!-- vector branch -->
+  <path d="M588 325 Q640 360 690 374" stroke="#38bdf8" stroke-width="2.2" fill="none"/>
+  <path d="M682 366 L694 376 L684 380 Z" fill="#38bdf8"/>
+  <g>
+    <rect x="700" y="330" width="420" height="92" rx="14" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="910" y="360" text-anchor="middle" fill="#38bdf8" font-size="14.5" font-weight="700">QDRANT &#8212; le s&#233;mantique</text>
+    <text x="910" y="388" text-anchor="middle" fill="#e6edf3" font-size="12.5" font-family="Consolas, monospace">scoreThreshold: 0.75 + filter payload</text>
+    <text x="910" y="410" text-anchor="middle" fill="#9198a1" font-size="11.5">bge-m3 multilingue &#183; un chunk par champ</text>
+  </g>
+
+  <!-- pitfall badges -->
+  <g font-size="12" font-weight="600">
+    <rect x="90" y="430" width="160" height="30" rx="15" fill="#12161d" stroke="#ffa657" stroke-width="1.5"/>
+    <text x="170" y="450" text-anchor="middle" fill="#ffa657">1 &#183; top-K aveugle</text>
+    <rect x="260" y="430" width="180" height="30" rx="15" fill="#12161d" stroke="#ffa657" stroke-width="1.5"/>
+    <text x="350" y="450" text-anchor="middle" fill="#ffa657">2 &#183; chunking au poids</text>
+    <rect x="450" y="430" width="170" height="30" rx="15" fill="#12161d" stroke="#ffa657" stroke-width="1.5"/>
+    <text x="535" y="450" text-anchor="middle" fill="#ffa657">3 &#183; entit&#233; noy&#233;e</text>
+    <rect x="630" y="430" width="200" height="30" rx="15" fill="#12161d" stroke="#ffa657" stroke-width="1.5"/>
+    <text x="730" y="450" text-anchor="middle" fill="#ffa657">4 &#183; embeddings = chat</text>
+    <rect x="840" y="430" width="160" height="30" rx="15" fill="#12161d" stroke="#ffa657" stroke-width="1.5"/>
+    <text x="920" y="450" text-anchor="middle" fill="#ffa657">5 &#183; tout vectoriser</text>
+    <rect x="1010" y="430" width="110" height="30" rx="15" fill="#12161d" stroke="#ffa657" stroke-width="1.5"/>
+    <text x="1065" y="450" text-anchor="middle" fill="#ffa657">6 &#183; au doigt</text>
+  </g>
+
+  <text x="600" y="497" text-anchor="middle" fill="#9198a1" font-size="13">le droit de dire &#171; je ne sais pas &#187; se programme &#8212; "I don't know" is a feature</text>
+
+  <text x="600" y="560" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">MICROSOFT.EXTENSIONS.AI&#160;EN&#160;PRATIQUE&#160;&#183;&#160;HANDS-ON&#160;WITH&#160;MICROSOFT.EXTENSIONS.AI</text>
+</svg>

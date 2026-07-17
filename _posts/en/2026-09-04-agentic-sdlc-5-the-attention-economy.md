@@ -23,7 +23,7 @@ Hence the chapter's canonical failure: a team adds an 800-line architecture docu
 
 ## The load lifecycle: four phases, three modes
 
-Before asking what the model *looks at*, the content has to *arrive*. Chapter 14 describes your primitives' full pipeline:
+Before asking what the model *looks at*, the content has to *arrive*. [Chapter 14](https://danielmeppiel.github.io/agentic-sdlc-handbook/handbook/ch14-the-load-lifecycle.html) describes your primitives' full pipeline:
 
 **Resolve** (dependency resolution, lockfile) → **Materialize** (files land where the harness expects them: `.github/`, `.claude/`…) → **Bind** (the harness classifies each file into a load mode) → **Activate** (the dispatcher picks what actually enters, based on the task and the remaining budget).
 
