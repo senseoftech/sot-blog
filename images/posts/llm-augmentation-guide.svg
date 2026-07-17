@@ -1,0 +1,90 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.18"/>
+      <stop offset="55%" stop-color="#bc8cff" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="58" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">LE&#160;GUIDE&#160;&#160;&#183;&#160;&#160;RAG&#160;&#160;&#183;&#160;&#160;RIG&#160;&#160;&#183;&#160;&#160;TOOLS&#160;&#160;&#183;&#160;&#160;MCP</text>
+  <text x="600" y="96" text-anchor="middle" fill="#e6edf3" font-size="30" font-weight="700">Augmenter son LLM : quand utiliser quoi&#8239;?</text>
+
+  <!-- central LLM chip -->
+  <g>
+    <rect x="510" y="270" width="180" height="90" rx="16" fill="url(#card)" stroke="#e6edf3" stroke-width="2.5"/>
+    <text x="600" y="308" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="800">LLM</text>
+    <text x="600" y="336" text-anchor="middle" fill="#9198a1" font-size="11.5">brillant, amn&#233;sique,</text>
+    <text x="600" y="351" text-anchor="middle" fill="#9198a1" font-size="11.5">coup&#233; du monde</text>
+    <!-- socket pins -->
+    <rect x="495" y="295" width="15" height="8" fill="#38bdf8"/>
+    <rect x="495" y="320" width="15" height="8" fill="#38bdf8"/>
+    <rect x="690" y="295" width="15" height="8" fill="#3fb950"/>
+    <rect x="690" y="320" width="15" height="8" fill="#3fb950"/>
+    <rect x="560" y="255" width="8" height="15" fill="#bc8cff"/>
+    <rect x="632" y="255" width="8" height="15" fill="#bc8cff"/>
+    <rect x="560" y="360" width="8" height="15" fill="#ffa657"/>
+    <rect x="632" y="360" width="8" height="15" fill="#ffa657"/>
+  </g>
+
+  <!-- SAVOIR (left) -->
+  <g>
+    <rect x="90" y="205" width="330" height="220" rx="16" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="255" y="240" text-anchor="middle" fill="#38bdf8" font-size="16" font-weight="700">&#128218;&#160;SAVOIR</text>
+    <text x="255" y="262" text-anchor="middle" fill="#9198a1" font-size="11.5">&#171; il ne conna&#238;t pas mes donn&#233;es &#187;</text>
+    <rect x="115" y="280" width="280" height="34" rx="8" fill="#12161d" stroke="#30363d" stroke-width="1.5"/>
+    <text x="255" y="302" text-anchor="middle" fill="#e6edf3" font-size="12.5">contexte + cache &#8212; petit corpus stable</text>
+    <rect x="115" y="322" width="280" height="34" rx="8" fill="#12161d" stroke="#30363d" stroke-width="1.5"/>
+    <text x="255" y="344" text-anchor="middle" fill="#e6edf3" font-size="12.5">RAG &#8212; grande base vivante</text>
+    <rect x="115" y="364" width="280" height="34" rx="8" fill="#12161d" stroke="#30363d" stroke-width="1.5"/>
+    <text x="255" y="386" text-anchor="middle" fill="#e6edf3" font-size="12.5">RIG &#8212; chiffres cit&#233;s en direct</text>
+    <path d="M420 315 H495" stroke="#38bdf8" stroke-width="2.2"/>
+    <path d="M487 309 L499 315 L487 321 Z" fill="#38bdf8"/>
+  </g>
+
+  <!-- AGIR (right) -->
+  <g>
+    <rect x="780" y="205" width="330" height="220" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="945" y="240" text-anchor="middle" fill="#3fb950" font-size="16" font-weight="700">&#129470;&#160;AGIR</text>
+    <text x="945" y="262" text-anchor="middle" fill="#9198a1" font-size="11.5">&#171; il ne peut rien ex&#233;cuter &#187;</text>
+    <rect x="805" y="280" width="280" height="34" rx="8" fill="#12161d" stroke="#30363d" stroke-width="1.5"/>
+    <text x="945" y="302" text-anchor="middle" fill="#e6edf3" font-size="12.5">tool calling &#8212; SQL, API, actions</text>
+    <rect x="805" y="322" width="280" height="34" rx="8" fill="#12161d" stroke="#30363d" stroke-width="1.5"/>
+    <text x="945" y="344" text-anchor="middle" fill="#e6edf3" font-size="12.5">MCP &#8212; la prise standard partag&#233;e</text>
+    <rect x="805" y="364" width="280" height="34" rx="8" fill="#12161d" stroke="#30363d" stroke-width="1.5"/>
+    <text x="945" y="386" text-anchor="middle" fill="#e6edf3" font-size="12.5">garde-fous : l'humain confirme</text>
+    <path d="M780 315 H705" stroke="#3fb950" stroke-width="2.2"/>
+    <path d="M713 309 L701 315 L713 321 Z" fill="#3fb950"/>
+  </g>
+
+  <!-- ETRE (top) -->
+  <g>
+    <rect x="430" y="130" width="340" height="90" rx="14" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="600" y="162" text-anchor="middle" fill="#bc8cff" font-size="15" font-weight="700">&#127917;&#160;&#202;TRE &#8212; ton, format, jargon</text>
+    <text x="600" y="188" text-anchor="middle" fill="#e6edf3" font-size="12.5">prompt d'abord &#183; fine-tuning si &#231;a ne suffit pas</text>
+    <text x="600" y="207" text-anchor="middle" fill="#9198a1" font-size="11">apprend comment parler, pas quoi savoir</text>
+  </g>
+
+  <!-- SE SOUVENIR (bottom) -->
+  <g>
+    <rect x="430" y="410" width="340" height="80" rx="14" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="600" y="442" text-anchor="middle" fill="#ffa657" font-size="15" font-weight="700">&#129504;&#160;SE SOUVENIR</text>
+    <text x="600" y="468" text-anchor="middle" fill="#e6edf3" font-size="12.5">m&#233;moire : r&#233;sum&#233;s, pr&#233;f&#233;rences, notes relues</text>
+  </g>
+
+  <text x="600" y="525" text-anchor="middle" fill="#9198a1" font-size="13">classez par manque combl&#233;, pas par popularit&#233; &#8212; sort by gap filled, not by hype</text>
+
+  <text x="600" y="565" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">AUGMENTER&#160;SON&#160;LLM&#160;&#183;&#160;AUGMENTING&#160;YOUR&#160;LLM&#160;&#8212;&#160;LE&#160;GUIDE&#160;/&#160;THE&#160;GUIDE</text>
+</svg>
