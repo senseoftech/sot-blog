@@ -5,7 +5,8 @@
         </a>
         <nav class="site-nav" aria-label="Main navigation">
             {% for item in site.navigation %}
-            <a href="{{ item.url | prepend: site.baseurl }}" {% if item.i18n %}data-i18n="{{ item.i18n }}"{% endif %} {% if page.url == item.url %}class="is-active" aria-current="page"{% endif %}>{{ item.text }}</a>
+            {% assign item_fr_url = '/fr' | append: item.url %}
+            <a href="{{ item.url | prepend: site.baseurl }}" {% if item.i18n %}data-i18n="{{ item.i18n }}"{% endif %} {% if page.url == item.url or page.url == item_fr_url %}class="is-active" aria-current="page"{% endif %}>{{ item.text }}</a>
             {% endfor %}
         </nav>
         <div class="header-actions">

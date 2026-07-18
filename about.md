@@ -3,6 +3,8 @@ layout: page
 title: About this blog
 description: About Adrien Clerbois and the Sense of Tech blog
 image: /images/aboutPage.jpg
+lang: en
+ref: about
 ---
 
 **Adrien Clerbois** is a Software Craftsman from [Buvrinnes](https://fr.wikipedia.org/wiki/Buvrinnes), Belgium. 
@@ -15,8 +17,8 @@ He was a consultant at Trasys (now called NRB) where he had fun in the industria
 
 He was an Enterprise Lead Designer at Ingenico and he customize the ePayment platform for international customers requirements such as Carrefour.
 
-He's now at my own and built up my company named Sense of Tech.
+He's now on his own and built up his company named Sense of Tech.
 
-He love to share, so if you see him, don't hesitate to discuss, as they say: 
+He loves to share, so if you see him, don't hesitate to discuss, as they say: 
 
 >"We learn something new every day".

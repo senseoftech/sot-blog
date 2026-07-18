@@ -18,7 +18,9 @@
     <link rel="canonical" href="{{ page.url | replace:'/index.html','/' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Feed" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
     {% if page.ref %}
-    {% assign alternates = site.posts | where: "ref", page.ref %}
+    {% assign alt_posts = site.posts | where: "ref", page.ref %}
+    {% assign alt_pages = site.pages | where: "ref", page.ref %}
+    {% assign alternates = alt_posts | concat: alt_pages %}
     {% for alt in alternates %}
     <link rel="alternate" hreflang="{{ alt.lang }}" href="{{ alt.url | prepend: site.url }}">
     {% endfor %}
@@ -36,7 +38,7 @@
         })();
     </script>
 </head>
-<body{% if page.ref %} data-post-ref="{{ page.ref }}"{% assign translations = site.posts | where: "ref", page.ref %}{% for t in translations %} data-url-{{ t.lang }}="{{ t.url | prepend: site.baseurl }}"{% endfor %}{% endif %}>
+<body{% if page.ref %} data-post-ref="{{ page.ref }}"{% assign tr_posts = site.posts | where: "ref", page.ref %}{% assign tr_pages = site.pages | where: "ref", page.ref %}{% assign translations = tr_posts | concat: tr_pages %}{% for t in translations %} data-url-{{ t.lang }}="{{ t.url | prepend: site.baseurl }}"{% endfor %}{% endif %}>
     {% include header.html %}
     <main class="site-main">
         {{ content }}
