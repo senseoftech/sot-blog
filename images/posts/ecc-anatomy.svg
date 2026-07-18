@@ -1,0 +1,82 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">ECC&#160;&#160;&#183;&#160;&#160;&#201;PISODE&#160;&#160;2/3</text>
+  <text x="600" y="100" text-anchor="middle" fill="#e6edf3" font-size="30" font-weight="700">Anatomie : skills-first, hooks, instincts</text>
+
+  <!-- SKILLS organ -->
+  <g>
+    <rect x="80" y="170" width="330" height="130" rx="14" fill="url(#card)" stroke="#38bdf8" stroke-width="2"/>
+    <text x="245" y="200" text-anchor="middle" fill="#38bdf8" font-size="15" font-weight="700">SKILLS &#8212; chargement paresseux</text>
+    <text x="245" y="226" text-anchor="middle" fill="#e6edf3" font-size="12.5">278 descriptions expos&#233;es,</text>
+    <text x="245" y="246" text-anchor="middle" fill="#e6edf3" font-size="12.5">le corps n'arrive qu'&#224; l'activation</text>
+    <text x="245" y="277" text-anchor="middle" fill="#9198a1" font-size="11.5">progressive disclosure &#215; 278</text>
+  </g>
+
+  <!-- AGENTS organ -->
+  <g>
+    <rect x="80" y="320" width="330" height="130" rx="14" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="245" y="350" text-anchor="middle" fill="#bc8cff" font-size="15" font-weight="700">AGENTS &#8212; d&#233;l&#233;gation auto</text>
+    <text x="245" y="376" text-anchor="middle" fill="#e6edf3" font-size="12.5">feature &#8594; planner &#183; code &#8594; reviewer</text>
+    <text x="245" y="396" text-anchor="middle" fill="#e6edf3" font-size="12.5">&#171; ALWAYS parallelize &#187;</text>
+    <text x="245" y="427" text-anchor="middle" fill="#9198a1" font-size="11.5">67 sp&#233;cialistes, dont silent-failure-hunter</text>
+  </g>
+
+  <!-- verification loop center -->
+  <g>
+    <rect x="440" y="200" width="320" height="220" rx="16" fill="url(#card)" stroke="#3fb950" stroke-width="2.5"/>
+    <text x="600" y="234" text-anchor="middle" fill="#3fb950" font-size="15" font-weight="700">VERIFICATION-LOOP</text>
+    <g font-size="12" fill="#e6edf3">
+      <text x="600" y="264" text-anchor="middle">build &#8594; types &#8594; lint</text>
+      <text x="600" y="286" text-anchor="middle">&#8594; tests 80 % &#8594; s&#233;curit&#233; &#8594; diff</text>
+    </g>
+    <rect x="480" y="306" width="115" height="34" rx="8" fill="#12161d" stroke="#3fb950" stroke-width="1.5"/>
+    <text x="537" y="328" text-anchor="middle" fill="#3fb950" font-size="13" font-weight="700">READY</text>
+    <rect x="605" y="306" width="115" height="34" rx="8" fill="#12161d" stroke="#f85149" stroke-width="1.5"/>
+    <text x="662" y="328" text-anchor="middle" fill="#f85149" font-size="13" font-weight="700">NOT READY</text>
+    <text x="600" y="368" text-anchor="middle" fill="#9198a1" font-size="11.5">toutes les 15 minutes en session longue</text>
+    <text x="600" y="394" text-anchor="middle" fill="#ffa657" font-size="12" font-weight="600">jamais le r&#233;cit, toujours la preuve</text>
+  </g>
+
+  <!-- HOOKS organ -->
+  <g>
+    <rect x="790" y="170" width="330" height="130" rx="14" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="955" y="200" text-anchor="middle" fill="#3fb950" font-size="15" font-weight="700">HOOKS &#8212; la couche d&#233;terministe</text>
+    <text x="955" y="226" text-anchor="middle" fill="#e6edf3" font-size="12.5">GateGuard &#183; secrets (sk-, ghp-, AKIA)</text>
+    <text x="955" y="246" text-anchor="middle" fill="#e6edf3" font-size="12.5">format &#183; typecheck &#183; save/load session</text>
+    <text x="955" y="277" text-anchor="middle" fill="#9198a1" font-size="11.5">profils minimal &#183; standard &#183; strict</text>
+  </g>
+
+  <!-- INSTINCTS organ -->
+  <g>
+    <rect x="790" y="320" width="330" height="130" rx="14" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="955" y="350" text-anchor="middle" fill="#ffa657" font-size="15" font-weight="700">INSTINCTS &#8212; m&#233;moire sous quota</text>
+    <text x="955" y="376" text-anchor="middle" fill="#e6edf3" font-size="12.5">confiance &#8805; 0,7 &#183; max 6 inject&#233;s</text>
+    <text x="955" y="396" text-anchor="middle" fill="#e6edf3" font-size="12.5">cap 8 000 caract&#232;res au d&#233;marrage</text>
+    <text x="955" y="427" text-anchor="middle" fill="#9198a1" font-size="11.5">/evolve : les instincts deviennent skills</text>
+  </g>
+
+  <path d="M410 235 H440 M410 385 H440 M760 235 H790 M760 385 H790" stroke="#6e7681" stroke-width="1.8"/>
+
+  <text x="600" y="490" text-anchor="middle" fill="#9198a1" font-size="13.5">l'&#233;chec devient instinct, l'instinct r&#233;current devient skill &#8212; la boucle de feedback automatis&#233;e</text>
+
+  <text x="600" y="560" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">ECC&#160;&#183;&#160;LA&#160;CONFIG&#160;GAGNANTE&#160;&#183;&#160;THE&#160;WINNING&#160;CONFIG&#160;&#8212;&#160;AFFAAN&#160;MUSTAFA</text>
+</svg>

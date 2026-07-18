@@ -1,0 +1,78 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="42%" r="62%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.16"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+    <linearGradient id="store" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22303f"/>
+      <stop offset="100%" stop-color="#161f2b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="60" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">GIT&#160;&#160;WORKTREES&#160;&#160;&#183;&#160;&#160;NIVEAU&#160;300</text>
+  <text x="600" y="98" text-anchor="middle" fill="#e6edf3" font-size="29" font-weight="700">Plusieurs plans de travail, un seul d&#233;p&#244;t</text>
+
+  <!-- central shared store -->
+  <g>
+    <ellipse cx="600" cy="318" rx="120" ry="26" fill="url(#store)" stroke="#38bdf8" stroke-width="2"/>
+    <path d="M480 318 V392 A120 26 0 0 0 720 392 V318" fill="url(#store)" stroke="#38bdf8" stroke-width="2"/>
+    <ellipse cx="600" cy="318" rx="120" ry="26" fill="#1a2432" stroke="#38bdf8" stroke-width="2"/>
+    <text x="600" y="315" text-anchor="middle" fill="#38bdf8" font-size="17" font-weight="700" font-family="Consolas, monospace">.git</text>
+    <text x="600" y="352" text-anchor="middle" fill="#e6edf3" font-size="12.5">magasin partag&#233;</text>
+    <text x="600" y="372" text-anchor="middle" fill="#9198a1" font-size="11.5">objets &#183; branches &#183; stash</text>
+  </g>
+
+  <!-- three worktrees -->
+  <!-- links -->
+  <path d="M215 250 Q400 250 495 315" stroke="#3fb950" stroke-width="2" fill="none"/>
+  <path d="M600 210 V292" stroke="#bc8cff" stroke-width="2" fill="none"/>
+  <path d="M985 250 Q800 250 705 315" stroke="#ffa657" stroke-width="2" fill="none"/>
+
+  <g>
+    <rect x="80" y="180" width="270" height="110" rx="14" fill="url(#card)" stroke="#3fb950" stroke-width="2"/>
+    <text x="215" y="210" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700" font-family="Consolas, monospace">main-repo/</text>
+    <text x="215" y="236" text-anchor="middle" fill="#e6edf3" font-size="12.5">branche : main</text>
+    <text x="215" y="258" text-anchor="middle" fill="#9198a1" font-size="11.5">HEAD + index propres</text>
+    <text x="215" y="278" text-anchor="middle" fill="#9198a1" font-size="11.5">votre travail principal</text>
+  </g>
+
+  <g>
+    <rect x="465" y="100" width="270" height="100" rx="14" fill="url(#card)" stroke="#bc8cff" stroke-width="2"/>
+    <text x="600" y="130" text-anchor="middle" fill="#bc8cff" font-size="14" font-weight="700" font-family="Consolas, monospace">../hotfix/</text>
+    <text x="600" y="156" text-anchor="middle" fill="#e6edf3" font-size="12.5">branche : hotfix</text>
+    <text x="600" y="178" text-anchor="middle" fill="#9198a1" font-size="11.5">le correctif urgent, sans stash</text>
+  </g>
+
+  <g>
+    <rect x="850" y="180" width="270" height="110" rx="14" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="985" y="210" text-anchor="middle" fill="#ffa657" font-size="14" font-weight="700" font-family="Consolas, monospace">../feature-x/</text>
+    <text x="985" y="236" text-anchor="middle" fill="#e6edf3" font-size="12.5">branche : feature-x</text>
+    <text x="985" y="258" text-anchor="middle" fill="#9198a1" font-size="11.5">HEAD + index propres</text>
+    <text x="985" y="278" text-anchor="middle" fill="#9198a1" font-size="11.5">un agent, ou un build long</text>
+  </g>
+
+  <!-- the .git file pointer note -->
+  <g>
+    <rect x="360" y="430" width="480" height="52" rx="10" fill="#12161d" stroke="#30363d" stroke-width="1.5"/>
+    <text x="600" y="452" text-anchor="middle" fill="#9198a1" font-size="12.5" font-family="Consolas, monospace">../hotfix/.git  &#8594;  gitdir: .git/worktrees/hotfix</text>
+    <text x="600" y="471" text-anchor="middle" fill="#6e7681" font-size="11">le .git d'un worktree est un fichier pointeur, pas un dossier</text>
+  </g>
+
+  <text x="600" y="512" text-anchor="middle" fill="#e6edf3" font-size="13.5" font-weight="600">HEAD + index par worktree &#183; objets, branches &#8212; et le stash &#8212; partag&#233;s</text>
+
+  <text x="600" y="560" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">GIT&#160;WORKTREES&#160;&#183;&#160;PLUSIEURS&#160;PLANS&#160;DE&#160;TRAVAIL&#160;&#183;&#160;SEVERAL&#160;WORKBENCHES,&#160;ONE&#160;REPO</text>
+</svg>

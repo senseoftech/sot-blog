@@ -1,0 +1,63 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#ffa657" stop-opacity="0.15"/>
+      <stop offset="55%" stop-color="#38bdf8" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#0d1117" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c2430"/>
+      <stop offset="100%" stop-color="#12161d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="#0d1117"/>
+  <rect width="1200" height="600" fill="url(#glow)"/>
+
+  <g stroke="#30363d" stroke-opacity="0.18" stroke-width="1">
+    <path d="M0 150 H1200 M0 300 H1200 M0 450 H1200"/>
+    <path d="M300 0 V600 M600 0 V600 M900 0 V600"/>
+  </g>
+
+  <text x="600" y="62" text-anchor="middle" fill="#38bdf8" font-size="17" letter-spacing="4" font-weight="600">ECC&#160;&#160;&#183;&#160;&#160;&#201;PISODE&#160;&#160;1/3</text>
+  <text x="600" y="100" text-anchor="middle" fill="#e6edf3" font-size="30" font-weight="700">La config qui a gagn&#233; le hackathon d'Anthropic</text>
+
+  <!-- trophy -->
+  <g>
+    <path d="M540 190 H660 V230 C660 275 630 300 600 300 C570 300 540 275 540 230 Z" fill="url(#card)" stroke="#ffa657" stroke-width="3"/>
+    <path d="M540 200 C505 200 495 235 520 252 C530 259 540 258 545 255" fill="none" stroke="#ffa657" stroke-width="3"/>
+    <path d="M660 200 C695 200 705 235 680 252 C670 259 660 258 655 255" fill="none" stroke="#ffa657" stroke-width="3"/>
+    <rect x="585" y="300" width="30" height="26" fill="url(#card)" stroke="#ffa657" stroke-width="2.5"/>
+    <rect x="558" y="326" width="84" height="18" rx="4" fill="url(#card)" stroke="#ffa657" stroke-width="2.5"/>
+    <text x="600" y="255" text-anchor="middle" fill="#ffa657" font-size="26" font-weight="800">ECC</text>
+    <text x="600" y="372" text-anchor="middle" fill="#9198a1" font-size="12.5">Cerebral Valley &#183; f&#233;vrier 2026</text>
+    <text x="600" y="392" text-anchor="middle" fill="#e6edf3" font-size="12.5">zenith.chat &#8212; construit 100 % dans Claude Code</text>
+  </g>
+
+  <!-- left stack: components -->
+  <g>
+    <rect x="95" y="200" width="300" height="46" rx="10" fill="url(#card)" stroke="#38bdf8" stroke-width="1.8"/>
+    <text x="245" y="229" text-anchor="middle" fill="#e6edf3" font-size="14"><tspan fill="#38bdf8" font-weight="700">278</tspan> skills &#8212; la surface de travail</text>
+    <rect x="95" y="256" width="300" height="46" rx="10" fill="url(#card)" stroke="#bc8cff" stroke-width="1.8"/>
+    <text x="245" y="285" text-anchor="middle" fill="#e6edf3" font-size="14"><tspan fill="#bc8cff" font-weight="700">67</tspan> agents sp&#233;cialis&#233;s</text>
+    <rect x="95" y="312" width="300" height="46" rx="10" fill="url(#card)" stroke="#3fb950" stroke-width="1.8"/>
+    <text x="245" y="341" text-anchor="middle" fill="#e6edf3" font-size="14"><tspan fill="#3fb950" font-weight="700">20+</tspan> hooks &#183; <tspan fill="#3fb950" font-weight="700">34</tspan> r&#232;gles</text>
+    <rect x="95" y="368" width="300" height="46" rx="10" fill="url(#card)" stroke="#ffa657" stroke-width="1.8"/>
+    <text x="245" y="397" text-anchor="middle" fill="#e6edf3" font-size="14"><tspan fill="#ffa657" font-weight="700">7</tspan> harnais &#183; MIT &#183; solo + 230 contribs</text>
+  </g>
+
+  <!-- right: stars + agentshield -->
+  <g>
+    <rect x="805" y="200" width="300" height="90" rx="12" fill="url(#card)" stroke="#ffa657" stroke-width="2"/>
+    <text x="955" y="240" text-anchor="middle" fill="#ffa657" font-size="26" font-weight="800">&#9733; 230 000+</text>
+    <text x="955" y="270" text-anchor="middle" fill="#9198a1" font-size="12.5">la config d'agent la plus scrut&#233;e du monde</text>
+    <rect x="805" y="306" width="300" height="108" rx="12" fill="url(#card)" stroke="#f85149" stroke-width="2"/>
+    <text x="955" y="338" text-anchor="middle" fill="#f85149" font-size="15" font-weight="700">&#128737; AGENTSHIELD</text>
+    <text x="955" y="364" text-anchor="middle" fill="#e6edf3" font-size="12.5">l'auditeur de s&#233;curit&#233; des configs</text>
+    <text x="955" y="386" text-anchor="middle" fill="#9198a1" font-size="12">1 282 tests &#183; 102 r&#232;gles &#183; red/blue/audit</text>
+  </g>
+
+  <text x="600" y="470" text-anchor="middle" fill="#9198a1" font-size="13.5">la preuve par l'usage : dix mois de vrai travail, valid&#233;s en un week-end &#8212; proof by use</text>
+
+  <text x="600" y="560" text-anchor="middle" fill="#6e7681" font-size="15" letter-spacing="2">ECC&#160;&#183;&#160;LA&#160;CONFIG&#160;GAGNANTE&#160;&#183;&#160;THE&#160;WINNING&#160;CONFIG&#160;&#8212;&#160;AFFAAN&#160;MUSTAFA</text>
+</svg>
